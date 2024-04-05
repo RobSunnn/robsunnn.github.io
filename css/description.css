@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap");
+
+.photo-description-container {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.description {
+    padding: 20px 30px;
+    background: #0a79df;
+    font-size: 15px;
+    font-family: monospace;
+    border-radius: 50px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.description p {
+    margin: 10px;
+    color: white;
+    font: 40px/1.2 "Cormorant Infant", serif;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: center;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    animation:
+            typing 4s steps(44, end) forwards, blink 13s ;
+}
+@keyframes typing {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-right: 2px solid transparent;
+    }
+
+    50% {
+        border-right: 2px solid #222;
+    }
+}

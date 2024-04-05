@@ -1,0 +1,113 @@
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main img {
+    display: flex;
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 30%;
+}
+
+
+.technology-stack {
+    font-weight: bold;
+    border: 2px solid black;
+    margin-top: 2em;
+    /*margin-right: 13em;*/
+    font-size: 30px;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 30%;
+    width: 600px;
+    flex-direction: column;
+    color: white;
+    background: #0a79df;
+    border-radius: 1em;
+}
+
+.my-photo {
+    width:100%;
+    height: auto;
+    margin-left: 17em;
+    margin-bottom: 2em;
+}
+
+
+.icons i {
+    font-size: 35px;
+    align-content: center;
+    margin-right: 3em;
+
+}
+
+
+.stack-head {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 0.5em 0.5em;
+    display: flex;
+    align-self: center;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    margin: 1em 0;
+}
+
+.container-icons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 500px;
+    align-self: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 1em;
+    align-content: center;
+    padding: 0.5em 0;
+}
+
+.container-icons p:first-child {
+    align-content: center;
+}
+
+.container-icons:nth-child(5) i {
+    margin-left: 23px;
+}
+
+.container-icons i {
+    font-size: 50px;
+    margin-left: 3em;
+    color: limegreen;
+}
+
+.title {
+    margin-left: 2em;
+}
+
+#spring {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 1em;
+}
+
+#spring p {
+    align-content: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#spring img {
+    width: 35px;
+    margin-right: 5em;
+    align-content: center;
+}
