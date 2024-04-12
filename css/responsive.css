@@ -1,9 +1,14 @@
 @media (max-width: 500px) {
+    body {
+        aspect-ratio: 5/9;
+    }
+
     footer {
         position: relative;
     }
 
     .description {
+
         font-size:5.2vw;
     }
 }
