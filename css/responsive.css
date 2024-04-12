@@ -8,14 +8,16 @@
     }
 
     .description {
-
         font-size:3.2vw;
     }
 
+    .contact-form {
+        width: 80%;
+    }
 
-.col-md-5 img {
-display:none;
-}
+    .col-md-5 img {
+        display:none;
+    }
 
     .profile-picture {
         width: 60%
