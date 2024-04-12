@@ -1,0 +1,59 @@
+.description {
+
+    padding: 30px 30px;
+    background: #2828b0;
+    border-radius: 50px;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    color: white;
+    font-family: "Cormorant Infant", serif;
+    font-size: 2em;
+    font-weight: 600;
+    white-space:  nowrap;
+    text-align: center;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    animation:
+            typing 1.3s steps(44, end) forwards, blink 1s ;
+}
+@keyframes typing {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-right: 2px solid transparent;
+    }
+
+    50% {
+        border-right: 2px solid #222;
+    }
+}
+
+.title {
+    padding: 5px 30px;
+    background: #2828b0;
+    border-radius: 50%;
+    height: 50px;
+    width:60%;
+    overflow: hidden;
+    margin: 0 auto;
+    color: white;
+    font-family: "Cormorant Infant", serif;
+    font-size: 2em;
+    font-weight: 600;
+    white-space:  nowrap;
+    text-align: center;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    animation:
+            typing 0.4s steps(44, end) forwards, blink 1s ;
+}
