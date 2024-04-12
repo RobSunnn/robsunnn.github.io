@@ -1,4 +1,4 @@
-@media (max-width: 500px) {
+@media (max-width: 650px) {
     body {
         aspect-ratio: 5/9;
     }
@@ -9,8 +9,13 @@
 
     .description {
 
-        font-size:4.2vw;
+        font-size:3.2vw;
     }
+
+
+.col-md-5 img {
+display:none;
+}
 
     .profile-picture {
         width: 60%
