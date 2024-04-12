@@ -1,14 +1,10 @@
 @media (max-width: 500px) {
 
-    body {
-        font-size: 1vmax;
-    }
-
-    footer {
+     footer {
         position: relative;
     }
 
     .description {
-        font-size:3vmax;
+        font-size:1.2vmax;
     }
 }
