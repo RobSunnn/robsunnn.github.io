@@ -2,9 +2,10 @@ const sendButton = document.getElementById('send-btn');
 
 sendButton.addEventListener('click', sendMail);
 
+function sendMail(e) {
 
+    e.preventDefault();
 
-function sendMail() {
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
     const messageField = document.getElementById('message');
@@ -23,11 +24,11 @@ function sendMail() {
     emailjs.send(serviceID, templateID, params)
         .then(
             (res) => {
-                // name.value = '';
-                // emailField.value = '';
-                // messageField.value = '';
+                 name.value = '';
+                 emailField.value = '';
+                 messageField.value = '';
                 console.log(res)
-                alert('your message is sent successfully')
+                alert('Your Message is Sent Successfully! Thank you :-)')
             }
         ).catch(err => console.log(err))
 }
