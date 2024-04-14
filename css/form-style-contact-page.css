@@ -91,5 +91,6 @@ footer ul li span {
 }
 
 #send-btn {
-   margin:0 28.5em;
+   display: block;
+   margin: 0 auto;
 }
