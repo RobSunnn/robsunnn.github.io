@@ -1,7 +1,10 @@
-@media (min-height: 1200px) {
+@media (max-height: 1200px) {
     .contact-form {
-        margin: 15em auto 0 auto;
+        margin: 1em auto;
+        height:20%;
     }
+
+
 }
 
 @media (max-width: 1220px) {
@@ -21,7 +24,7 @@
     }
 
     footer {
-        position: relative;
+        position: fixed;
     }
 
     .description {

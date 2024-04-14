@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Jersey+15&family=Platypi:ital,wght@0,300..800;1,300..800&family=Seymour+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Honk&family=Jersey+15&family=Nabla&family=Platypi:ital,wght@0,300..800;1,300..800&family=Seymour+One&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+
 body {
     background-color: grey;
 }
@@ -9,8 +14,13 @@ button {
 footer {
     background-color: #343a40;
     position: fixed;
+    bottom: 0;
     width: 100%;
+    margin-top: 0;
+    padding: 0.01em;
+
 }
+
 
 footer ul {
     display: flex;
@@ -32,9 +42,38 @@ footer ul li span {
 }
 
 #RS-button {
-    background-color: grey;
+    background-color: #4287f5;
     border-radius: 50%;
-    padding:0.6em;
+    padding:0.5em;
+    font-size: 1.5vw;
+    font-weight: 900;
+    color: #343a40;
+}
+
+.contact-form h4 {
+    margin-bottom: 0.6em;
+    text-align: center;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 2em;
+    max-width: 392ch
+}
+
+.contact-form h5 {
+    color: #343a40;
+    text-align:center;
+    font-size: 1.3em;
+    font-weight: 900;
+    margin-bottom: -0.5em;
+}
+
+.contact-form h6 {
+    color: red;
+    font-family: "Honk", system-ui;
+    text-align:center;
+    font-size: 1.3em;
+    font-weight: 100;
 }
 
 .contact-form {
@@ -49,4 +88,8 @@ footer ul li span {
 .textAreaTest {
     width:100%;
     height:6rem;
+}
+
+#send-btn {
+   margin:0 28.5em;
 }

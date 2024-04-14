@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- My CSS -->
     <link rel="stylesheet" href="css/form-style-contact-page.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/reset.css">
 
     <title>Contact Page</title>
 
@@ -40,29 +44,27 @@
     <div>
 
         <form class="contact-form">
-            <h4>If you want to contact me, you can send me email from here.</h4>
+            <h4>If you want to contact me, you can send me email from here or you can use the links below.</h4>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
+                    <h5><label for="name" class="form-label">Name</label></h5>
+                    <h6>At least 2 characters   ...</h6>
                     <input type="text" autocomplete="on" class="form-control" id="name" placeholder="Your name...">
                 </div>
             <div class="mb-2">
-                <label for="email" class="form-label">Email address</label>
+                <h5><label for="email" class="form-label">Email address</label></h5>
+                <h6>Please enter a valid email   ...</h6>
                 <input type="email" autocomplete="on"  class="form-control" id="email" placeholder="Your email..." >
 
             </div>
             <div class="mb-4">
 
-                <label for="message">Message</label>
-                <textarea class="form-control" rows="3" id="message" placeholder="Enter your message here..." ></textarea>
+                <h5><label for="message">Message</label></h5>
+                <h6>Please at least say hi :-)   ...</h6>
+                <textarea class="form-control" rows="2" id="message" placeholder="Enter your message here..." ></textarea>
             </div>
 
-
-<!--            <div class="mb-3 form-check">-->
-<!--                <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
-<!--                <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
-<!--            </div>-->
-            <button type="submit" class="btn btn-primary" id="send-btn">Send mail</button>
         </form>
+            <button type="submit" class="btn btn-primary" id="send-btn">Send mail</button>
 
     </div>
 
