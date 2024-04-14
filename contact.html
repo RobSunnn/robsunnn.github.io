@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/form-style-contact-page.css">
     <link rel="stylesheet" href="css/responsive.css">
     <title>Contact Page</title>
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -22,10 +23,10 @@
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about-me.html">About</a>
+                    <a class="nav-link" href="under-development.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link" href="under-development.html">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
@@ -37,14 +38,20 @@
     <div>
 
         <form class="contact-form">
-            <h4>If you want to contact me, you can send me a email here.</h4>
+            <h4>If you want to contact me, you can send me email from here.</h4>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" disabled aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <label for="name" class="form-label">Name</label>
+                <input type="text" autocomplete="on" class="form-control" id="name" placeholder="Your name...">
+            </div>
+            <div class="mb-2">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" autocomplete="on"  class="form-control" id="email" placeholder="Your email..." >
+
             </div>
             <div class="mb-4">
-                <textarea class="textAreaTest" placeholder="Under Development..." disabled></textarea>
+
+                <label for="message">Message</label>
+                <textarea class="form-control" rows="3" id="message" placeholder="Enter your message here..." ></textarea>
             </div>
 
 
@@ -52,9 +59,20 @@
 <!--                <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
 <!--                <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
 <!--            </div>-->
-            <button type="submit" class="btn btn-primary">Send mail</button>
+            <button type="submit" class="btn btn-primary" id="send-btn">Send mail</button>
         </form>
 
     </div>
 </body>
+<script src="js/contact.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "BwzIjmmEVLNY7N-2r",
+        });
+    })();
+</script>
 </html>
