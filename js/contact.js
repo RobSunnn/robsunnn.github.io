@@ -13,7 +13,8 @@ function sendMail(e) {
     const validMessage = validateMessage(messageField.value);
 
     if (nameField.value === '' || emailField.value === '' || messageField.value === '' ||
-    !validateName || !validEmail || !validateMessage) return;
+        !validName || !validEmail || !validMessage) return;
+
 
     let params = {
         name: nameField.value,
@@ -27,11 +28,11 @@ function sendMail(e) {
     emailjs.send(serviceID, templateID, params)
         .then(
             (res) => {
-                 name.value = '';
-                 emailField.value = '';
-                 messageField.value = '';
-                 console.log(res)
-                 alert('@@@@@     Your Message is Sent Successfully! Thank you :-)     @@@@@')
+                name.value = '';
+                emailField.value = '';
+                messageField.value = '';
+                console.log(res)
+                alert('@@@@@     Your Message is Sent Successfully! Thank you :-)     @@@@@')
             }
         )
         .catch(err => console.log(err))
@@ -39,44 +40,44 @@ function sendMail(e) {
 
 function validateEmail(input) {
 
-  let validRegex = /[A-Za-z0-9_-]+@[A-Za-z-]{2,}\.[A-Za-z]+/gm;
-  let validEmail = input.match(validRegex);
+    let validRegex = /[A-Za-z0-9_-]+@[A-Za-z-]{2,}\.[A-Za-z]+/gm;
+    let validEmail = input.match(validRegex);
 
-      if (validEmail) {
+    if (validEmail) {
         return true;
-      }
+    }
 
-        alert("-----=> Invalid email address! <=-----\n    -----=> Please enter a valid email... <=-----");
-        location.reload();
+    alert("-----=> Invalid email address! <=-----\n    -----=> Please enter a valid email... <=-----");
+    location.reload();
 
-        return false;
+    return false;
 }
 
 function validateName(input) {
 
-     let validRegex = /[A-Za-z0-9+_.-]{2,100}/gm;
-     let validName = input.match(validRegex);
+    let validRegex = /[A-Za-z0-9+_.-]{2,100}/gm;
+    let validName = input.match(validRegex);
 
-          if (validName) {
-            return true;
-          }
+    if (validName) {
+        return true;
+    }
 
-     alert("------>    Please enter your name. :-)    <------");
-     location.reload();
-     return false;
+    alert("------>    Please enter your name. :-)    <------");
+    location.reload();
+    return false;
 
 }
 
 function validateMessage(input) {
-      let validRegex = /[A-Za-z0-9+_.-]{2,}/gm;
-      let validMessage = input.match(validRegex);
+    let validRegex = /[A-Za-z0-9+_.-]{2,}/gm;
+    let validMessage = input.match(validRegex);
 
-          if (validMessage) {
+    if (validMessage) {
 
-             return true;
-          }
-      alert("You want to send me message so write something :)\nThank you.");
-      location.reload();
+        return true;
+    }
+    alert("You want to send me message so write something :)\nThank you.");
+    location.reload();
 
-            return false;
+    return false;
 }

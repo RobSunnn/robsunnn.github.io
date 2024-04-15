@@ -1,0 +1,26 @@
+body {
+    background-color: grey;
+}
+
+footer {
+    background-color: #343a40;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+#story-btn {
+    display: block;
+    border: 3px solid white;
+    border-radius: 30%;
+    width: 10%;
+    background: #1147bd;
+    color: white;
+    text-align: center;
+    align-content: center;
+    margin: 2em auto;
+    font: 1.1vw/1.2 "Cormorant Infant", serif;
+    font-weight: 500;
+    transform: scale(1.3);
+}
