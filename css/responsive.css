@@ -26,6 +26,7 @@
     .nav-item {
         text-align:end;
         display: block;
+        border-bottom: unset;
     }
 
     .nav-item:hover {

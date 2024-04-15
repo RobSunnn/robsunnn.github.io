@@ -15,7 +15,6 @@ function sendMail(e) {
     if (nameField.value === '' || emailField.value === '' || messageField.value === '' ||
         !validName || !validEmail || !validMessage) return;
 
-
     let params = {
         name: nameField.value,
         email: emailField.value,
@@ -35,11 +34,11 @@ function sendMail(e) {
                 alert('@@@@@     Your Message is Sent Successfully! Thank you :-)     @@@@@')
             }
         )
+        .then(clearForms(nameField, emailField, messageField))
         .catch(err => console.log(err))
 }
 
 function validateEmail(input) {
-
     let validRegex = /[A-Za-z0-9_-]+@[A-Za-z-]{2,}\.[A-Za-z]+/gm;
     let validEmail = input.match(validRegex);
 
@@ -48,13 +47,11 @@ function validateEmail(input) {
     }
 
     alert("-----=> Invalid email address! <=-----\n    -----=> Please enter a valid email... <=-----");
-    location.reload();
 
     return false;
 }
 
 function validateName(input) {
-
     let validRegex = /[A-Za-z0-9+_.-]{2,100}/gm;
     let validName = input.match(validRegex);
 
@@ -63,7 +60,7 @@ function validateName(input) {
     }
 
     alert("------>    Please enter your name. :-)    <------");
-    location.reload();
+
     return false;
 
 }
@@ -73,11 +70,16 @@ function validateMessage(input) {
     let validMessage = input.match(validRegex);
 
     if (validMessage) {
-
         return true;
     }
     alert("You want to send me message so write something :)\nThank you.");
-    location.reload();
 
     return false;
+}
+
+
+function clearForms(nameField, emailField, messageField) {
+     nameField.value = '';
+     emailField.value = '';
+     messageField.value = '';
 }

@@ -20,8 +20,6 @@ footer {
 footer ul {
     display: flex;
     list-style: none outside;
-
-
 }
 
 footer ul li {
@@ -29,15 +27,17 @@ footer ul li {
        padding: 0.5em 1.3em;
        font-size: 1.7em;
        margin: 0 auto;
-
 }
 
 footer ul li span {
     display: none;
 }
+
 .navbar-brand,
 .nav-item {
     font-family: "Shantell Sans", cursive;
+    border-bottom: 2px solid white;
+
 }
 
 .nav-item {
@@ -61,7 +61,7 @@ footer ul li span {
 
 .contact-form h4 {
 
-    color: white;
+    color: #343a40;
     text-align: center;
     font-family: "Yanone Kaffeesatz", sans-serif;
     font-optical-sizing: auto;
