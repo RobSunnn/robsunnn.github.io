@@ -1,6 +1,5 @@
 window.addEventListener("load", generatePageAboutMe);
 
-
 const bodyElement = document.body;
 
 const educationButton = document.createElement('a');
@@ -41,15 +40,13 @@ function generatePageAboutMe() {
             const authorElement = document.createElement('h3');
             authorElement.setAttribute('id', 'quote-author');
 
-            authorElement.textContent = `Author: ${authorOfQuote} ->`;
+            authorElement.textContent = `Author: ${authorOfQuote}`;
 
             const quoteElement = document.createElement('p');
             quoteElement.setAttribute('id', 'quote');
             quoteElement.textContent = `${quote}`;
             quoteElement.appendChild(authorElement)
 
-
-            // quoteDivElement.appendChild(authorElement)
             quoteDivElement.appendChild(quoteElement)
 
             bodyElement.appendChild(quoteDivElement);
