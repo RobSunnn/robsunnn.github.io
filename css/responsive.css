@@ -1,13 +1,13 @@
-@media (max-height: 1200px) {
-    .contact-form {
-        margin: 1em auto;
-        height:20%;
-    }
+/*@media (max-height: 1200px) {*/
+/*    .contact-form {*/
+/*        margin: 1em auto;*/
+/*        height:20%;*/
+/*    }*/
 
-    footer {
-        bottom: -6em;
-    }
-}
+/*    footer {*/
+/*        bottom: -10em;*/
+/*    }*/
+/*}*/
 
 @media (max-width: 1220px) {
 
@@ -19,9 +19,9 @@
         animation:typing 2s steps(44, end) forwards, blink 1s;
     }
 
-    .title {
-        color: blue;
-    }
+    /*.title {*/
+    /*    color: blue;*/
+    /*}*/
 
     .nav-item {
         text-align:end;
