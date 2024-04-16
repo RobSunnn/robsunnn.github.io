@@ -7,7 +7,7 @@ body {
     background-color: #343a40;
     position: relative;
     background-repeat: no-repeat;
-    background-size: 100% 30%;
+    background-size: 100% 35%;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     width: 100%;
@@ -17,8 +17,10 @@ body {
 
 }
 
+
 .footer {
     background-color: #343a40;
+    text-align: center;
     color: white;
     font-family: "Shantell Sans", cursive;
     font-size: 1.3em;
@@ -43,38 +45,51 @@ body {
     border-top-right-radius: 30%;
 }
 
+.info-about-me {
+    margin: 10em auto;
+}
+
+.mt-6 {
+    margin-top: 5em;
+}
+
 .col-md-7 {
- margin-top: 2em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .col-md-7 h2 {
     color: white;
+    margin: 1em auto;
 }
 
-.row .col-md-8 {
-    margin-top: 5em;
+.col-md-7 p {
+    margin: 2em auto;
+    color: white;
+    text-align: center;
+    width: fit-content;
 }
 
+.col-md-9 {
+    display: flex;
+    margin: -5em auto 0 auto;
+    height: auto;
+}
+
+.col-md-9 img {
+    width: 8%;
+    height: 80%;
+    margin: auto auto;
+    background: transparent;
+}
 
 .nav-item:hover {
     background-color: black;
     border-radius: 50%;
 }
 
-.text-info {
-    color: white;
-}
 
-.row:nth-child(1) {
-
-    margin-top: 8em;
-    margin-bottom: 8em;
-}
-
-.mt-6 {
-    margin-top: 10em;
-    background: #343a40;
-}
 
 
 

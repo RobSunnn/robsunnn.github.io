@@ -2,12 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Tektur:wght@400..900&family=Tilt+Prism&display=swap');
 
 .description {
-
     border-radius: 50px;
     height: auto;
     width: 100%;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 3em auto 0 auto;
     color: white;
     font-family: "Tektur", sans-serif;
     font-size: 2.4em;
@@ -41,8 +40,7 @@
 }
 
 .title {
-    border-radius: 50%;
-    letter-spacing: 1.1vw;
+    letter-spacing: 1vw;
     height: 50px;
     width:60%;
     overflow: hidden;
