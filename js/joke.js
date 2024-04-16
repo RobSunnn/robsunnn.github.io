@@ -83,7 +83,7 @@ function getTime() {
             ipAddressParagraphElement.textContent = result.client_ip;
 
             divContainerElement.append(`Your IP Address is: ${ipAddressParagraphElement.textContent}\n`);
-            divContainerElement.append(`Today is - ${dayOfYearParagraphElement.textContent} from this year.`);
+            divContainerElement.append(`Today is - ${dayOfYearParagraphElement.textContent} day from this year.`);
 
             const hideStoryButton = createHideButton();
             hideButtons();
