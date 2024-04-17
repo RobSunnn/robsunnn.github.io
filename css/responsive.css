@@ -36,21 +36,44 @@
     }
 
     .description {
-        font-size:3.2vw;
+        font-size:0.2vw;
+        margin: -3em auto 0 auto;
+    }
+
+    .col-md-7 h2 {
+        font-size: 20px;
+    }
+
+    .col-md-7 p {
+        font-size: 15px;
+    }
+
+    .col-md-8 {
+        border-bottom: 2px solid grey;
+        border-top: 2px solid grey;
+
+    }
+
+    .col-md-9 img {
+        width: 14%;
+    }
+
+    .mt-6 {
+        margin-top: -10em;
     }
 
     .contact-form {
         width: 80%;
     }
 
-    .col-md-5 img {
-        display:none;
-    }
-
     .profile-picture {
         width: 60%;
         max-width: 100%;
         height: 60%;
+    }
+
+    .footer {
+        margin-top: -6.5em;
     }
 }
 
