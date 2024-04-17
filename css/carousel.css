@@ -1,0 +1,66 @@
+  body {
+    background-color: black;
+    margin: 2em auto;
+  }
+
+  .carousel {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border:3px solid black;
+    outline:3px solid green;
+    border-radius: 10%;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slide {
+    width: 1200px;
+    height: 900px;
+    flex-shrink: 0;
+  }
+
+  .controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+  }
+
+  .control {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin: 0 5px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin: 1em auto;
+    border: 3px solid black;
+    border-radius:10%;
+    padding: 2em;
+  }
+
+  .card-title {
+    text-align:center;
+    border-bottom: 3px solid black;
+  }
+
+  .card-img-top {
+
+  }
+
+ #prev-btn {
+    margin: 0 auto;
+    }

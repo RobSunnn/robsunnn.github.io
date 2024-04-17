@@ -22,36 +22,36 @@ buttonsContainer.setAttribute('id', 'buttons');
 
 function generatePageAboutMe() {
     const ninjasURL = 'https://api.api-ninjas.com/v1/quotes?category=happiness';
-
-
-    fetch(ninjasURL, {
-        method: 'GET',
-        headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
-        contentType: 'application/json',
-    })
-        .then(res => res.json())
-        .then(result => {
-            const authorOfQuote = result[0].author;
-            const quote = result[0].quote;
-
-
-            const quoteDivElement = document.getElementsByClassName('quotes')[0];
-
-            const authorElement = document.createElement('h3');
-            authorElement.setAttribute('id', 'quote-author');
-
-            authorElement.textContent = `Author: ${authorOfQuote}`;
-
-            const quoteElement = document.createElement('p');
-            quoteElement.setAttribute('id', 'quote');
-            quoteElement.textContent = `${quote}`;
-            quoteElement.appendChild(authorElement)
-
-            quoteDivElement.appendChild(quoteElement)
-
-            bodyElement.appendChild(quoteDivElement);
-
-        })
+//
+//
+//    fetch(ninjasURL, {
+//        method: 'GET',
+//        headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
+//        contentType: 'application/json',
+//    })
+//        .then(res => res.json())
+//        .then(result => {
+//            const authorOfQuote = result[0].author;
+//            const quote = result[0].quote;
+//
+//
+//            const quoteDivElement = document.getElementsByClassName('quotes')[0];
+//
+//            const authorElement = document.createElement('h3');
+//            authorElement.setAttribute('id', 'quote-author');
+//
+//            authorElement.textContent = `Author: ${authorOfQuote}`;
+//
+//            const quoteElement = document.createElement('p');
+//            quoteElement.setAttribute('id', 'quote');
+//            quoteElement.textContent = `${quote}`;
+//            quoteElement.appendChild(authorElement)
+//
+//            quoteDivElement.appendChild(quoteElement)
+//
+//            bodyElement.appendChild(quoteDivElement);
+//
+//        })
 
 
     buttonsContainer.appendChild(educationButton);
