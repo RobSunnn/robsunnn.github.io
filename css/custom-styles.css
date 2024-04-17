@@ -52,6 +52,8 @@ body {
     margin-top: 5em;
 }
 
+
+
 .col-md-7 {
     margin: 0 auto;
     display: flex;
@@ -75,6 +77,35 @@ body {
     width: fit-content;
     padding-bottom: 2em;
 }
+
+/*.col-md-5 {*/
+/*    margin: 0 auto;*/
+/*    color: white;*/
+/*    font-size: 1.4rem;*/
+/*    font-family: "Shantell Sans", cursive;*/
+/*    line-height: 1;*/
+/*    text-align: center;*/
+/*    width: fit-content;*/
+/*    padding-bottom: 2em;*/
+/*}*/
+
+/*.col-md-5 h2 {*/
+/*    color: grey;*/
+/*    margin: 1em auto;*/
+/*    font-family: "Shantell Sans", cursive;*/
+/*    font-size: 2.5rem;*/
+/*}*/
+
+/*.col-md-5 p {*/
+/*    margin: 0 auto;*/
+/*    color: white;*/
+/*    font-size: 1.4rem;*/
+/*    font-family: "Shantell Sans", cursive;*/
+/*    line-height: 1;*/
+/*    text-align: center;*/
+/*    width: fit-content;*/
+/*    padding-bottom: 2em;*/
+/*}*/
 
 .col-md-9 {
     display: flex;

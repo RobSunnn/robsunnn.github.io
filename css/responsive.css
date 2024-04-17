@@ -1,9 +1,9 @@
 
-@media (max-width: 1220px) {
+@media (max-width: 900px) {
 
     .description,
     .title{
-        font-size:2.7vw;
+        font-size:3vw;
         padding: 0;
         background: unset;
         animation:typing 2s steps(44, end) forwards, blink 1s;
@@ -13,6 +13,16 @@
         text-align: end;
         display: block;
         border-bottom: unset;
+    }
+
+    .col-md-7 h2 {
+
+        font-size: 1.5rem;
+    }
+
+    .col-md-9 img {
+      width: 14%;
+        margin: 0 1em;
     }
 
     .nav-item:hover {
@@ -25,6 +35,11 @@
     }
 
 
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+    }
 }
 
 @media (max-width: 650px) {
@@ -32,14 +47,18 @@
         aspect-ratio: 5/9;
     }
 
-    footer {
-        position: relative;
+    .footer {
+        position: fixed;
         bottom: 0;
     }
 
     .description {
-        font-size:0.2vw;
+        font-size:4vw;
         margin: -3em auto 0 auto;
+    }
+
+    .col-md-7 {
+        margin: 3em auto;
     }
 
     .col-md-7 h2 {
@@ -48,12 +67,8 @@
 
     .col-md-7 p {
         font-size: 15px;
-    }
-
-    .col-md-8 {
-        border-bottom: 2px solid grey;
-        border-top: 2px solid grey;
-
+        padding: 0;
+        margin: -1em auto;
     }
 
     .col-md-9 img {
@@ -79,18 +94,9 @@
     }
 }
 
-@media (max-width: 650px) {
- .description,
-    .title{
-        font-size:5vw;
-        padding: 0;
-        background: unset;
-        animation:typing 2s steps(44, end) forwards, blink 1s;
-    }
 
-}
 
-@media (max-width: 260px) {
+@media (max-width: 470px) {
  .description,
     .title{
         font-size:4vw;
@@ -98,5 +104,11 @@
         background: unset;
         animation:typing 2s steps(44, end) forwards, blink 1s;
     }
+    /*.col-md-7 {*/
+    /*    margin: 5em auto;*/
+    /*}*/
 
+    /*.col-md-9 {*/
+    /*    margin-top: -5em;*/
+    /*}*/
 }
