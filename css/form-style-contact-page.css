@@ -24,10 +24,10 @@ footer ul {
 }
 
 footer ul li {
-       text-decoration: none;
-       padding: 0.5em 1.3em;
-       font-size: 1.7em;
-       margin: 0 auto;
+    text-decoration: none;
+    padding: 0.5em 1.3em;
+    font-size: 1.7em;
+    margin: 0 auto;
 }
 
 footer ul li span {
@@ -42,7 +42,7 @@ footer ul li span {
 }
 
 .nav-item {
-    text-align:end;
+    text-align: end;
     display: block;
 }
 
@@ -52,8 +52,8 @@ footer ul li span {
 }
 
 .contact-form {
-    width:40%;
-    margin: 8em auto;
+    width: 40%;
+    margin: 4em auto 0 auto;
 }
 
 
@@ -70,7 +70,7 @@ footer ul li span {
 
 .contact-form h5 {
     color: black;
-    text-align:center;
+    text-align: center;
     font-size: 1.5em;
     font-weight: 900;
     margin-bottom: -0.5em;
@@ -79,26 +79,25 @@ footer ul li span {
 .contact-form h6 {
     color: red;
     font-family: "Honk", system-ui;
-    text-align:center;
+    text-align: center;
     font-size: 1.5em;
     font-weight: 100;
 }
 
 
-
 .mb-5 {
-    height:300px;
+    height: 300px;
 }
 
 .textAreaTest {
-    width:100%;
-    height:6rem;
+    width: 100%;
+    height: 6rem;
 }
 
 #RS-button {
     background-color: #4287f5;
     border-radius: 50%;
-    padding:0.5em;
+    padding: 0.5em;
     font-size: 1.5rem;
     font-weight: 900;
     color: #343a40;
@@ -106,10 +105,10 @@ footer ul li span {
 
 
 #send-btn {
-   display: block;
-   margin: 0 auto 6em auto;
-   font-family: "Shantell Sans", cursive;
-   font-size: 1.2em
+    display: block;
+    margin: 0 auto 6em auto;
+    font-family: "Shantell Sans", cursive;
+    font-size: 1.2em
 
 }
 

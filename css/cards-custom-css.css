@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Tektur:wght@400..900&family=Tilt+Prism&display=swap');
+
+
+body {
+    background-color: #343a40;
+    margin: 0 auto;
+
+}
+
+h1 {
+    font-family: "Tektur", sans-serif;
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+h5 > a {
+    font-size: 2rem;
+    color: black;
+}
+
+.navbar-brand,
+.nav-item {
+    font-family: "Shantell Sans", cursive;
+    border-bottom: 2px solid white;
+}
+
+.nav-item {
+    text-align: end;
+    display: block;
+}
+
+.nav-item:hover {
+    background-color: black;
+    border-radius: 50%;
+}
+
+.carousel {
+    width: 50%;
+    height: auto;
+    margin: 6rem auto;
+}
+
+.card {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*.card-img-top {*/
+/*    height: 30rem;*/
+/*}*/
+
+.card-title {
+    font-family: "Tektur", sans-serif;
+    text-align: center;
+}
+
+.card-text {
+    font-family: "Tektur", sans-serif;
+    text-align: center;
+}
+
+#carouselExampleIndicators {
+    padding-bottom: 5rem;
+}

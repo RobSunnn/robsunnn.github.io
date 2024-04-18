@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Tektur:wght@400..900&family=Tilt+Prism&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Tektur:wght@400..900&family=Tilt+Prism&display=swap');
 
 
 body {
@@ -9,7 +9,6 @@ body {
 }
 
 div {
-
     text-align: center;
 }
 
@@ -26,6 +25,22 @@ img {
     margin: 0 auto;
 }
 
+.navbar-brand,
+.nav-item {
+    font-family: "Shantell Sans", cursive;
+    border-bottom: 2px solid white;
+}
+
+.nav-item {
+    text-align: end;
+    display: block;
+}
+
+.nav-item:hover {
+    background-color: black;
+    border-radius: 50%;
+}
+
 .quotes {
     margin: 0 auto;
     background-color: green;
@@ -33,9 +48,11 @@ img {
 }
 
 #buttons {
-    display: flex;
-    margin: 5em auto 0 auto;
-    justify-content: space-evenly;
+    margin: 0 auto 0 auto;
+    position: relative;
+    width: 900px;
+    top: 50rem;
+    left: 26em;
 }
 
 #quote {

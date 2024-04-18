@@ -11,12 +11,12 @@
     font-family: "Tektur", sans-serif;
     font-size: 2.4rem;
     font-weight: 600;
-    white-space:  nowrap;
+    white-space: nowrap;
     text-align: center;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
-    animation:
-            typing 1.8s steps(44, end) forwards, blink 1s ;
+    animation: typing 1.8s steps(44, end) forwards, blink 1s;
 }
+
 @keyframes typing {
     0% {
         width: 0%
@@ -42,16 +42,15 @@
 .title {
     letter-spacing: 1vw;
     height: 50px;
-    width:60%;
+    width: 60%;
     overflow: hidden;
     margin: 0 auto;
     color: white;
     font-family: "Tilt Prism", sans-serif;
     font-size: 2.5em;
     font-weight: 600;
-    white-space:  nowrap;
+    white-space: nowrap;
     text-align: center;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
-    animation:
-            typing 0.4s steps(44, end) forwards, blink 1s ;
+    animation: typing 2.4s steps(44, end) forwards, blink 1s;
 }

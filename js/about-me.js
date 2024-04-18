@@ -2,11 +2,6 @@ window.addEventListener("load", generatePageAboutMe);
 
 const bodyElement = document.body;
 
-const educationButton = document.createElement('a');
-educationButton.setAttribute('id', 'story-btn');
-educationButton.href = '#';
-educationButton.textContent = 'Education';
-
 const storyButton = document.createElement('a');
 storyButton.setAttribute('id', 'story-btn');
 storyButton.href = '#';
@@ -54,7 +49,6 @@ function generatePageAboutMe() {
         })
 
 
-    buttonsContainer.appendChild(educationButton);
     buttonsContainer.appendChild(timeButton);
     buttonsContainer.appendChild(storyButton);
 
@@ -133,5 +127,4 @@ function createHideButton() {
 function hideButtons() {
     storyButton.remove();
     timeButton.remove();
-    educationButton.remove();
 }

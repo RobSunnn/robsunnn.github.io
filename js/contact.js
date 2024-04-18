@@ -79,7 +79,7 @@ function validateMessage(input) {
 
 
 function clearForms(nameField, emailField, messageField) {
-     nameField.value = '';
-     emailField.value = '';
-     messageField.value = '';
+    nameField.value = '';
+    emailField.value = '';
+    messageField.value = '';
 }
