@@ -10,20 +10,12 @@ img {
     margin: 0 auto;
 }
 
-footer {
-    background-color: #343a40;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    margin-top: auto;
-}
-
 .quotes {
     margin: 6rem auto 2.5rem auto;
     display: flex;
     position: relative;
-    bottom: 8em;
+    bottom: 9rem;
+    width: 70%;
 }
 
 #buttons {
@@ -39,7 +31,7 @@ footer {
     height: auto;
     font-size: 1.1rem;
     font-weight: bold;
-    background-color: #123a40;
+    background-color: royalblue;
     border: 3px solid wheat;
     border-radius: 20%;
     color: white;
