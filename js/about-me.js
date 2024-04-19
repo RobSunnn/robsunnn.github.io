@@ -42,7 +42,7 @@ function generatePageAboutMe() {
            //
            // quoteDivElement.appendChild(quoteElement)
 
-           buttonsContainer.append(quoteElement);
+           // buttonsContainer.append(quoteElement);
            divQuoteElement.appendChild(quoteElement);
        })
 
