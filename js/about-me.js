@@ -1,6 +1,7 @@
 window.addEventListener("load", generatePageAboutMe);
 
 const bodyElement = document.body;
+const divQuoteElement = document.getElementById('quotes')
 
 const storyButton = document.createElement('a');
 storyButton.setAttribute('id', 'story-btn');
@@ -17,46 +18,43 @@ buttonsContainer.setAttribute('id', 'buttons');
 
 function generatePageAboutMe() {
     const ninjasURL = 'https://api.api-ninjas.com/v1/quotes?category=happiness';
-//
-//
-//    fetch(ninjasURL, {
-//        method: 'GET',
-//        headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
-//        contentType: 'application/json',
-//    })
-//        .then(res => res.json())
-//        .then(result => {
-//            const authorOfQuote = result[0].author;
-//            const quote = result[0].quote;
-//
-//
-//            const quoteDivElement = document.getElementsByClassName('quotes')[0];
-//
-//            const authorElement = document.createElement('h3');
-//            authorElement.setAttribute('id', 'quote-author');
-//
-//            authorElement.textContent = `Author: ${authorOfQuote}`;
-//
-//            const quoteElement = document.createElement('p');
-//            quoteElement.setAttribute('id', 'quote');
-//            quoteElement.textContent = `${quote}`;
-//            quoteElement.appendChild(authorElement)
-//
-//            quoteDivElement.appendChild(quoteElement)
-//
-//            bodyElement.appendChild(quoteDivElement);
-//
-//        })
 
 
-    buttonsContainer.appendChild(timeButton);
-    buttonsContainer.appendChild(storyButton);
+   fetch(ninjasURL, {
+       method: 'GET',
+       headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
+       contentType: 'application/json',
+   })
+       .then(res => res.json())
+       .then(result => {
+           const authorOfQuote = result[0].author;
+           const quote = result[0].quote;
 
-    bodyElement.appendChild(buttonsContainer);
+           const authorElement = document.createElement('h3');
+           authorElement.setAttribute('id', 'quote-author');
 
+           authorElement.textContent = `Author: ${authorOfQuote}`;
 
-    storyButton.addEventListener('click', chuckNorris);
-    timeButton.addEventListener('click', getTime);
+           const quoteElement = document.createElement('p');
+           quoteElement.setAttribute('id', 'quote');
+           quoteElement.textContent = `${quote}`;
+           quoteElement.appendChild(authorElement);
+           //
+           // quoteDivElement.appendChild(quoteElement)
+
+           buttonsContainer.append(quoteElement);
+           divQuoteElement.appendChild(quoteElement);
+       })
+
+    //
+    // buttonsContainer.appendChild(timeButton);
+    // buttonsContainer.appendChild(storyButton);
+    //
+    // divQuoteElement.appendChild(buttonsContainer);
+    //
+    //
+    // storyButton.addEventListener('click', chuckNorris);
+    // timeButton.addEventListener('click', getTime);
 
 }
 
@@ -103,7 +101,14 @@ function chuckNorris() {
 
             hideButtons();
 
-            const hideStoryButton = createHideButton();
+            const hideStoryButton = document.createElement('a');
+            hideStoryButton.setAttribute('id', 'story-btn');
+            hideStoryButton.textContent = 'Hide';
+            hideStoryButton.addEventListener('click', () => {
+                htmlDivElement.remove()
+                uncleChuck.remove()
+                hideStoryButton.remove()
+            });
 
             bodyElement.appendChild(uncleChuck)
             bodyElement.appendChild(htmlDivElement);

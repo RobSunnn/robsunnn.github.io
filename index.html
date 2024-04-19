@@ -14,12 +14,16 @@
     <link rel="stylesheet" href="css/custom-styles.css">
     <link rel="stylesheet" href="css/description.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/cards-custom-css.css">
+    <link rel="stylesheet" href="css/about-me-custom-css.css">
+
+    <link rel="stylesheet" href="css/form-style-contact-page.css">
 </head>
 
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
     <div class="container">
         <a class="navbar-brand" href="index.html">My Simple Page</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -28,9 +32,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <!--        <li class="nav-item active">-->
-                <!--          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
-                <!--        </li>-->
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
                 <!--        <li class="nav-item">-->
                 <!--          <a class="nav-link" href="under-development.html">Education</a>-->
                 <!--        </li>-->
@@ -38,17 +42,17 @@
                 <!--          <a class="nav-link" href="under-development.html">Portfolio</a>-->
                 <!--        </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="education.html">Education</a>
+                    <a class="nav-link" href="#carouselExampleIndicators">Education</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Body -->
+<!-- Name and Title -->
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-4">
@@ -57,13 +61,14 @@
         </div>
 
         <div class="col-md-8">
-            <h2 class="description">Hello, my name is Roberto Spasov</h2>
+            <h1 class="description">Hello, my name is Roberto Spasov</h1>
             <p class="title">Web Developer</p>
 
         </div>
     </div>
 </div>
 
+<!-- Journey and Technology -->
 <div class="info-about-me">
 
     <div class="container mt-6">
@@ -113,16 +118,243 @@
     </div>
 </div>
 
+<!-- Education -->
+<h1>Here is my education and the certificates I have obtained from the best academy in Bulgaria</h1>
+
+<!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+    </ol>
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+
+            <div class="card" style="width: 28rem;">
+                <img src="images/basics.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://softuni.bg/certificates/details/125160/ade37b33">Java
+                        Basics</a></h5>
+                    <p class="card-text">This is how my education started with the Programming Basics course. This
+                        course gave me basic coding skills using Java and how to use IDE. Here we started to study about
+                        data types and variables, conditional statements, nested conditional statements, loops, nested
+                        loops, how to debug code, how to work with console. And this is my certificate from this
+                        course.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="carousel-item">
+
+            <div class="card" style="width: 28rem;">
+                <img src="images/fundamentals.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://softuni.bg/certificates/details/169293/1fb49d57">Java
+                        Fundamentals</a></h5>
+                    <p class="card-text">In this course we started to study more complex parts from the Java programming
+                        language like: Arrays, Lists, Methods, Associative Arrays, Text processing, Regular Expressions,
+                        Objects and Classes and this gave me Fundamental knowledge in programming. This is my
+                        certificate from this course.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="carousel-item">
+
+            <div class="card" style="width: 28rem;">
+                <img src="images/advanced.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://softuni.bg/certificates/details/161836/67400029">Java
+                        Advanced</a></h5>
+                    <p class="card-text">Java Advanced course gave me more advanced knowledge in the programming
+                        language Java. Here I learned how to use more advanced features like Multidimensional Arrays,
+                        Stacks and Queues, HashSet, TreeSet, LinkedHashSet And Maps, Streams, Generics Syntax, Generic
+                        Classes and Interfaces, Generic Methods, Iterators and Comparators. And this is my certificate
+                        from this course.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="carousel-item">
+
+            <div class="card" style="width: 28rem;">
+                <img src="images/oop.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://softuni.bg/certificates/details/168988/1526a52d">Java
+                        OOP</a></h5>
+                    <p class="card-text">Now it's getting interesting with the OOP course. Here we learned about the
+                        four pillars of Object Oriented Programming - Abstraction, Encapsulation, Polymorphism,
+                        Inheritance. Also we learned about Reflection and Annotation and how to use them. Exception and
+                        Error handling, Design Patterns, Unit Testing and Test Driven Development were also part from
+                        this course.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="carousel-item">
+
+            <div class="card" style="width: 28rem;">
+                <img src="images/mysql-cert.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://softuni.bg/certificates/details/172158/99896a3c">MySQL
+                        Course</a></h5>
+                    <p class="card-text">In MySQL course we started long education over creating databases and how to
+                        handle with databases. We have learned about: Data Definition and Data Types in MySQL, CRUD
+                        operations, Built-in functions of MySQL, Data Aggregation, Table Relations, Subqueries and
+                        JOINs, Database Programmability and Transactions, Functions and Procedures. This is the
+                        certificate I acquired from this course.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="carousel-item">
+
+            <div class="card" style="width: 28rem;">
+                <img src="images/spring-data.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://softuni.bg/certificates/details/180536/5816b185">Spring Data
+                        Course</a></h5>
+                    <p class="card-text">Spring Data course gave me knowledge how Application to Database Connection
+                        works. We have learned about ORM's and how they are build, also how to use Maven, Hibernate
+                        framework, Java Persistence API, Spring Data, Spring Data Repositories, Spring Data Query
+                        creation, Retrieving Data by Custom Queries, Java Persistence Query Language, Auto Mapping
+                        Objects(Data Transfer objects, Model Mapping), JSON and XML processing and Custom
+                        Configurations.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="carousel-item">
+
+            <div class="card" style="width: 28rem;">
+                <img src="images/spring-fundamentals.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://softuni.bg/certificates/details/191514/eeadc9b7">Spring
+                        Fundamentals</a></h5>
+                    <p class="card-text">In this course we started to build MVC projects using the Spring Framework and
+                        how to deploy them.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="carousel-item">
+
+            <div class="card" style="width: 28rem;">
+                <img src="images/html-css.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://softuni.bg/certificates/details/191514/eeadc9b7">HTML &
+                        CSS</a></h5>
+                    <p class="card-text">This course was all about HTML & CSS and how to add CSS into our HTML
+                        documents. We learned about HTML Tags and Attributes, CSS Syntax and Selectors, about the
+                        Typography in CSS, CSS Properties and Units, Box Model and Position, CSS Layout, Forms and
+                        working with Forms and Responsive Web Design. And this is how I got this idea to make a page to
+                        introduce myself in a proper way.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="carousel-item">
+
+            <div class="card" style="width: 28rem;">
+                <img src="images/js.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://softuni.bg/certificates/details/212506/f08df490">JS
+                        Front-End</a></h5>
+                    <p class="card-text">JS COURSE FRONT END</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Contact Form -->
+<h4>If you want to contact me, you can send me email from here or you can use the links below.</h4>
+
+<form class="contact-form" id="contact">
+    <div class="mb-3">
+        <h5><label for="name" class="form-label">Name:</label></h5>
+        <h6>At least 2 characters ...</h6>
+        <input type="text" autocomplete="on" class="form-control" id="name" placeholder="Your name...">
+    </div>
+    <div class="mb-2">
+        <h5><label for="email" class="form-label">Email address:</label></h5>
+        <h6>Please enter a valid email ...</h6>
+        <input type="email" autocomplete="on" class="form-control" id="email" placeholder="Your email...">
+
+    </div>
+    <div class="mb-4">
+
+        <h5><label for="message">Message:</label></h5>
+        <h6>Please at least say hi :-) ...</h6>
+        <textarea class="form-control" rows="2" id="message" placeholder="Enter your message here..."></textarea>
+    </div>
+
+</form>
+<button type="submit" class="btn btn-primary" id="send-btn">Send mail</button>
+
+<!-- Quotes -->
+<div class="quotes" id="quotes"></div>
 
 <!-- Footer -->
-<div class="footer">
-    <p>&copy; 2024 Made by Roberto Spasov.</p>
-</div>
+<footer class="footer">
+    <div class="footer-text"><p>&copy; 2024 Made by Roberto Spasov.</p></div>
+    <div class="footer-icons"> <ul>
+        <li><a href="https://www.linkedin.com/in/roberto-spasov-3305a4228/"><i
+                class="fa-brands fa-linkedin fa-bounce fa-xl"></i><span>LinkedIn</span></a></li>
+        <li><a href="https://github.com//Robsunnn"><i
+                class="fa-brands fa-github fa-bounce fa-xl"></i><span>GitHub</span></a></li>
+    </ul></div>
+</footer>
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- My Scripts...-->
+<script src="js/contact.js"></script>
+<script src="js/about-me.js"></script>
+<script src="js/navbar.js"></script>
+
+<!-- Mail Scripts...-->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init({
+            publicKey: "BwzIjmmEVLNY7N-2r",
+        });
+    })();
+</script>
 </body>
 
 </html>

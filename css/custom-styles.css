@@ -1,23 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Tektur:wght@400..900&family=Tilt+Prism&display=swap');
 
 body {
-
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../images/poster.jpg);
-    background-color: #343a40;
-    position: relative;
+    background-color: grey;
     background-repeat: no-repeat;
-    background-size: 100% 35%;
-    border-top: 2px solid white;
+    background-size: 100% 13%;
     width: 100%;
     max-width: 100%;
-    height: 380px;
     min-height: 100vh;
+}
 
+h2 {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 1.3rem;
+    padding-bottom: 1.5em;
+    font: 2.5rem/1 "Shantell Sans", cursive;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+    font: 1.8rem/1 "Shantell Sans", cursive;
 }
 
 .footer {
     background-color: #343a40;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
     color: white;
     font-family: "Shantell Sans", cursive;
@@ -25,9 +36,13 @@ body {
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;
+    height: auto;
     border-top: 2px solid white;
-    margin-top: auto;
+    margin-top: 2rem;
+}
+
+.footer-text {
+    margin-top: 2rem;
 }
 
 .navbar-brand,
@@ -36,16 +51,25 @@ body {
     border-bottom: 2px solid white;
 }
 
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
 
 .profile-picture {
     max-width: 100%;
+    position: relative;
     height: auto;
+    margin-top: 5em;
     border-bottom-left-radius: 30%;
     border-top-right-radius: 30%;
 }
 
 .info-about-me {
-    margin: 7em auto;
+    margin: 11rem auto 8rem auto;
 }
 
 .mt-6 {
@@ -54,16 +78,9 @@ body {
 
 
 .col-md-7 {
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     display: flex;
     flex-direction: column;
-}
-
-.col-md-7 h2 {
-    color: grey;
-    margin: 1em auto;
-    font-family: "Shantell Sans", cursive;
-    font-size: 2.5rem;
 }
 
 .col-md-7 p {
@@ -77,34 +94,9 @@ body {
     padding-bottom: 2em;
 }
 
-/*.col-md-5 {*/
-/*    margin: 0 auto;*/
-/*    color: white;*/
-/*    font-size: 1.4rem;*/
-/*    font-family: "Shantell Sans", cursive;*/
-/*    line-height: 1;*/
-/*    text-align: center;*/
-/*    width: fit-content;*/
-/*    padding-bottom: 2em;*/
-/*}*/
-
-/*.col-md-5 h2 {*/
-/*    color: grey;*/
-/*    margin: 1em auto;*/
-/*    font-family: "Shantell Sans", cursive;*/
-/*    font-size: 2.5rem;*/
-/*}*/
-
-/*.col-md-5 p {*/
-/*    margin: 0 auto;*/
-/*    color: white;*/
-/*    font-size: 1.4rem;*/
-/*    font-family: "Shantell Sans", cursive;*/
-/*    line-height: 1;*/
-/*    text-align: center;*/
-/*    width: fit-content;*/
-/*    padding-bottom: 2em;*/
-/*}*/
+.col-md-8 {
+    margin-top: 9em;
+}
 
 .col-md-9 {
     display: flex;
@@ -118,7 +110,6 @@ body {
     padding-top: 1em;
     margin: auto auto;
     background: transparent;
-
 }
 
 .nav-item:hover {

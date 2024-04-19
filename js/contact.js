@@ -34,7 +34,7 @@ function sendMail(e) {
                 alert('@@@@@     Your Message is Sent Successfully! Thank you :-)     @@@@@')
             }
         )
-        .then(clearForms(nameField, emailField, messageField))
+
         .catch(err => console.log(err))
 }
 
