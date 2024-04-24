@@ -27,7 +27,7 @@ function sendMail(e) {
     emailjs.send(serviceID, templateID, params)
         .then(
             (res) => {
-                name.value = '';
+                nameField.value = '';
                 emailField.value = '';
                 messageField.value = '';
                 console.log(res)

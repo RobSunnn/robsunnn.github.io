@@ -15,7 +15,7 @@ h5 > a {
 }
 
 .card {
-    background-color: royalblue;
+    background-color: transparent;
     border-radius: 15%;
     display: flex;
     flex-direction: column;
