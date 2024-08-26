@@ -14,9 +14,6 @@
 
 .slide {
     width: 1200px;
-    height: 900px;
-    flex-shrink: 0;
-
 }
 
 .controls {
@@ -34,7 +31,7 @@
 }
 
 .carousel-indicators .active {
-    background-color: royalblue;
+    background-color: black;
 }
 
 #carouselExampleIndicators {

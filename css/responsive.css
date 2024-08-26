@@ -7,10 +7,11 @@
         animation: typing 2s steps(44, end) forwards, blink 1s;
     }
 }
+
 @media (max-width: 990px) {
     .description,
     .title {
-        font-size:2vw;
+        font-size: 2vw;
         padding: 0;
         background: unset;
         animation: typing 2s steps(44, end) forwards, blink 1s;
@@ -26,9 +27,9 @@
     }
 
     h1,
-    h4{
+    h4 {
         font-size: 1em;
-         margin: -9rem auto;
+        margin: -9rem auto;
     }
 
     .card-title > a {
@@ -44,12 +45,13 @@
         width: 50%;
     }
 
-    .carousel-indicators li {
-    display:none;
+    .carousel {
+        width: 100%;
+        max-width: 100% !important;
     }
 
     .col-md-8 {
-        margin-top: 1em;
+        margin-top: -2em;
     }
 
     .description,
@@ -72,12 +74,12 @@
 
     .mb-2,
     .mb-3,
-    .mb-4{
+    .mb-4 {
         font-size: 0.8em;
     }
 
     .mt-6 {
-    margin-top: 2em;
+        margin-top: 2em;
     }
 
     .card-img-top {
@@ -90,6 +92,7 @@
 
     #contact {
         margin: 11em auto 0 auto;
+        width: 90%;
     }
 
     .quotes {
@@ -109,7 +112,7 @@
 @media (max-width: 273px) {
 
     .navbar-brand {
-        display:none;
+        display: none;
     }
 
     .profile-picture {
@@ -120,13 +123,18 @@
 
 @media (max-width: 615px) {
 
-    h4 {
-            margin: 3em auto 0 auto;
+    body {
+        background-size: 100vw 680px;
+        width: 100%;
+    }
 
+    h4,h1 {
+        margin: 3em auto 0 auto;
+        width: 100% !important;
     }
 
     footer p,
-     footer a{
+    footer a {
         font-size: 0.7rem;
     }
 
@@ -134,29 +142,30 @@
         font-size: 0.35rem;
     }
 
-    .card-title {
-        font-size: 0.4rem;
+    .card-title,
+    .card-text {
+        font-size: 0.8rem;
     }
 
-    #quote  {
-        font-size: 0.7rem;
-     }
+    #quote {
+        font-size: 0.7rem !important;
+    }
 
     #contact {
         margin: 2em auto 0 auto;
-     }
+    }
 }
 
 
 /*@media (max-width: 900px) {*/
 
-    /*.description,*/
-    /*.title {*/
-    /*    font-size: 3vw;*/
-    /*    padding: 0;*/
-    /*    background: unset;*/
-    /*    animation: typing 2s steps(44, end) forwards, blink 1s;*/
-    /*}*/
+/*.description,*/
+/*.title {*/
+/*    font-size: 3vw;*/
+/*    padding: 0;*/
+/*    background: unset;*/
+/*    animation: typing 2s steps(44, end) forwards, blink 1s;*/
+/*}*/
 
 /*    .nav-item {*/
 /*        text-align: end;*/
