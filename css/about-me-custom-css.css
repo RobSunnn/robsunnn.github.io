@@ -16,6 +16,14 @@ img {
     position: relative;
     bottom: 9rem;
     width: 70%;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out;
+}
+
+.quotes.in-view {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 #buttons {

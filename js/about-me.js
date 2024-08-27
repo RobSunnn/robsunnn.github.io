@@ -30,10 +30,6 @@ function generatePageAboutMe() {
            const authorOfQuote = result[0].author;
            const quote = result[0].quote;
 
-           if (quote.length > 200) {
-                return;
-           }
-
            const authorElement = document.createElement('h3');
            authorElement.setAttribute('id', 'quote-author');
 

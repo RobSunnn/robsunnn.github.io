@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Tektur:wght@400..900&family=Tilt+Prism&display=swap');
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/poster.jpg);
-    background-color: #0e6ca1;
-    background-repeat: no-repeat;
+    background: linear-gradient(to right, rgba(43, 41, 41, 0.9), rgba(65, 70, 87, 0.9), rgba(105, 135, 224, 0.9));,
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    background-blend-mode: darken;
     background-size: 100vw 1200px;
     width: 100%;
-    max-width: 100%;
     min-height: 100vh;
+    margin: 0;
 }
+
 
 h2 {
     color: white;
@@ -44,7 +44,7 @@ footer {
     width: 100%;
     height: auto;
     border-top: 2px solid white;
-    margin-top: 2rem;
+    margin-top: 7rem;
 }
 
 
@@ -104,6 +104,15 @@ footer ul li span {
 
 .info-about-me {
     margin: 5rem auto 10rem auto;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+
+.info-about-me.in-view {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .mt-6 {

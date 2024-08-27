@@ -4,6 +4,8 @@ sendButton.addEventListener('click', sendMail);
 
 function sendMail(e) {
 
+    e.preventDefault();
+    
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
     const messageField = document.getElementById('message');
@@ -27,10 +29,7 @@ function sendMail(e) {
     emailjs.send(serviceID, templateID, params)
         .then(
             (res) => {
-                nameField.value = '';
-                emailField.value = '';
-                messageField.value = '';
-                console.log(res)
+                clearForms(nameField, emailField, messageField);
                 alert('@@@@@     Your Message is Sent Successfully! Thank you :-)     @@@@@')
             }
         )

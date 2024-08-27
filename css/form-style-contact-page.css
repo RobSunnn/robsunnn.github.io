@@ -7,6 +7,14 @@
 .contact-form {
     width: 40%;
     margin: 4em auto 0 auto;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.contact-form.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contact-form h4 {
