@@ -1,10 +1,28 @@
-let prevScrollPos = window.pageYOffset;
-window.onscroll = function() {
-    let currentScrollPos = window.pageYOffset;
+let prevScrollPos = window.scrollY;
+
+function collapseNavbar() {
+    let navbarToggle = document.querySelector('.navbar-toggler');
+    let navbarCollapse = document.querySelector('.navbar-collapse');
+
+    if (navbarCollapse.classList.contains('show')) {
+        navbarToggle.click(); // Programmatically click the toggle to collapse the navbar
+    }
+}
+
+document.addEventListener('click', function (event) {
+    let clickInside = document.getElementById('navbar').contains(event.target);
+    if (!clickInside) {
+        collapseNavbar();
+    }
+});
+
+window.addEventListener('scroll', function () {
+    let currentScrollPos = window.scrollY;
     if (prevScrollPos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
     } else {
-        document.getElementById("navbar").style.top = "-500px";
+        collapseNavbar();
+        document.getElementById("navbar").style.top = "-400px";
     }
     prevScrollPos = currentScrollPos;
-}
+});

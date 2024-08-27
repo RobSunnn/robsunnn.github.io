@@ -3,7 +3,6 @@ const sendButton = document.getElementById('send-btn');
 sendButton.addEventListener('click', sendMail);
 
 function sendMail(e) {
-
     e.preventDefault();
     
     const nameField = document.getElementById('name');
@@ -14,15 +13,20 @@ function sendMail(e) {
     const validEmail = validateEmail(emailField.value);
     const validMessage = validateMessage(messageField.value);
 
-    if (nameField.value === '' || emailField.value === '' || messageField.value === '' ||
-        !validName || !validEmail || !validMessage) return;
+    if (!validName) {
+        return;
+    }
+
+
 
     let params = {
         name: nameField.value,
         email: emailField.value,
         message: messageField.value,
     };
-
+    emailjs.init({
+        publicKey: "BwzIjmmEVLNY7N-2r",
+    });
     const serviceID = 'service_3m9okqc';
     const templateID = 'template_gexa6zi';
 

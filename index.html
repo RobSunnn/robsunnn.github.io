@@ -70,7 +70,7 @@
             <div class="col-md-7">
                 <h2><i class="fa-solid fa-code"></i> Technology I use <i class="fa-solid fa-code"></i></h2>
 
-                <p>I know I have a lot to learn, but I have some knowledge in this technologies and I want to
+                <p>I know I have a lot to learn, but I have some knowledge in these technologies and I want to
                     continue my studies, so I will :)</p>
 
             </div>
@@ -417,41 +417,8 @@
 <script src="js/contact.js"></script>
 <script src="js/about-me.js"></script>
 <script src="js/navbar.js"></script>
-
-
+<script src="js/animation.js"></script>
 <!-- Mail Scripts...-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-    (function () {
-        emailjs.init({
-            publicKey: "BwzIjmmEVLNY7N-2r",
-        });
-    })();
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const elementsToAnimate = [
-            { element: document.querySelector('.info-about-me'), class: 'in-view' },
-            { element: document.querySelector('.carousel-container'), class: 'in-view' },
-            { element: document.querySelector('.contact-form'), class: 'in-view'},
-            { element: document.querySelector('.quotes'), class: 'in-view'}
-        ];
-
-        function checkInView() {
-            elementsToAnimate.forEach(item => {
-                const rect = item.element.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    item.element.classList.add(item.class);
-                }
-            });
-        }
-
-        window.addEventListener('scroll', checkInView);
-        checkInView(); // Check initially in case any element is already in view
-    });
-</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
-
 </html>

@@ -44,11 +44,8 @@ img {
     border-radius: 20%;
     color: white;
     position: absolute;
-    margin: 0 auto;
+    margin: 3em auto;
     letter-spacing: 0.1rem;
-    /*bottom: 3em;*/
-    /*left: 1em;*/
-
 }
 
 #quote-author {

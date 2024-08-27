@@ -68,8 +68,11 @@
 
     .footer {
         position: relative;
-        bottom: -3em;
         font-size: 1em;
+    }
+
+    .footer-icons ul li a {
+        font-size: 0.8em;
     }
 
     .mb-2,
@@ -136,6 +139,10 @@
     footer p,
     footer a {
         font-size: 0.7rem;
+    }
+
+    footer a i {
+        font-size: 1.5rem;
     }
 
     .card-text {
