@@ -10,14 +10,17 @@ function sendMail(e) {
     const messageField = document.getElementById('message');
 
     const validName = validateName(nameField.value);
-    const validEmail = validateEmail(emailField.value);
-    const validMessage = validateMessage(messageField.value);
-
     if (!validName) {
-        return;
-    }
-
-
+            return;
+        }
+    const validEmail = validateEmail(emailField.value);
+    if (!validEmail) {
+            return;
+        }
+    const validMessage = validateMessage(messageField.value);
+    if (!validMessage) {
+            return;
+        }
 
     let params = {
         name: nameField.value,
