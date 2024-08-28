@@ -18,3 +18,34 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', checkInView);
     checkInView(); // Check initially in case any element is already in view
 });
+
+const educationBtn = document.getElementById("education-btn");
+const contactBtn = document.getElementById("contact-btn");
+const homeBtn = document.getElementById("home-btn");
+
+const btnArr = [educationBtn, contactBtn, homeBtn];
+
+btnArr.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (btn.id === "education-btn") {
+            document.getElementById("carouselExampleIndicators").scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+                inline: "nearest"
+            });
+        } else if (btn.id === "contact-btn") {
+            document.getElementById("contact").scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+                inline: "nearest"
+            });
+        } else {
+            document.getElementById("name-and-title").scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+                inline: "nearest"
+            });
+        }
+    })
+})
