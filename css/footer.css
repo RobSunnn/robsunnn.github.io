@@ -6,12 +6,12 @@ footer {
     color: white;
     font-family: "Shantell Sans", cursive;
     font-size: 1.3em;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: auto;
     border-top: 2px solid white;
-    margin-top: 2rem;
+    margin-top:12rem;
 }
 
 
