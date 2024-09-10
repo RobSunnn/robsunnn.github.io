@@ -1,0 +1,30 @@
+.navbar-custom {
+    background: linear-gradient(90deg, black, royalblue);
+    width: 100%;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16m-7 6h7"/></svg>');
+}
+
+#navbarNav {
+    justify-content: flex-end;
+}
+
+#navbarNav ul li a {
+    color: black;
+    border: 1px solid black;
+    border-radius: 20%;
+    margin-right: 0.3em;
+}
+
+#navbarNav ul li a:hover {
+    color: white !important;
+    background-color: darkslategrey;
+    transform: scale(1.3);
+}

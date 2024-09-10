@@ -3,60 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Simple Page</title>
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-    <!-- Bootstrap CSS -->
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <title>I'm Roberto Spasov</title>
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- My CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">My Simple Page</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" id="home-btn">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <!--        <li class="nav-item">-->
-                <!--          <a class="nav-link" href="under-development.html">Portfolio</a>-->
-                <!--        </li>-->
-                <li class="nav-item">
-                    <a class="nav-link" href="#carouselExampleIndicators" id="education-btn">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact" id="contact-btn">Contact</a>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand" href="#"><img src="images/favicon-32x32.png" alt="RS"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Education</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
     </div>
 </nav>
-
-<!-- Name and Title -->
-<div class="container mt-5" id="name-and-title">
+<!-- Name And Title-->
+<div class="container name-and-title">
     <div class="row">
-        <div class="col-md-4">
-            <img src="images/me.jpg" alt="Profile Picture" class="img-fluid profile-picture p-3 bg-body-tertiary">
-        </div>
         <div class="col-md-8">
             <h1 class="description">Hello, my name is Roberto Spasov</h1>
             <p class="title">Web Developer</p>
         </div>
+        <div class="col-md-4">
+            <img src="images/photo_2024-09-08_20-18-19.jpg" alt="Profile Picture"
+                 class="img-fluid profile-picture p-3 bg-body-tertiary">
+        </div>
     </div>
 </div>
-<!-- Journey and Technology -->
+
+<!-- Name And Title-->
 <div class="info-about-me">
     <div>
-        <div class="row">
-            <div class="col-md-7">
+        <div>
+            <div class="col-md-7 journey">
                 <h2> My Journey </h2>
                 <p>While my professional path has led me through diverse companies and roles, it was in the realm of
                     programming that I discovered my true calling. The creativity, problem-solving, and endless
@@ -65,18 +58,16 @@
         </div>
     </div>
     <div>
-        <div class="row">
-            <div class="col-md-7">
-                <h2><i class="fa-solid fa-code"></i> Technology I use <i class="fa-solid fa-code"></i></h2>
-                <p>I know I have a lot to learn, but I have some knowledge in these technologies and I want to
-                    continue my studies, so I will :)</p>
+        <div>
+            <div class="col-md-7 journey">
+                <h2><i class="fa-solid fa-code"></i> Technologies I use <i class="fa-solid fa-code"></i></h2>
+
             </div>
         </div>
     </div>
     <div class="container mt-8">
         <div class="row">
-            <div class="col-md-9">
-
+            <div class="technologies">
                 <img src="images/java.png" alt="java">
                 <img src="images/spring-3-logo-png-transparent.png" alt="spring">
                 <img src="images/mysql.png" alt="mysql">
@@ -87,274 +78,7 @@
         </div>
     </div>
 </div>
-<!-- Education -->
-<h1 class="mt-5">Here is my education and the certificates I have obtained from the best academy in Bulgaria</h1>
-<!-- Carousel -->
-<div id="carouselExampleIndicators" class="carousel-container carousel slide" data-ride="carousel" data-interval="8000">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="card" style="width: 33rem;">
-                <img src="images/spring-advanced.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/223730/0fcad70e">Spring Advanced</a>
-                    </h5>
-                    <p class="card-text">This comprehensive course dives deep into the Spring Framework, focusing on
-                        essential skills and advanced techniques for modern application development.
-                        Throughout the course, we learn the principles of REST APIs, how to build and consume them,
-                        how to
-                        secure our applications by integrating Spring Security, how to handle errors effectively,
-                        unit and integration tests.</p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card" style="width: 33rem;">
-                <img src="images/spring-fundamentals.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/191514/eeadc9b7">Spring Fundamentals</a>
-                    </h5>
-                    <p class="card-text">In this course we started to build MVC projects using the Spring Framework,
-                        also we learned about the Spring MVC Controllers,
-                        State management(cookies and sessions), http protocol and what is web server.
-                        We were using Thymeleaf for Template Engine for dynamic generation of HTMLs, also how to
-                        validate
-                        fields in our HTML Forms using the Spring stereotype annotations.</p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item ">
-            <div class="card" style="width: 33rem;">
-                <img src="images/containers-and-cloud.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/224760/49044736">Containers and Cloud</a>
-                    </h5>
-                    <p class="card-text">This course offers a deep dive into modern DevOps practices, focusing on
-                        containers, cloud technologies, and infrastructure management. By the end of this course, we
-                        have acquired the skills to efficiently deploy, manage, and monitor applications in a cloud
-                        environment. We have learned about Containers and Docker, Docker Compose, Container
-                        Orchestration, Cloud computing, Infrastructure as a code and how to use Terraform.</p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item ">
 
-            <div class="card" style="width: 33rem;">
-                <img src="images/software-engineering-and-DevOps.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/219752/ebe2dc93">DevOps</a>
-                    </h5>
-                    <p class="card-text">This course provides an in-depth exploration of Software Engineering
-                        practices and the DevOps culture, equipping us with the tools and techniques necessary to
-                        streamline development and operations workflows. We have learned about, Version control with
-                        Git, Automated Testing, Continuous Integration and Continuous Deployment.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="carousel-item">
-
-            <div class="card" style="width: 33rem;">
-                <img src="images/spring-data.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/180536/5816b185">Spring Data Course</a>
-                    </h5>
-                    <p class="card-text">Spring Data course gave me knowledge how Application to Database Connection
-                        works. We have learned about ORM's and how they are build, also how to use Maven, Hibernate
-                        framework, Java Persistence API, Spring Data, Spring Data Repositories, Spring Data Query
-                        creation, Retrieving Data by Custom Queries, Java Persistence Query Language, Auto Mapping
-                        Objects(Data Transfer objects, Model Mapping), JSON and XML processing and Custom
-                        Configurations.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="carousel-item">
-
-            <div class="card" style="width: 33rem;">
-                <img src="images/mysql-cert.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/172158/99896a3c">MySQL Course</a>
-                    </h5>
-                    <p class="card-text">In MySQL course, we started a long education over creating databases and
-                        how to
-                        handle with databases.
-                        We have learned about Data Definition and Data Types in MySQL, CRUD
-                        operations, Built-in functions of MySQL, Data Aggregation, Table Relations, Subqueries and
-                        JOINs, Transactions, Functions and Procedures.
-                        This is the
-                        certificate I acquired from this course.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="carousel-item">
-
-            <div class="card" style="width: 33rem;">
-                <img src="images/oop.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/168988/1526a52d">Java OOP</a>
-                    </h5>
-                    <p class="card-text">Now it's getting interesting with the OOP course. Here we learned about the
-                        four pillars of Object-Oriented Programming — Abstraction, Encapsulation, Polymorphism, and
-                        Inheritance. Also, we learned about Reflection and Annotation and how to use them. Exception
-                        and
-                        Error handling, Design Patterns, Unit Testing and Test-Driven Development were also part of
-                        this course.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="carousel-item">
-
-            <div class="card" style="width: 33rem;">
-                <img src="images/advanced.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/161836/67400029">Java Advanced</a>
-                    </h5>
-                    <p class="card-text">Java Advanced course gave me more advanced knowledge in the programming
-                        language Java. Here I learned how to use more advanced features like Multidimensional
-                        Arrays,
-                        Stacks and Queues, HashSet, TreeSet, LinkedHashSet And Maps, Streams, Generics Syntax,
-                        Generic
-                        Classes and Interfaces, Generic Methods, Iterators and Comparators. And this is my
-                        certificate
-                        from this course.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="carousel-item">
-
-            <div class="card" style="width: 33rem;">
-                <img src="images/fundamentals.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/169293/1fb49d57">Java Fundamentals</a>
-                    </h5>
-                    <p class="card-text">In this course, we started to study more complex parts of the Java
-                        programming
-                        language like: Arrays, Lists, Methods, Associative Arrays, Text processing, Regular
-                        Expressions,
-                        Objects and Classes, and this gave me Fundamental knowledge in programming.
-                        This is my certificate from this course.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="carousel-item ">
-
-            <div class="card" style="width: 33rem;">
-                <img src="images/basics.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/125160/ade37b33">Java Basics</a>
-                    </h5>
-                    <p class="card-text">This is how my education started with the Programming Basics course. This
-                        course gave me basic coding skills using Java and how to use IDE. Here we started to study
-                        about
-                        data types and variables, conditional statements, nested conditional statements, loops,
-                        nested
-                        loops, how to debug code, how to work with console. And this is my certificate from this
-                        course.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="carousel-item">
-            <div class="card" style="width: 33rem;">
-                <img src="images/html-css.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/191514/eeadc9b7">HTML & CSS</a>
-                    </h5>
-                    <p class="card-text">This course was all about HTML & CSS and how to add CSS into our HTML
-                        documents. We learned about HTML Tags and Attributes, CSS Syntax and Selectors, about the
-                        Typography in CSS, CSS Properties and Units, Box Model and Position, CSS Layout, Forms and
-                        working with Forms and Responsive Web Design. And this is how I got this idea to make a page
-                        to
-                        introduce myself in a proper way.</p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card" style="width: 33rem;">
-                <img src="images/js.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/212506/f08df490">JS Front-End</a>
-                    </h5>
-                    <p class="card-text">In this course, we learned about JavaScript and how
-                        to use JavaScript at the front end of a web application.
-                        We learned how to use
-                        Arrays, Strings, Objects and Functions in JavaScript, also we learned about
-                        Document Object Model and how to make events and to manipulate a DOM tree
-                        and a little bit about Browser Object Model, also we learned about HTTP and
-                        REST services and Asynchronous programming and how to use AJAX. </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-<!-- Contact Form -->
-<h4>If you want to contact me, you can email me from here, or you can use the links below.</h4>
-<form class="contact-form" id="contact">
-    <div class="mb-3">
-        <h5><label for="name" class="form-label">Name:</label></h5>
-        <h6>At least two characters ...</h6>
-        <input type="text" autocomplete="on" class="form-control" id="name" placeholder="Your name...">
-    </div>
-    <div class="mb-2">
-        <h5><label for="email" class="form-label">Email address:</label></h5>
-        <h6>Please enter a valid email ...</h6>
-        <input type="email" autocomplete="on" class="form-control" id="email" placeholder="Your email...">
-    </div>
-    <div class="mb-4">
-        <h5><label for="message">Message:</label></h5>
-        <h6>Please at least say hi :-) ...</h6>
-        <textarea class="form-control" rows="2" id="message" placeholder="Enter your message here..."></textarea>
-    </div>
-</form>
-<button type="submit" class="btn btn-primary" id="send-btn">Send mail</button>
-<h2 class="text-center">Random Quote</h2>
-<!-- Quotes -->
-<div class="quotes" id="quotes"></div>
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-icons">
@@ -377,18 +101,10 @@
         <p>&copy; 2024 Made by Roberto Spasov.</p>
     </div>
 </footer>
-<!-- Bootstrap JS and dependencies -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- My Scripts...-->
-<script src="js/contact.js"></script>
-<script src="js/about-me.js"></script>
-<script src="js/navbar.js"></script>
 <script src="js/animation.js"></script>
-
-
-<!-- Mail Scripts...-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 </html>

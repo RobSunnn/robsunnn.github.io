@@ -1,0 +1,41 @@
+footer {
+    background: linear-gradient(to right, rgba(43, 41, 41, 0.9), rgba(65, 70, 87, 0.9), rgba(105, 135, 224, 0.9));
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+    font-family: "Shantell Sans", cursive;
+    font-size: 1.3em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    border-top: 2px solid white;
+    margin-top: 2rem;
+}
+
+
+footer ul {
+    display: flex;
+    list-style: none outside;
+}
+
+footer ul li {
+    text-decoration: none;
+    padding: 0.5em 1.3em;
+    font-size: 1.5em;
+    margin: 0 auto;
+}
+
+footer ul li span {
+    display: none;
+}
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-text {
+    margin-top: 2rem;
+}

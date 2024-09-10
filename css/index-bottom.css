@@ -1,0 +1,41 @@
+.name-and-title {
+    margin-top: 7em ;
+}
+
+.info-about-me {
+    margin: 2em auto 10rem auto;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.info-about-me.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.journey  {
+    margin: 0 auto;
+    color: white;
+    font-size: 1.4rem;
+    font-family: "Shantell Sans", cursive;
+    line-height: 1;
+    text-align: center;
+    width: fit-content;
+    padding-bottom: 2em;
+}
+
+.technologies {
+    display: flex;
+    height: auto;
+    margin: 0 auto;
+    background: linear-gradient(to right, rgba(43, 41, 41, 0.9), rgba(65, 70, 87, 0.9), rgba(105, 135, 224, 0.9));
+    border-radius: 30%;
+    padding: 1em 0;
+}
+
+.technologies img {
+    width: 8%;
+    height: 80%;
+    margin: auto auto;
+}
