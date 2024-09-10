@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Simple Page</title>
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -23,7 +22,7 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Education</a>
+                <a class="nav-link" href="education.html">Education</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
@@ -34,14 +33,29 @@
 <!-- Name And Title-->
 <div class="name-and-title-container">
     <div class="container name-and-title">
-        <div class="row">
-            <div class="col-md-8">
-                <h1 class="description">Hello, my name is Roberto Spasov</h1>
-                <p class="title">Web Developer</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/photo_2024-09-08_20-18-19.jpg" alt="Profile Picture"
-                     class="img-fluid profile-picture p-3 bg-body-tertiary">
+        <div class="name-and-title">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="description">Hello, my name is Roberto Spasov!</h1>
+                    <p class="title">Web Developer</p>
+                    <div class="container journey">
+                        <h2><i class="fa-solid fa-code"></i> Technologies I use <i class="fa-solid fa-code"></i></h2>
+                        <div class="row">
+                            <div class="technologies">
+                                <img src="images/java.png" alt="java">
+                                <img src="images/spring-3-logo-png-transparent.png" alt="spring">
+                                <img src="images/mysql.png" alt="mysql">
+                                <img src="images/java-script.png" alt="js">
+                                <img src="images/html-5.png" alt="html">
+                                <img src="images/css-3.png" alt="css">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/photo_2024-09-08_20-18-19.jpg" alt="Profile Picture"
+                         class="img-fluid profile-picture p-3 bg-body-tertiary">
+                </div>
             </div>
         </div>
     </div>
@@ -49,36 +63,14 @@
 
 <!-- Name And Title-->
 <div class="info-about-me">
-    <div>
-        <div>
-            <div class="col-md-7 journey">
-                <h2> My Journey </h2>
-                <p>While my professional path has led me through diverse companies and roles, it was in the realm of
-                    programming that I discovered my true calling. The creativity, problem-solving, and endless
-                    possibilities inherent in coding captured my heart and mind like nothing else.</p>
-            </div>
-        </div>
+    <div class="container col-md-7 journey">
+        <h2> My Journey </h2>
+        <p>While my professional path has led me through diverse companies and roles, it was in the realm of
+            programming that I discovered my true calling. The creativity, problem-solving, and endless
+            possibilities inherent in coding captured my heart and mind like nothing else.</p>
     </div>
-    <div>
-        <div>
-            <div class="col-md-7 journey">
-                <h2><i class="fa-solid fa-code"></i> Technologies I use <i class="fa-solid fa-code"></i></h2>
 
-            </div>
-        </div>
-    </div>
-    <div class="container mt-8">
-        <div class="row">
-            <div class="technologies">
-                <img src="images/java.png" alt="java">
-                <img src="images/spring-3-logo-png-transparent.png" alt="spring">
-                <img src="images/mysql.png" alt="mysql">
-                <img src="images/java-script.png" alt="js">
-                <img src="images/html-5.png" alt="html">
-                <img src="images/css-3.png" alt="css">
-            </div>
-        </div>
-    </div>
+
 </div>
 
 <!-- Footer -->

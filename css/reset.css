@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, black, royalblue)  no-repeat center center fixed;
+    background: linear-gradient(to bottom, #05170d, royalblue)  no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

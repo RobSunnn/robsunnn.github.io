@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Tektur:wght@400..900&family=Tilt+Prism&display=swap');
-.name-and-title-container {
-    max-width: 100%;
-    border-bottom-left-radius: 30%;
-    border-top-right-radius: 30%;
-}
+
+/*.name-and-title-container {*/
+/*    max-width: 100%;*/
+/*    border-bottom-left-radius: 30%;*/
+/*    border-top-right-radius: 30%;*/
+/*}*/
+
 .profile-picture {
-    max-width: 100%;
+    width: 500px;
+    max-height: 500px;
+    margin-top: 3em;
     border-bottom-left-radius: 30%;
     border-top-right-radius: 30%;
 }
 
 .name-and-title {
+    margin-top: 7em;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
-    animation: typing 1.3s steps(44, end) forwards;
-    background: url("/images/poster.jpg");
-    min-height: 450px;
-    max-width: 80vw;
+    animation: typing 1s steps(500, end) forwards 0.3s;
+    max-width: 100vw;
+    transition: clip-path 0.3s ease-in-out;
 }
 
 .name-and-title::before {
@@ -25,10 +29,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 80%;
-    background: url("/images/poster.jpg") border-box;
+    min-height: 100vh;
+    background: url("/images/poster.jpg") no-repeat center;
+    background-size: cover;
     filter: blur(5px) brightness(0.5) contrast(1);
 }
+
 .description {
     height: auto;
     width: 150%;
@@ -38,19 +44,31 @@
     font-family: "Tektur", sans-serif;
     font-size: 2.3em;
     font-weight: 600;
-    text-align: center;
+
     white-space: nowrap;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
-    animation: typing 1.8s steps(44, end) forwards;
+    /*animation: typing 1s steps(50, start) forwards 0.3s, fadeIn 0.4s ;*/
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @keyframes typing {
     0% {
-        width: 0%;
+        width: 0;
+        opacity: 0;
     }
-
     100% {
         width: 100%;
+        opacity: 1;
     }
 }
 
@@ -65,9 +83,8 @@
     font-size: 2.2em;
     font-weight: 900;
     white-space: nowrap;
-    text-align: center;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
-    animation: typing 2.4s steps(44, end) forwards, blink 1s;
+    animation: typing 2.4s steps(50, end) forwards;
 }
 
 .blur-image {

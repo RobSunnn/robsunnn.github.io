@@ -5,7 +5,7 @@
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
-    color: #fff;
+    color: #fff ;
 }
 
 .navbar-custom .navbar-toggler-icon {
@@ -21,6 +21,8 @@
     border: 1px solid black;
     border-radius: 20%;
     margin-right: 0.3em;
+    background-color: white ;
+
 }
 
 #navbarNav ul li a:hover {

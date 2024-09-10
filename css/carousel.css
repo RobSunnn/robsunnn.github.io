@@ -1,0 +1,51 @@
+.carousel {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10%;
+    min-height: 700px;
+}
+
+.carousel-item {
+    width: 100%;
+}
+
+.carousel-card {
+    display: flex;
+    margin: 0 auto;
+}
+
+.carousel-card-text {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.carousel-card-body {
+    width: 100%;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+.control {
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    margin: 0 5px;
+}
+
+.carousel-indicators .active {
+    background-color: black;
+}
+
+#carouselExampleIndicators {
+    margin: auto auto;
+}

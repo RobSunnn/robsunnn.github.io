@@ -1,27 +1,22 @@
-.name-and-title {
-    margin-top: 7em ;
-}
-
 .info-about-me {
     margin: 2em auto 10rem auto;
     opacity: 0;
-    transform: translateX(-300px);
+    transform: translateX(-500px);
 }
 
 .info-about-me.in-view {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .journey  {
-    margin: 0 auto;
+    margin: 2em auto;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-family: "Shantell Sans", cursive;
     line-height: 1;
     text-align: center;
-    width: fit-content;
     padding-bottom: 2em;
 }
 
