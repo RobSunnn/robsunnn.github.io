@@ -5,13 +5,13 @@
 .info-about-me {
     margin: 2em auto 10rem auto;
     opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    transform: translateX(-300px);
 }
 
 .info-about-me.in-view {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .journey  {
