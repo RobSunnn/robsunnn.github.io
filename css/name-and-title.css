@@ -3,6 +3,7 @@
 
 .name-and-title-container {
     max-width: 100%;
+    margin-top: 5em;
 }
 
 .profile-picture {
@@ -29,7 +30,7 @@
 .name-and-title {
      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
      max-width: 100vw;
-     transition: clip-path 0.3s ease-in-out;
+     transition: clip-path ease-in-out;
  }
 
 .title {
@@ -74,30 +75,18 @@
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        visibility: hidden;
+
         color: black;
     }
     100% {
         opacity: 1;
-        visibility: visible;
+
         color: white;
     }
 }
 @keyframes typing {
   0% { width: 0; }
-  10% { width: 10%; }
-  20% { width: 20%; }
-  30% { width: 30%; }
-  40% { width: 40%; }
-  50% { width: 50%; }
-  60% { width: 60%; }
-  70% { width: 70%; }
-  80% { width: 80%; }
-  90% { width: 90%; }
+
   100% { width: 100%; }
 }
 
-@keyframes blink {
-  0%, 100% { border-right-color: transparent; }
-  50% { border-right-color: black; }
-}

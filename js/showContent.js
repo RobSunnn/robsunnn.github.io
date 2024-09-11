@@ -1,7 +1,9 @@
 const buttons = Array.from(document.getElementsByClassName('nav-link'));
 buttons.forEach(button => button.addEventListener('click', (e) => {
+    e.preventDefault();
     const page = e.target.textContent;
     const content = document.getElementById('content');
+
     let newContent = '';
 
     // Change the content based on the clicked link
@@ -12,7 +14,7 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
                     <p>This is the home page content. Enjoy browsing!</p>
                 `;
             break;
-        case 'about':
+        case 'Contact':
             newContent = `
                     <h2>About Us</h2>
                     <p>Learn more about our company and team.</p>
@@ -280,7 +282,6 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
         </button>
     </div>
 </div>
-
                 `;
             break;
         case 'Contact':
@@ -294,10 +295,13 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
 
     content.classList.remove('fadeIn');
 
-
+    setTimeout(() => {
+        content.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }, 50);
     setTimeout(() => {
         content.innerHTML = newContent;
         content.classList.add('fadeIn');
+        content.scrollIntoView({behavior: 'smooth', block: 'center'});
     }, 500);
 }))
 
