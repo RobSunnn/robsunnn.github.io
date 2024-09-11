@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     function checkInView() {
-        console.log(elementsToAnimate);
+
         elementsToAnimate.forEach(item => {
             const rect = item.element.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom > 0) {

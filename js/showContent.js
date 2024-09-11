@@ -1,18 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Education</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/carousel.css">
-</head>
-<body>
-<div class="heading">
-    <h1 class="mt-5">Here is my education and the certificates I have obtained from the best academy in Bulgaria</h1>
-</div>
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+const buttons = Array.from(document.getElementsByClassName('nav-link'));
+buttons.forEach(button => button.addEventListener('click', (e) => {
+    const page = e.target.textContent;
+    const content = document.getElementById('content');
+    let newContent = '';
+
+    // Change the content based on the clicked link
+    switch (page) {
+        case 'Home':
+            newContent = `
+                    <h2>Home Page</h2>
+                    <p>This is the home page content. Enjoy browsing!</p>
+                `;
+            break;
+        case 'about':
+            newContent = `
+                    <h2>About Us</h2>
+                    <p>Learn more about our company and team.</p>
+                `;
+            break;
+        case 'Education':
+            newContent = `
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <!-- Indicators -->
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -272,7 +280,24 @@
         </button>
     </div>
 </div>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+                `;
+            break;
+        case 'Contact':
+            newContent = `
+                    <h2>Contact Us</h2>
+                    <p>Feel free to reach out for any inquiries or support.</p>
+                `;
+            break;
+    }
+
+
+    content.classList.remove('fadeIn');
+
+
+    setTimeout(() => {
+        content.innerHTML = newContent;
+        content.classList.add('fadeIn');
+    }, 500);
+}))
+

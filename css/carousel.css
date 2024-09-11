@@ -28,8 +28,7 @@ body {
 }
 
 .carousel-card {
-
-    max-width: 900px;
+    max-width: 1200px;
     height: 600px;
     margin: 5em auto;
     display: flex;
@@ -47,16 +46,22 @@ body {
     padding: 15px;
     background-color: white;
     text-align: center;
+    width: 900px;
 }
 
 .card-title {
-    margin-top: 1em;
+    margin-top: 3em;
+}
+
+.card-title a {
+    font-size: 1.5em;
 }
 
 .carousel-card-text {
-    width: 80%;
-    height: 300px;
+    width: 100%;
+    height: 500px;
     margin: 2em auto;
+    color: black;
 }
 
 .carousel-item {
@@ -72,6 +77,31 @@ body {
     animation: fadeIn 1.5s ease-in-out forwards;
 }
 
+.carousel-control-next, .carousel-control-prev {
+    height: 300px;
+    align-self: center;
+    width: 5%;
+    color: black;
+}
+
+.carousel-control-next {
+    right: 30px;
+}
+
+.carousel-control-prev {
+    left: 30px;
+}
+
+.carousel-indicators button {
+    width: 30px;
+    margin-right: 10px;
+    color: white;
+}
+
+.visually-hidden {
+    display: none;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -80,7 +110,7 @@ body {
         opacity: 1;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .carousel-card {
         flex-direction: column;
     }
