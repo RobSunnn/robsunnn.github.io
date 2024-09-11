@@ -15,4 +15,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
     min-height: 100vh;
+        background: url("/images/poster.jpg") no-repeat center;
+
 }
