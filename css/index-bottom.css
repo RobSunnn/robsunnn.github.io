@@ -16,4 +16,20 @@
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
+.content-container {
+    margin: 2em auto 2em auto;
+    color: white;
+    font-size: 1.7rem;
+    font-family: "Shantell Sans", cursive;
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(500px);
+}
 
+.content-container.in-view {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
