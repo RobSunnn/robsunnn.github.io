@@ -9,7 +9,7 @@
 }
 
 .carousel-card {
-    max-width: 1200px;
+    max-width: 80%;
     height: 600px;
     margin: 5em auto;
     display: flex;
@@ -55,7 +55,7 @@
 }
 
 .carousel-item {
-    animation: fadeIn 1.5s ease-in-out forwards;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -90,5 +90,28 @@
 @media (max-width: 1200px) {
     .carousel-card {
         flex-direction: column;
+        width: 72%;
+        max-width: 70%;
+        height: auto;
+    }
+
+    .carousel-card-body {
+        width: 100%;
+        padding: 0;
+    }
+
+    /*.carousel-card img {*/
+    /*    height: 400px;*/
+    /*    object-fit: contain;*/
+    /*    width: 100%;*/
+    /*}*/
+
+    .card-title {
+        margin-top: 0;
+    }
+
+    .carousel-card-text {
+        font-size: 0.7em;
+        max-height: 100px;
     }
 }

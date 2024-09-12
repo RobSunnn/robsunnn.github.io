@@ -7,7 +7,7 @@ footer {
     font-family: "Shantell Sans", cursive;
     font-size: 1.3em;
     position: relative;
-    bottom: 0;
+    bottom: -60px;
     width: 100%;
     height: auto;
     border-top: 2px solid white;
