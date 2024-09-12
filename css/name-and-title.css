@@ -119,3 +119,26 @@
     line-height: 1;
     text-align: center;
 }
+
+@media (max-width: 900px ) {
+    .name-and-title-container {
+        font-size: 0.7em;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .technologies-wrapper .row {
+        flex-direction: column !important;
+    }
+
+    .technologies-wrapper .row h2 {
+        font-size: 0.8em;
+    }
+
+    .name-and-title .row {
+        flex-direction: column-reverse;
+    }
+
+}

@@ -25,11 +25,11 @@
     text-align: center;
     width: 100%;
     opacity: 0;
-    transform: translateX(500px);
+    transform: translateY(500px);
 }
 
 .content-container.in-view {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }

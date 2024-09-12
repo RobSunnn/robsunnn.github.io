@@ -3,10 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Honk&family=Jersey+15&family=Nabla&family=Platypi:ital,wght@0,300..800;1,300..800&family=Seymour+One&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Tektur:wght@400..900&family=Tilt+Prism&display=swap');
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .contact-form {
     width: 60%;
     margin: 4em auto 0 auto;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 .contact-form.in-view {
@@ -22,7 +31,6 @@
 }
 
 .contact-form h5 {
-    color: black;
     text-align: center;
     font-size: 1em;
     font-weight: 900;
