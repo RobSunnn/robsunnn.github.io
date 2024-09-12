@@ -18,3 +18,11 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 1200px) {
+
+    h5,h6 {
+        font-size: 0.6em !important;
+    }
+
+}

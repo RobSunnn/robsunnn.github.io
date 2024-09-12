@@ -90,14 +90,12 @@
 
 @media (max-width: 1200px) {
     .carousel-card {
-        flex-direction: column;
-        width: 72%;
-        max-width: 70%;
+        flex-wrap: wrap;
         height: auto;
     }
 
     .carousel-item {
-        width: 60%;
+        width: 80%;
     }
 
     .carousel-card-body {
