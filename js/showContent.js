@@ -1,4 +1,7 @@
+import { createContactForm } from '/js/createContactForm.js';
+
 const buttons = Array.from(document.getElementsByClassName('nav-link'));
+
 buttons.forEach(button => button.addEventListener('click', (e) => {
     e.preventDefault();
     const page = e.target.textContent;
@@ -6,7 +9,6 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
 
     let newContent = '';
 
-    // Change the content based on the clicked link
     switch (page) {
         case 'Home':
             newContent = `
@@ -15,14 +17,14 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
                 `;
             break;
         case 'Contact':
-            newContent = `
-                    <h2>About Us</h2>
-                    <p>Learn more about our company and team.</p>
-                `;
+            setTimeout(() => {
+                content.innerHTML = '';
+                content.append(createContactForm());
+            }, 500);
             break;
         case 'Education':
             newContent = `
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <!-- Indicators -->
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -284,24 +286,23 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
 </div>
                 `;
             break;
-        case 'Contact':
-            newContent = `
-                    <h2>Contact Us</h2>
-                    <p>Feel free to reach out for any inquiries or support.</p>
-                `;
-            break;
     }
-
 
     content.classList.remove('fadeIn');
 
     setTimeout(() => {
         content.scrollIntoView({behavior: 'smooth', block: 'center'});
     }, 50);
+
     setTimeout(() => {
-        content.innerHTML = newContent;
+        //Here I check for new content length because I need to know which button is pressed
+        //to know which content to show
+        if (newContent.length > 0) {
+            content.innerHTML = newContent;
+        }
         content.classList.add('fadeIn');
         content.scrollIntoView({behavior: 'smooth', block: 'center'});
     }, 500);
 }))
+
 

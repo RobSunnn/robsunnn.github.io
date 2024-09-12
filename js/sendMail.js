@@ -1,8 +1,4 @@
-const sendButton = document.getElementById('send-btn');
-
-sendButton.addEventListener('click', sendMail);
-
-function sendMail(e) {
+export function sendMail(e) {
     e.preventDefault();
     
     const nameField = document.getElementById('name');
@@ -41,9 +37,7 @@ function sendMail(e) {
                 clearForms(nameField, emailField, messageField);
                 alert('@@@@@     Your Message is Sent Successfully! Thank you :-)     @@@@@')
             }
-        )
-
-        .catch(err => console.log(err))
+        ).catch(err => console.log(err))
 }
 
 function validateEmail(input) {
@@ -70,7 +64,6 @@ function validateName(input) {
     alert("------>    Please enter your name. :-)    <------");
 
     return false;
-
 }
 
 function validateMessage(input) {
@@ -84,7 +77,6 @@ function validateMessage(input) {
 
     return false;
 }
-
 
 function clearForms(nameField, emailField, messageField) {
     nameField.value = '';
