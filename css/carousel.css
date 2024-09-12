@@ -87,6 +87,7 @@
         opacity: 1;
     }
 }
+
 @media (max-width: 1200px) {
     .carousel-card {
         flex-direction: column;
@@ -95,10 +96,16 @@
         height: auto;
     }
 
+    .carousel-item {
+        width: 60%;
+    }
+
     .carousel-card-body {
         width: 100%;
         padding: 0;
+        font-size: 0.8em;
     }
+
 
     /*.carousel-card img {*/
     /*    height: 400px;*/

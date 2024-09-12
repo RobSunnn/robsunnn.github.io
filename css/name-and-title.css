@@ -43,7 +43,7 @@
     max-width: 100%;
     position: absolute;
     margin-top: 5em;
-    top: 20%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -120,7 +120,27 @@
     text-align: center;
 }
 
-@media (max-width: 900px ) {
+.container {
+    padding: 0;
+}
+
+@media (max-width: 1366px ) {
+     .info-about-me {
+         margin-top: 13em  !important;
+     }
+
+     .carousel-card img {
+         height: 35vh !important;
+         zoom: 1.5;
+     }
+}
+
+@media (max-width: 992px ) {
+
+    main {
+        margin-top: 5em;
+    }
+
     .profile-picture {
         max-height: 350px;
         margin-top: 5em;
@@ -129,16 +149,19 @@
     .name-and-title-container {
         font-size: 0.7em;
         position: relative;
-        top: 0;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
-    /*.technologies {*/
-    /*    display: flex;*/
-    /*    flex-wrap: wrap;*/
-    /*    gap: 0.6em;*/
-    /*}*/
+    .name-and-title-container .row {
+        align-items: center;
+    }
+
+    technologies {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 0.6em;
+    }
 
     .technologies img {
         width: 13%;
@@ -157,6 +180,56 @@
 
     .name-and-title .row {
         flex-direction: column-reverse;
+    }
+
+    .info-about-me {
+        margin-top: -13em  !important;
+     }
+
+     .carousel-card img{
+        height: 40vh !important;
+        zoom: 1.5;
+     }
+}
+
+@media (max-width: 500px ) {
+
+    .technologies-wrapper .row h2 {
+        font-size: 0.5em;
+    }
+
+    .technologies img {
+        display: block;
+        width: 13%;
+    }
+
+    .my-name {
+        font-size: 2em;
+    }
+
+    .info-about-me {
+        margin-top: -14em !important;
+    }
+
+    .title{
+        width: 100%;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    h2, p {
+        font-size: 0.6em;
+    }
+
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .footer-icons ul {
+        flex-wrap: wrap;
+        font-size: 0.9em;
+        margin-left: -2em;
     }
 
 }

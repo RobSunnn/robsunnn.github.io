@@ -95,7 +95,7 @@ export function createContactForm() {
     // Create the button
     const sendButton = document.createElement('button');
     sendButton.type = 'submit';
-    sendButton.classList.add('btn', 'btn-primary', 'send-btn');
+    sendButton.classList.add('btn', 'btn-primary', 'btn-lg', 'send-btn');
 
     sendButton.innerText = 'Send mail';
 
