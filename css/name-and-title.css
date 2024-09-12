@@ -124,7 +124,7 @@
     padding: 0;
 }
 
-@media (max-width: 1366px ) {
+@media (max-width: 1360px ) {
      .info-about-me {
          margin-top: 13em  !important;
      }
