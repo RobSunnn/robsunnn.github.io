@@ -9,9 +9,9 @@
     align-items: center;
 }
 
-.navbar-collapse {
-    justify-content: end;
-}
+/*.navbar-collapse {*/
+/*    justify-content: end;*/
+/*}*/
 
 .navbar-brand img {
     max-height: 10px !important;
@@ -52,8 +52,4 @@
     padding: 10px;
     z-index: 4000;
     transition: top 0.4s !important;
-}
-
-#box {
-    margin-right: 20px;
 }
