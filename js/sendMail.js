@@ -27,9 +27,11 @@ function sendMail(e) {
         email: emailField.value,
         message: messageField.value,
     };
+
     emailjs.init({
         publicKey: "BwzIjmmEVLNY7N-2r",
     });
+
     const serviceID = 'service_3m9okqc';
     const templateID = 'template_gexa6zi';
 
