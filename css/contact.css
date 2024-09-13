@@ -13,8 +13,13 @@
 }
 
 .contact-form {
-    width: 60%;
-    margin: 4em auto 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 3em;
+    align-self: center;
+    align-content: center;
+    border: 3px solid black;
+    /*margin: 4em auto 0 auto;*/
     animation: fadeIn 2s ease-in-out forwards;
 }
 
@@ -28,14 +33,16 @@
     font-family: "Yanone Kaffeesatz", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
+    color: black;
 }
 
 .contact-form h5 {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 900;
     margin-bottom: -0.5em;
     margin-top: 1.5em;
+    color: black;
 }
 
 .contact-form h6 {
@@ -43,18 +50,65 @@
     text-align: center;
     font-size: 1em;
     font-weight: 100;
+    color: black;
+}
+.contact-form .mb-4 h5 label {
+    margin-bottom: 10px;
+}
+.contact-form h6:hover {
+    transform: scale(1.3);
 }
 
+.content {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+    gap: 0;
+    width: 70%;
+    margin: 5em auto;
+    height: auto;
+}
+
+.contact-form {
+    background-color: white;
+}
+
+.quote {
+    width: 50%;
+    height: auto;
+    border: 3px solid black;
+    background-color: #76756c;
+    color: white;
+    align-content: center;
+}
 
 #send-btn {
     display: block;
-    margin: 0 auto 8em auto;
+    margin: 0 auto;
     font-family: "Shantell Sans", cursive;
     font-size: 1.2em
 
 }
 
 #send-btn:hover {
-    transform: scale(1.3);
+    transform: scale(1.5);
+}
+
+#quote {
+    font-family: "Shantell Sans", cursive;
+    font-size: 1.2em;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 3em auto;
+}
+
+#quote-author {
+    font-family: "Shantell Sans", cursive;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#quote-author a {
+    color: #daf5ff;
 }
 

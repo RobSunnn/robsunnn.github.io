@@ -1,4 +1,5 @@
-import { createContactForm } from '/js/createContactForm.js';
+import {createContactForm} from '/js/createContactForm.js';
+import {fetchQuote} from '/js/fetchData.js';
 
 const buttons = Array.from(document.getElementsByClassName('nav-link'));
 
@@ -17,10 +18,16 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
                 `;
             break;
         case 'Contact':
-            setTimeout(() => {
-                content.innerHTML = '';
-                content.append(createContactForm());
-            }, 500);
+
+            content.innerHTML = '';
+            content.append(createContactForm());
+
+            const fetchQuoteScript = document.createElement('script');
+            fetchQuoteScript.src = '/js/fetchData.js';
+            fetchQuoteScript.type = 'module';
+            document.body.appendChild(fetchQuoteScript);
+            fetchQuote();
+
             break;
         case 'Education':
             newContent = `

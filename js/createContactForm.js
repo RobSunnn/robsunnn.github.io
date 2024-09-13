@@ -2,25 +2,21 @@ import { sendMail } from '/js/sendMail.js';
 
 export function createContactForm() {
     const contactFormContainer = document.createElement('div');
+    contactFormContainer.classList.add('content');
 
     // Dynamically append a script to the document
-
-
     const mailScript = document.createElement('script');
     mailScript.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
     mailScript.async = true;
     mailScript.type = 'text/javascript';
     document.body.appendChild(mailScript);
 
-    // const aboutMeScript = document.createElement('script');
-    // aboutMeScript.src = '/js/fetchData.js';
-    // aboutMeScript.async = true;
-    // document.body.appendChild(aboutMeScript);
 
-    // Create the main heading
-    const heading = document.createElement('h4');
-    heading.innerText = 'If you want to contact me, you can email me from here, or you can use the links below.';
-    contactFormContainer.appendChild(heading);
+
+    // // Create the main heading
+    // const heading = document.createElement('h4');
+    // heading.innerText = 'If you want to contact me, you can email me from here, or you can use the links below.';
+    // contactFormContainer.appendChild(heading);
 
     // Create the form element
     const form = document.createElement('form');
@@ -99,10 +95,14 @@ export function createContactForm() {
 
     sendButton.innerText = 'Send mail';
 
+    const quote = document.createElement('div');
+    quote.classList.add('quote');
+    quote.id = 'quotes';
 
     // Append the form and button to the container
+    form.appendChild(sendButton);
     contactFormContainer.appendChild(form);
-    contactFormContainer.appendChild(sendButton);
+    contactFormContainer.appendChild(quote);
 
     sendButton.addEventListener('click', (e) => {
         sendMail(e)

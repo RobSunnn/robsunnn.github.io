@@ -41,6 +41,10 @@ export function sendMail(e) {
 }
 
 function validateEmail(input) {
+    if (input.length > 100) {
+        alert("Your email is too long, please use different one.\nThank you.");
+        return false;
+    }
     let validRegex = /[A-Za-z0-9_-]+@[A-Za-z-]{2,}\.[A-Za-z]+/gm;
     let validEmail = input.match(validRegex);
 
@@ -54,7 +58,11 @@ function validateEmail(input) {
 }
 
 function validateName(input) {
-    let validRegex = /[A-Za-z0-9+_.-]{2,100}/gm;
+    // if (input.length > 100) {
+    //     alert("Your name is too long, please write your name initials.\nThank you.");
+    //     return false;
+    // }
+    let validRegex = /[A-Za-z0-9+_.-]{2,}/gm;
     let validName = input.match(validRegex);
 
     if (validName) {
@@ -67,6 +75,11 @@ function validateName(input) {
 }
 
 function validateMessage(input) {
+    if (input.length > 400) {
+        alert("Your message is too long, please write something shorter. :)\nThank you.");
+        return false;
+    }
+
     let validRegex = /[A-Za-z0-9+_.-]{2,}/gm;
     let validMessage = input.match(validRegex);
 
