@@ -43,7 +43,7 @@
     max-width: 100%;
     position: absolute;
     margin-top: 5em;
-    top: 35%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -124,7 +124,7 @@
     padding: 0;
 }
 
-@media (max-width: 1500px ) {
+@media (max-width: 1350px ) {
      .info-about-me {
          margin-top: 13em  !important;
      }
