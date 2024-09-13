@@ -112,3 +112,20 @@
     color: #daf5ff;
 }
 
+@media (max-width: 992px) {
+    .content {
+        width: 95%;
+    }
+    .contact-form {
+        padding: 0.3em;
+    }
+    .quote {
+        width: 60%;
+    }
+    #quote {
+        font-size: 0.4em;
+    }
+    #quote-author {
+        font-size: 0.4em;
+    }
+}

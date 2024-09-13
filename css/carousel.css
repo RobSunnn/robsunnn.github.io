@@ -4,6 +4,11 @@
     color: white;
 }
 
+.carousel {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .carousel-item {
     margin: 0;
 }
@@ -19,7 +24,7 @@
 }
 
 .carousel-card img {
-    width: 100%;
+    width: 80%;
     height: 600px;
 }
 
