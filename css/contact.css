@@ -46,10 +46,6 @@
 }
 
 .contact-form h6 {
-    font-family: "Honk", system-ui;
-    text-align: center;
-    font-size: 1em;
-    font-weight: 100;
     color: black;
 }
 
@@ -76,7 +72,7 @@
 }
 
 .quote {
-    width: 50%;
+    width: 75%;
     height: auto;
     border: 3px solid black;
     background-color: #76756c;
@@ -100,16 +96,18 @@
 
 #quote {
     font-family: "Shantell Sans", cursive;
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-align: center;
     width: 80%;
     margin: 0 auto 3em auto;
 }
-
+"Sadness is a very interesting idea, this idea of sadness being some kind of default setting that artists will go into. And then I started thinking about this idea of sadness and happiness, and the idea that sadness is very loud, and happiness is quiet."
 #quote-author {
     font-family: "Shantell Sans", cursive;
     text-align: center;
     text-decoration: underline;
+    font-size: 1.5em;
+
 }
 
 #quote-author a {
@@ -136,9 +134,9 @@
         width: 60%;
     }
     #quote {
-        font-size: 0.4em;
+        font-size: 0.7em;
     }
     #quote-author {
-        font-size: 0.4em;
+        font-size: 0.7em;
     }
 }

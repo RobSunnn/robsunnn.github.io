@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        /* styles.css */
+
+/* Basic styling for the popup window */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure the popup is above other content */
+}
+
+/* Styling for the close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+/* Styling for the overlay */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Ensure the overlay is below the popup */
+}
+
+    </style>
+</head>
+<body>
+<!-- Field that will trigger the popup -->
+<input type="text" id="triggerField" placeholder="Click me for a popup">
+
+<!-- Popup window -->
+<div id="popup" class="popup">
+    <span id="closeBtn" class="close-btn">&times;</span>
+    <p>This is the popup content!</p>
+</div>
+
+<script>
+    // script.js
+
+// Get the elements
+const triggerField = document.getElementById('triggerField');
+const popup = document.getElementById('popup');
+const closeBtn = document.getElementById('closeBtn');
+
+// Show the popup when the field is clicked
+triggerField.addEventListener('click', function() {
+    popup.style.display = 'block';
+});
+
+// Hide the popup when the close button is clicked
+closeBtn.addEventListener('click', function() {
+    popup.style.display = 'none';
+});
+
+// Optional: Hide the popup if the user clicks outside of it
+window.addEventListener('click', function(event) {
+    if (event.target === popup) {
+        console.log('event.target')
+        popup.style.display = 'none';
+    }
+});
+
+</script>
+</body>
+</html>

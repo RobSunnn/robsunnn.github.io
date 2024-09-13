@@ -15,9 +15,22 @@
 // const buttonsContainer = document.createElement('div');
 // buttonsContainer.setAttribute('id', 'buttons');
 
-export function fetchQuote() {
+export async function fetchQuote() {
     const ninjasURL = 'https://api.api-ninjas.com/v1/quotes?category=happiness';
     const divQuoteElement = document.getElementById('quotes');
+
+    const messageLabel = document.createElement('h4');
+    messageLabel.classList.add('typing-effect');
+
+    divQuoteElement.append(messageLabel);
+
+    messageLabel.innerText = 'Fetching random quote for you ...';
+    await delay(2500);
+    messageLabel.innerText = 'Your quote is';
+    await delay(1000);
+    divQuoteElement.innerText = '';
+
+    messageLabel.remove();
 
     fetch(ninjasURL, {
         method: 'GET',
@@ -43,9 +56,30 @@ export function fetchQuote() {
             quoteElement.setAttribute('id', 'quote');
             quoteElement.textContent = `"${quote}"`;
 
+
             divQuoteElement.appendChild(quoteElement);
             divQuoteElement.appendChild(authorElement);
+
+            if (quote.length > 270) {
+
+            const quote = document.getElementById("quote");
+            const currentFontSize = window.getComputedStyle(quote).fontSize;
+            const currentFontSizeValue = parseFloat(currentFontSize);
+            const reduction = 2.2;
+
+            const newFontSize = currentFontSizeValue / reduction;
+
+            quote.style.fontSize = `${newFontSize}px`;
+
+            }
+
         });
+}
+
+// Function that returns a Promise that resolves after a given time
+function delay(ms, message) {
+
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 // function getTime() {

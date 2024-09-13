@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const elementsToAnimate = [
         { element: document.querySelector('.info-about-me'), class: 'in-view' },
-        { element: document.querySelector('.content-container'), class: 'in-view' },
+//        { element: document.querySelector('.content-container'), class: 'in-view' },
 
     ];
 

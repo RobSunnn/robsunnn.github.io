@@ -19,10 +19,10 @@
 
 .hero {
     width: 100%;
-    min-height: 50vh;
+    min-height: 80vh;
     background: url("/images/poster.jpg") no-repeat center;
     background-size: cover;
-    filter: blur(2px) brightness(0.7) contrast(1);
+    filter: blur(3px) brightness(0.7) contrast(1);
 }
 
 .blur-image {
