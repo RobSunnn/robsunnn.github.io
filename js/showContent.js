@@ -1,5 +1,5 @@
-import {createContactForm} from '/js/createContactForm.js';
-import {fetchQuote} from '/js/fetchData.js';
+import { createContactForm } from '/js/createContactForm.js';
+import { fetchQuote } from '/js/fetchData.js';
 
 const buttons = Array.from(document.getElementsByClassName('nav-link'));
 
