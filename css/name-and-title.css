@@ -22,7 +22,7 @@
     min-height: 50vh;
     background: url("/images/poster.jpg") no-repeat center;
     background-size: cover;
-    filter: blur(5px) brightness(0.5) contrast(1);
+    filter: blur(2px) brightness(0.7) contrast(1);
 }
 
 .blur-image {
@@ -217,9 +217,9 @@
 
 }
 
-@media only screen and (min-width: 320px) and (max-width: 992px) and (min-height: 380px) {
+@media only screen and (max-width: 992px) and (min-height: 480px) {
     .name-and-title-container {
-        transform: translate(-50%, 0);
+        transform: translate(-50%, -30%);
     }
 
     main > .container {
