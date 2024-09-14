@@ -119,9 +119,9 @@
 /*     }*/
 /*}*/
 
-@media only screen and (max-width: 390px) and (min-height: 840px) {
+@media  screen and (max-width: 380px) and (max-height: 670px) {
     main {
-        margin-top: 3em;
+        margin-top: 13em;
     }
     .profile-picture {
         max-height: 350px;
@@ -169,10 +169,31 @@
      }
 }
 
-@media only screen and (max-width: 992px) and (max-height: 450px) {
+@media only screen and (max-width: 670px) and (max-height: 380px) {
+
+    .name-and-title-container {
+        font-size: 0.7em;
+        position: relative;
+        margin-top: 2em;
+        transform: translate(-50%, -42%);
+    }
 
     .profile-picture {
-        margin-top: 10em;
+        width: 300px;
+        height: 300px;
+        margin-top: 7em;
+    }
+
+    .col-md-4 {
+        text-align: center;
+    }
+
+    .name-and-title .row {
+        flex-direction: column-reverse;
+    }
+
+    .technologies-wrapper .row {
+        flex-direction: column !important;
     }
 
     .title {
@@ -180,7 +201,7 @@
         margin-bottom: 1em;
     }
     .info-about-me {
-        margin-top: 7em  !important;
+        margin-top: -10em  !important;
     }
 }
 
