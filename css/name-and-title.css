@@ -48,6 +48,10 @@
     transform: translate(-50%, -50%);
 }
 
+.name-and-title .row {
+    align-items: center;
+}
+
 .name-and-title {
     margin-top: 5em;
 }
@@ -113,12 +117,6 @@
     padding: 0;
 }
 
-/*@media (max-width: 1350px ) {*/
-/*     .info-about-me {*/
-/*         margin-top: 13em  !important;*/
-/*     }*/
-/*}*/
-
 @media screen and (max-width: 435px) and (max-height: 940px) {
     /*main {*/
     /*    margin-top: 13em;*/
@@ -175,6 +173,8 @@
         font-size: 0.7em;
         position: relative;
         transform: translate(-50%, -42%);
+        margin-top: -18em;
+        margin-bottom: 8em;
     }
 
     .profile-picture {
@@ -185,11 +185,6 @@
 
     .col-md-4 {
         text-align: center;
-    }
-
-    .name-and-title .row {
-        flex-direction: column-reverse;
-        align-items: center;
     }
 
     .technologies-wrapper .row {
