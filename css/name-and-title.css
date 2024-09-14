@@ -119,11 +119,13 @@
 /*     }*/
 /*}*/
 
-@media only screen and (max-width: 450px) and (min-height: 900px) {
-
-
+@media only screen and (max-width: 390px) and (min-height: 840px) {
+    main {
+        margin-top: 3em;
+    }
     .profile-picture {
         max-height: 350px;
+        margin-top: 13em;
     }
 
     .name-and-title-container {
