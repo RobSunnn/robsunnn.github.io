@@ -131,11 +131,16 @@
 
     .contact-form {
         height: 90vh;
-        padding: 0;
+        padding: 0.3em;
     }
 
-    .contact-form h4 {
+    .contact-form h4{
         margin-bottom: 0 !important;
+        font-size: 0.9em;
+    }
+
+    .contact-form h6 {
+        font-size: 0.6em;
     }
 }
 
