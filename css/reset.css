@@ -19,6 +19,16 @@ body {
     flex-direction: column;
 }
 
+
+.hero {
+    width: 100%;
+    min-height: 80vh;
+    background: url("/images/poster.jpg") no-repeat center;
+    background-size: cover;
+    filter: blur(3px) brightness(0.7) contrast(1);
+}
+
+
 @media (max-width: 1200px) {
 
     h5,h6 {

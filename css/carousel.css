@@ -64,6 +64,10 @@
     color: white;
 }
 
+.carousel-indicators {
+    margin-bottom: 4em;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -75,7 +79,8 @@
 
 @media screen and (max-width: 1380px) and (max-height: 780px) {
     .carousel-card {
-        height: 400px;
+        height: 350px;
+        align-content: center;
     }
 
     .carousel-card-text {

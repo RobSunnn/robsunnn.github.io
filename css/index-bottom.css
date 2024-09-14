@@ -43,3 +43,17 @@
 /*    line-height: 1;*/
 /*    text-align: center;*/
 /*}*/
+.btn-list {
+    width: 50%;
+    margin: 0 auto;
+}
+.btn-list ul {
+    display: flex;
+    list-style: none outside;
+    justify-content: center;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: white;
+}

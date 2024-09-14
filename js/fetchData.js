@@ -15,6 +15,7 @@
 // const buttonsContainer = document.createElement('div');
 // buttonsContainer.setAttribute('id', 'buttons');
 
+
 export async function fetchQuote() {
     const ninjasURL = 'https://api.api-ninjas.com/v1/quotes?category=happiness';
     const divQuoteElement = document.getElementById('quotes');
@@ -78,7 +79,6 @@ export async function fetchQuote() {
 
 // Function that returns a Promise that resolves after a given time
 function delay(ms, message) {
-
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
