@@ -65,7 +65,7 @@ export async function fetchQuote() {
                 const quote = document.getElementById("quote");
                 const currentFontSize = window.getComputedStyle(quote).fontSize;
                 const currentFontSizeValue = parseFloat(currentFontSize);
-                const reduction = 2.2;
+                const reduction = 1.5;
 
                 const newFontSize = currentFontSizeValue / reduction;
 

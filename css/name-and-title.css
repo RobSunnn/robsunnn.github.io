@@ -62,13 +62,9 @@
 }
 
 .profile-picture {
-    width: 500px;
-    max-height: 500px;
-    margin-top: 3em;
     border-bottom-left-radius: 30%;
     border-top-right-radius: 30%;
 }
-
 
 .title {
     letter-spacing: 0.5vw;
@@ -117,11 +113,16 @@
     padding: 0;
 }
 
-@media screen and (max-width: 670px) and (max-height: 380px) {
-
-    main {
-        margin-top: 10em;
+@media screen and (max-width: 1380px) and (max-height: 780px) {
+    .profile-picture {
+        margin-top: 5em;
     }
+    #quote {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 670px) and (max-height: 380px) {
 
     .name-and-title-container .row {
         flex-direction: column-reverse;
@@ -129,7 +130,52 @@
 
 }
 
+@media screen and (max-width: 770px) {
+    .name-and-title-wrapper {
+        transform: translateY(-30%);
+    }
+
+    .name-and-title-container .row {
+        flex-direction: column-reverse;
+    }
+
+    .name-and-title-container {
+        font-size: 0.7em;
+        position: relative;
+    }
+
+    .profile-picture {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .technologies-wrapper row {
+        flex-direction: column;
+    }
+
+    .technologies-and-name {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .name-and-title-wrapper {
+        transform: translateY(-10%);
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .name-and-title-wrapper {
+        transform: translateY(-7%);
+    }
+}
+
 @media screen and (max-width: 435px) and (max-height: 940px) {
+    .hero {
+        min-height: 60vh;
+    }
 
     .profile-picture {
         max-height: 350px;
@@ -178,9 +224,6 @@
 }
 
 @media screen and (max-width: 940px) and (max-height: 440px) {
-    main {
-        margin-top: 5em;
-    }
 
     .name-and-title-container {
         font-size: 0.7em;

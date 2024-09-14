@@ -113,6 +113,34 @@
 #quote-author a {
     color: #daf5ff;
 }
+@media screen and (max-width: 1380px) and (max-height: 780px) {
+    label {
+        display: none;
+    }
+
+    .contact-form {
+        height: 360px;
+        padding: 0;
+        font-size: 0.8em;
+    }
+
+    .contact-form h4 {
+        margin-bottom: 1em !important;
+    }
+
+    .form-control {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #quote {
+        font-size: 0.6em;
+    }
+
+    #quote-author {
+        font-size: 0.7em;
+    }
+}
 
 @media screen and (max-width: 940px) and (max-height: 435px) {
     .content {

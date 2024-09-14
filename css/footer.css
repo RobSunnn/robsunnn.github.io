@@ -39,3 +39,15 @@ footer ul li span {
 .footer-text {
     margin-top: 2rem;
 }
+
+@media (max-width: 500px) {
+        .footer {
+            flex-wrap: wrap;
+        }
+
+        .footer-icons ul {
+            flex-wrap: wrap;
+            font-size: 0.9em;
+            margin-left: -2em;
+        }
+}
