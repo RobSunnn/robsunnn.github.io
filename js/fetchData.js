@@ -62,14 +62,14 @@ export async function fetchQuote() {
 
             if (quote.length > 270) {
 
-            const quote = document.getElementById("quote");
-            const currentFontSize = window.getComputedStyle(quote).fontSize;
-            const currentFontSizeValue = parseFloat(currentFontSize);
-            const reduction = 2.2;
+                const quote = document.getElementById("quote");
+                const currentFontSize = window.getComputedStyle(quote).fontSize;
+                const currentFontSizeValue = parseFloat(currentFontSize);
+                const reduction = 2.2;
 
-            const newFontSize = currentFontSizeValue / reduction;
+                const newFontSize = currentFontSizeValue / reduction;
 
-            quote.style.fontSize = `${newFontSize}px`;
+                quote.style.fontSize = `${newFontSize}px`;
 
             }
 
