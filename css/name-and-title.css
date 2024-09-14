@@ -178,6 +178,9 @@
 }
 
 @media screen and (max-width: 940px) and (max-height: 440px) {
+    main {
+        margin-top: 5em;
+    }
 
     .name-and-title-container {
         font-size: 0.7em;
@@ -209,61 +212,3 @@
         margin-top: -10em  !important;
     }
 }
-
-/*@media (max-width: 500px ) {*/
-/*    main {*/
-/*        margin-top: 0;*/
-/*    }*/
-
-/*    .technologies-wrapper .row h2 {*/
-/*        font-size: 0.5em;*/
-/*    }*/
-
-/*    .technologies img {*/
-/*        display: block;*/
-/*        width: 13%;*/
-/*    }*/
-
-/*    .my-name {*/
-/*        font-size: 2em;*/
-/*    }*/
-
-/*    .info-about-me {*/
-/*        margin-top: -14em !important;*/
-/*    }*/
-
-/*    .title{*/
-/*        width: 100%;*/
-/*        font-size: 1.4em;*/
-/*        text-align: center;*/
-/*    }*/
-
-/*    h2, p {*/
-/*        font-size: 0.6em;*/
-/*    }*/
-
-
-/*    .footer {*/
-/*        flex-wrap: wrap;*/
-/*    }*/
-
-/*    .footer-icons ul {*/
-/*        flex-wrap: wrap;*/
-/*        font-size: 0.9em;*/
-/*        margin-left: -2em;*/
-/*    }*/
-
-/*}*/
-
-/*@media only screen and (max-width: 992px) and (min-height: 480px) {*/
-/*    main {*/
-/*        margin-top: -12em;*/
-/*    }*/
-/*    !*.name-and-title-container {*!*/
-/*    !*    transform: translate(-50%, -30%);*!*/
-/*    !*}*!*/
-
-/*    !*main > .container {*!*/
-/*    !*    margin-top: 20em;*!*/
-/*    !*}*!*/
-/*}*/
