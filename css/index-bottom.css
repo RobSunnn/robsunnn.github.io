@@ -35,27 +35,4 @@
     transform: translateY(10%);
 }
 
-/*.content-container {*/
-/*    width: 100%;*/
-/*    margin: 5em auto;*/
-/*    color: white;*/
-/*    font-size: 1.7rem;*/
-/*    font-family: "Shantell Sans", cursive;*/
-/*    line-height: 1;*/
-/*    text-align: center;*/
-/*}*/
-.btn-list {
-    width: 50%;
-    margin: 0 auto;
-}
 
-.btn-list ul {
-    display: flex;
-    list-style: none outside;
-    justify-content: center;
-}
-
-.btn-link {
-    text-decoration: none;
-    color: white;
-}

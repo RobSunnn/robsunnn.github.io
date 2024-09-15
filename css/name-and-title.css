@@ -21,6 +21,15 @@
     }
 }
 
+@keyframes typing-2 {
+    10% {
+        height: 10%;
+    }
+    60% {
+        height: 60%;
+    }
+}
+
 .blur-image {
     filter: blur(5px);
 }
@@ -31,6 +40,10 @@
 
 .typing-effect {
     animation: typing 1.5s steps(50, jump-both) forwards;
+}
+
+.typing-effect-2 {
+    animation: typing-2 1.5s steps(50, jump-both) forwards;
 }
 
 .black-to-white {
