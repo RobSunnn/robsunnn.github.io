@@ -1,4 +1,4 @@
-import { sendMail } from '/js/sendMail.js';
+import {sendMail} from '/js/sendMail.js';
 
 export function createContactForm() {
     const contactFormContainer = document.createElement('div');
@@ -11,10 +11,10 @@ export function createContactForm() {
     mailScript.type = 'text/javascript';
     document.body.appendChild(mailScript);
 
-     // Create the main heading
-     const heading = document.createElement('h4');
-     heading.classList.add('mb-5');
-     heading.innerText = 'You can email me from here, or you can use the links below.';
+    // Create the main heading
+    const heading = document.createElement('h4');
+    heading.classList.add('mb-5');
+    heading.innerText = 'You can email me from here, or you can use the links below.';
 
     // Create the form element
     const form = document.createElement('form');

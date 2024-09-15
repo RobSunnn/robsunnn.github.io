@@ -1,21 +1,5 @@
-// window.addEventListener("load", generatePageAboutMe);
-//
-// const bodyElement = document.body;
-//
-// const storyButton = document.createElement('a');
-// storyButton.setAttribute('id', 'story-btn');
-// storyButton.href = '#';
-// storyButton.textContent = 'Chuck Norris Joke';
-//
-// const timeButton = document.createElement('a');
-// timeButton.setAttribute('id', 'story-btn');
-// timeButton.href = '#';
-// timeButton.textContent = 'If you want to see your ip address';
-//
-// const buttonsContainer = document.createElement('div');
-// buttonsContainer.setAttribute('id', 'buttons');
-
-
+import { getPopup } from "/js/popup.js";
+import { getEmptyPopup } from "/js/popup.js";
 export async function fetchQuote() {
     const ninjasURL = 'https://api.api-ninjas.com/v1/quotes?category=happiness';
     const divQuoteElement = document.getElementById('quotes');
@@ -77,8 +61,29 @@ export async function fetchQuote() {
         });
 }
 
+export async function fetchFact() {
+    const ninjasURL = 'https://api.api-ninjas.com/v1/facts';
+    fetch(ninjasURL, {
+        method: 'GET',
+        headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
+        contentType: 'application/json',
+    })
+        .then(res => res.json())
+        .then(result => {
+            //todo: fix this
+            // const emptyPopup = getEmptyPopup();
+            // document.documentElement.appendChild(emptyPopup);
+            // delay(3500);
+            // emptyPopup.remove();
+            const fact = result[0].fact;
+            const popup =  getPopup(fact);
+            // Append the popup outside the body, directly to the <html> element
+            document.documentElement.appendChild(popup);
+        });
+}
+
 // Function that returns a Promise that resolves after a given time
-function delay(ms, message) {
+function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 

@@ -145,6 +145,7 @@
     .carousel {
         width: 100%;
     }
+
     .card-title {
         margin: 0 !important;
     }
@@ -163,9 +164,9 @@
 }
 
 @media screen and (max-width: 570px) {
-       .carousel-card {
-            flex-wrap: wrap;
-            height: auto;
-        }
+    .carousel-card {
+        flex-wrap: wrap;
+        height: auto;
+    }
 
 }

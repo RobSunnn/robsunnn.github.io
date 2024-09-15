@@ -3,7 +3,7 @@ import { fetchQuote } from '/js/fetchData.js';
 
 const buttons = Array.from(document.getElementsByClassName('nav-link'));
 
-buttons.forEach(button => button.addEventListener('click', (e) => {
+buttons.forEach(button => button.addEventListener('click', async (e) => {
     e.preventDefault();
     const page = e.target.textContent;
     const content = document.getElementById('content');
@@ -30,7 +30,7 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
             fetchQuoteScript.src = '/js/fetchData.js';
             fetchQuoteScript.type = 'module';
             document.body.appendChild(fetchQuoteScript);
-            fetchQuote();
+            await fetchQuote();
 
             break;
         case 'Education':

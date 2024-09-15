@@ -13,8 +13,12 @@
 }
 
 @keyframes typing {
-    10% { width: 10%; }
-    100% { width: 100%; }
+    10% {
+        width: 10%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 .blur-image {
@@ -96,7 +100,7 @@
     margin: auto auto;
 }
 
-.technologies-wrapper  {
+.technologies-wrapper {
     margin: 2em auto;
     color: white;
     font-size: 1.7rem;
@@ -113,6 +117,7 @@
     .profile-picture {
         margin-top: 5em;
     }
+
     #quote {
         font-size: 0.7em;
     }
@@ -191,9 +196,9 @@
     }
 
     technologies {
-       display: flex;
-       flex-wrap: wrap;
-       gap: 0.6em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6em;
     }
 
     .technologies img {
@@ -216,8 +221,8 @@
     }
 
     .info-about-me {
-        margin-top: -23em  !important;
-     }
+        margin-top: -23em !important;
+    }
 }
 
 @media screen and (max-width: 940px) and (max-height: 440px) {
@@ -248,7 +253,8 @@
         width: 100%;
         margin-bottom: 1em;
     }
+
     .info-about-me {
-        margin-top: -10em  !important;
+        margin-top: -10em !important;
     }
 }
