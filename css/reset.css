@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, #05170d, royalblue)  no-repeat center center fixed;
+    background: linear-gradient(to bottom, #05170d, royalblue) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -19,9 +19,19 @@ body {
     flex-direction: column;
 }
 
+
+.hero {
+    width: 100%;
+    min-height: 60vh;
+    background: url("/images/poster.jpg") no-repeat center;
+    background-size: cover;
+    filter: blur(3px) brightness(0.7) contrast(1);
+}
+
+
 @media (max-width: 1200px) {
 
-    h5,h6 {
+    h5, h6 {
         font-size: 0.6em !important;
     }
 

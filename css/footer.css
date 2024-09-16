@@ -11,7 +11,6 @@ footer {
     width: 100%;
     height: auto;
     border-top: 2px solid white;
-    margin-top: 19rem;
 }
 
 
@@ -41,13 +40,13 @@ footer ul li span {
 }
 
 @media (max-width: 500px) {
-        .footer {
-            flex-wrap: wrap;
-        }
+    .footer {
+        flex-wrap: wrap;
+    }
 
-        .footer-icons ul {
-            flex-wrap: wrap;
-            font-size: 0.9em;
-            margin-left: -2em;
-        }
+    .footer-icons ul {
+        flex-wrap: wrap;
+        font-size: 0.9em;
+        margin-left: -2em;
+    }
 }

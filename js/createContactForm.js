@@ -1,4 +1,4 @@
-import { sendMail } from '/js/sendMail.js';
+import {sendMail} from '/js/sendMail.js';
 
 export function createContactForm() {
     const contactFormContainer = document.createElement('div');
@@ -7,14 +7,13 @@ export function createContactForm() {
     // Dynamically append a script to the document
     const mailScript = document.createElement('script');
     mailScript.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
-    mailScript.async = true;
     mailScript.type = 'text/javascript';
     document.body.appendChild(mailScript);
 
-     // Create the main heading
-     const heading = document.createElement('h4');
-     heading.classList.add('mb-5');
-     heading.innerText = 'You can email me from here, or you can use the links below.';
+    // Create the main heading
+    const heading = document.createElement('h4');
+    heading.classList.add('mb-5');
+    heading.innerText = 'You can email me from here, or you can use the links below.';
 
     // Create the form element
     const form = document.createElement('form');
@@ -95,8 +94,8 @@ export function createContactForm() {
     contactFormContainer.appendChild(form);
     contactFormContainer.appendChild(quote);
 
-    sendButton.addEventListener('click', (e) => {
-        sendMail(e)
+    sendButton.addEventListener('click', async (e) => {
+        await sendMail(e)
     });
 
     return contactFormContainer;

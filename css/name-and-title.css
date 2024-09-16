@@ -13,28 +13,40 @@
 }
 
 @keyframes typing {
-    10% { width: 10%; }
-    100% { width: 100%; }
+    10% {
+        width: 10%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
-.hero {
-    width: 100%;
-    min-height: 80vh;
-    background: url("/images/poster.jpg") no-repeat center;
-    background-size: cover;
-    filter: blur(3px) brightness(0.7) contrast(1);
+@keyframes typing-2 {
+    10% {
+        height: 10%;
+    }
+    60% {
+        height: 60%;
+    }
 }
 
 .blur-image {
     filter: blur(5px);
 }
 
+.remove-blur {
+    filter: blur(0) !important;
+}
+
 .typing-effect {
     animation: typing 1.5s steps(50, jump-both) forwards;
 }
 
+.typing-effect-2 {
+    animation: typing-2 1.5s steps(50, jump-both) forwards;
+}
+
 .black-to-white {
-    width: 0;
     animation: fadeIn 3s;
 }
 
@@ -100,7 +112,7 @@
     margin: auto auto;
 }
 
-.technologies-wrapper  {
+.technologies-wrapper {
     margin: 2em auto;
     color: white;
     font-size: 1.7rem;
@@ -117,9 +129,11 @@
     .profile-picture {
         margin-top: 5em;
     }
+
     #quote {
         font-size: 0.7em;
     }
+
 }
 
 @media screen and (max-width: 670px) and (max-height: 380px) {
@@ -194,9 +208,9 @@
     }
 
     technologies {
-       display: flex;
-       flex-wrap: wrap;
-       gap: 0.6em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6em;
     }
 
     .technologies img {
@@ -219,12 +233,14 @@
     }
 
     .info-about-me {
-        margin-top: -23em  !important;
-     }
+        margin-top: -23em !important;
+    }
 }
 
 @media screen and (max-width: 940px) and (max-height: 440px) {
-
+    main {
+        margin-top: 5em;
+    }
     .name-and-title-container {
         font-size: 0.7em;
         position: relative;
@@ -251,7 +267,8 @@
         width: 100%;
         margin-bottom: 1em;
     }
+
     .info-about-me {
-        margin-top: -10em  !important;
+        margin-top: -10em !important;
     }
 }

@@ -1,3 +1,5 @@
+// Checking the resolution with javascript
+
 // Function to adjust the transform based on window width
 function adjustTranslateY() {
     const element = document.querySelector('.translate-element');

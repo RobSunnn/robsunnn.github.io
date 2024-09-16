@@ -1,9 +1,10 @@
 import { createContactForm } from '/js/createContactForm.js';
 import { fetchQuote } from '/js/fetchData.js';
+import { generateHomeContent } from '/js/createCoolButtons.js';
 
 const buttons = Array.from(document.getElementsByClassName('nav-link'));
 
-buttons.forEach(button => button.addEventListener('click', (e) => {
+buttons.forEach(button => button.addEventListener('click', async (e) => {
     e.preventDefault();
     const page = e.target.textContent;
     const content = document.getElementById('content');
@@ -19,7 +20,44 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
             newContent = `
                     <h2>Home Page</h2>
                     <p>This is the home page content. Enjoy browsing!</p>
+                            <section class="cards-wrapper">
+                                <div class="text-center mb-5">
+                                    <button id="show-button" class="btn-link btn btn-primary">Show More Content</button>
+                                </div>
+                                <ul>
+
+                                    <li class="card-item invisible">
+                                        <div class="cool-card">
+                                            <h5 class="cool-card-title">
+                                                <button id="cool-fact" class="btn-link btn btn-secondary">Cool fact</button>
+                                            </h5>
+                                            <p class="cool-card-text">If you press this button a random fact from our world will appear.</p>
+                                        </div>
+                                    </li>
+                                    <li class="card-item invisible">
+                                        <div class="cool-card">
+                                            <h5 class="cool-card-title">
+                                                <button id="weather-forecast" class="btn-link btn btn-secondary">Weather Forecast</button>
+                                            </h5>
+                                            <p class="cool-card-text">This button will lead you to a place called Weather Forecast.</p>
+                                        </div>
+                                    </li>
+                                    <li class="card-item invisible">
+                                        <div class="cool-card">
+                                            <h5 class="cool-card-title">
+                                                <button class="btn-link btn btn-secondary">Check it out here</button>
+                                            </h5>
+                                            <p class="cool-card-text">If you feel bored, here is a random hobby generator.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
                 `;
+
+                setTimeout(() => {
+                    generateHomeContent();
+                }, 1000);
+
             break;
         case 'Contact':
 
@@ -30,7 +68,7 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
             fetchQuoteScript.src = '/js/fetchData.js';
             fetchQuoteScript.type = 'module';
             document.body.appendChild(fetchQuoteScript);
-            fetchQuote();
+            await fetchQuote();
 
             break;
         case 'Education':
@@ -81,6 +119,10 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
                         how to
                         secure our applications by integrating Spring Security, how to handle errors effectively,
                         unit and integration tests.</p>
+
+                    <p class="carousel-card-text">
+                        This is the repository holding my project defence for this course: <a href="https://github.com/RobSunnn/HotelApp">Hotel MS</a>
+                    </p>
                 </div>
             </div>
         </div>

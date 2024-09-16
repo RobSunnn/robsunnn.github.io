@@ -1,0 +1,76 @@
+section ul {
+    display: flex;
+    list-style: none outside;
+    padding: 0;
+    gap: 2em;
+}
+
+section ul li {
+    align-self: center;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.3em;
+}
+
+.card-item {
+}
+
+.cool-card {
+    width: 100%;
+    height: 300px;
+    background-color: royalblue;
+    padding: 0.3em;
+    text-align: center;
+    align-content: center;
+}
+
+.cool-card-title {
+}
+
+.cool-card-text {
+}
+
+.weather-card {
+    width: 100%;
+    flex-direction: column;
+    padding:2em;
+}
+
+.card-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.card-row h4,
+.card-row p {
+    margin: 0;
+}
+
+.btn-link {
+    text-decoration: none;
+    background-color: green;
+    color: white;
+}
+
+.btn-link:hover {
+    color: grey;
+    background-color: purple;
+}
+
+@media screen and (max-width: 672px) {
+
+    .cards-wrapper ul {
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
