@@ -87,7 +87,6 @@ export async function fetchFact() {
 export async function createWeatherForecast(city) {
     try {
         const popup = getEmptyPopup();
-        popup.style.background = 'grey';
         popup.classList.add('black-to-white');
 
         const weatherInfo = await getWeatherInfo(city);
@@ -96,6 +95,20 @@ export async function createWeatherForecast(city) {
         const currentTemperatureFahrenheit = weatherInfo.currentConditions.temp;
         const currentTemperatureCelsius = `${Math.round(fahrenheitToCelsius(currentTemperatureFahrenheit))}°C`;
         const place = weatherInfo.resolvedAddress;
+
+        if (currentTemperatureFahrenheit > 86) {
+            popup.style.background = 'red';
+            popup.style.background = 'linear-gradient(93deg, rgba(255,0,0,1) 5%, rgba(255,2,0,1) 41%, rgba(191,37,36,1) 73%)';
+        } else if (currentTemperatureFahrenheit > 68) {
+            popup.style.background = 'orange';
+            popup.style.background = 'linear-gradient(93deg, rgba(255,218,0,1) 0%, rgba(255,196,0,1) 49%, rgba(255,171,0,1) 78%)';
+        } else if (currentTemperatureFahrenheit > 50) {
+            popup.style.background = 'yellow';
+            popup.style.background = 'linear-gradient(93deg, rgba(0,5,255,1) 0%, rgba(0,215,255,1) 52%, rgba(8,0,255,1) 100%)';
+        } else {
+            popup.style.background = 'linear-gradient(to bottom, #020024, #20208b, #00d4ff)';
+        }
+
 
         const weatherIconCode = weatherInfo.currentConditions.icon;
 
