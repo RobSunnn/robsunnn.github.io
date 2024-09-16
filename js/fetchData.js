@@ -92,64 +92,107 @@ export async function createWeatherForecast(city) {
 
         const weatherInfo = await getWeatherInfo(city);
 
-        const weather = weatherInfo.weather[0].main;
-        const weatherIconCode = weatherInfo.weather[0].icon;
-        const currentTemperature = Math.round(Number(weatherInfo.main.temp));
-        //TODO: add feels like
-        const feelsLikeTemperature = weatherInfo.main.feels_like;
-        const maxTemperatureForTheDay = Math.round(Number(weatherInfo.main.temp_max));
-        const minTemperatureForTheDay = weatherInfo.main.temp_min;
-        const pressure = weatherInfo.main.pressure;
-        const humidity = weatherInfo.main.humidity;
+        const weather = weatherInfo.currentConditions;
+        const currentTemperatureFahrenheit = weatherInfo.currentConditions.temp;
+        const currentTemperatureCelsius = `${Math.round(fahrenheitToCelsius(currentTemperatureFahrenheit))}°C`;
+        console.log(currentTemperatureCelsius)
+        const place = weatherInfo.resolvedAddress;
+console.log(weatherInfo)
+        const weatherIconCode = weatherInfo.currentConditions.icon;
 
-        const iconUrl = `http://openweathermap.org/img/wn/${weatherIconCode}.png`;
+        const iconUrl = `https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/PNG/2nd%20Set%20-%20Color/${weatherIconCode}.png`;
 
         const card = document.createElement('div');
         card.classList.add('weather-card', 'd-flex');
 
-        const cardRow = document.createElement('div');
-        cardRow.classList.add('card-row')
-
-        const cardSecondRow = document.createElement('div');
-        cardSecondRow.classList.add('card-row')
-
         const cardTitle = document.createElement('h4');
-        cardTitle.textContent = `The weather in ${city} is:`;
+        cardTitle.textContent = `The weather in ${place} is:`;
 
         const imgElement = document.createElement('img');
         imgElement.src = iconUrl;
 
-        cardRow.appendChild(cardTitle);
-        cardRow.appendChild(imgElement);
+        const temperatureElement = document.createElement('h4');
+        temperatureElement.textContent = `Current temperature is:`;
 
-        const currentTemperatureElement = document.createElement('h4');
-        currentTemperatureElement.textContent = "Current temperature is: ";
+        const description = document.createElement('div');
+        description.classList.add('card-row');
+        description.textContent = weatherInfo.description;
 
-        const currentTemperatureValue = document.createElement('p');
-        currentTemperatureValue.textContent = `${currentTemperature}°C`;
 
-        const cardThirdRow = document.createElement('div');
-        cardThirdRow.classList.add('card-row');
+        const heading = document.createElement('div');
+        heading.classList.add('cool-card-title');
 
-        const pressureElement = document.createElement('h4');
-        pressureElement.textContent = "Humidity is: ";
+        const firstRow = document.createElement('div');
+        firstRow.classList.add('card-row');
 
-        const pressureValue = document.createElement('p');
-        pressureValue.textContent = `${humidity}%`;
+        heading.appendChild(cardTitle);
+        heading.appendChild(imgElement);
+        firstRow.appendChild(temperatureElement);
+        firstRow.append(currentTemperatureCelsius);
 
-        cardSecondRow.appendChild(currentTemperatureElement);
-        cardSecondRow.appendChild(currentTemperatureValue);
-
-        cardThirdRow.appendChild(pressureElement);
-        cardThirdRow.appendChild(pressureValue);
-
-        card.appendChild(cardRow);
-        card.appendChild(cardSecondRow);
-        card.appendChild(cardThirdRow);
-
+        card.appendChild(heading);
+        card.appendChild(firstRow);
+        card.appendChild(description);
 
         popup.appendChild(card);
         document.documentElement.appendChild(popup);
+        //
+        // const currentTemperature = Math.round(Number(weatherInfo.main.temp));
+        // //TODO: add feels like
+        // const feelsLikeTemperature = weatherInfo.main.feels_like;
+        // const maxTemperatureForTheDay = Math.round(Number(weatherInfo.main.temp_max));
+        // const minTemperatureForTheDay = weatherInfo.main.temp_min;
+        // const pressure = weatherInfo.main.pressure;
+        // const humidity = weatherInfo.main.humidity;
+        //
+        // const iconUrl = `http://openweathermap.org/img/wn/${weatherIconCode}.png`;
+        //
+        // const card = document.createElement('div');
+        // card.classList.add('weather-card', 'd-flex');
+        //
+        // const cardRow = document.createElement('div');
+        // cardRow.classList.add('card-row')
+        //
+        // const cardSecondRow = document.createElement('div');
+        // cardSecondRow.classList.add('card-row')
+        //
+        // const cardTitle = document.createElement('h4');
+        // cardTitle.textContent = `The weather in ${city} is:`;
+        //
+        // const imgElement = document.createElement('img');
+        // imgElement.src = iconUrl;
+        //
+        // cardRow.appendChild(cardTitle);
+        // cardRow.appendChild(imgElement);
+        //
+        // const currentTemperatureElement = document.createElement('h4');
+        // currentTemperatureElement.textContent = "Current temperature is: ";
+        //
+        // const currentTemperatureValue = document.createElement('p');
+        // currentTemperatureValue.textContent = `${currentTemperature}°C`;
+        //
+        // const cardThirdRow = document.createElement('div');
+        // cardThirdRow.classList.add('card-row');
+        //
+        // const pressureElement = document.createElement('h4');
+        // pressureElement.textContent = "Humidity is: ";
+        //
+        // const pressureValue = document.createElement('p');
+        // pressureValue.textContent = `${humidity}%`;
+        //
+        // cardSecondRow.appendChild(currentTemperatureElement);
+        // cardSecondRow.appendChild(currentTemperatureValue);
+        //
+        // cardThirdRow.appendChild(pressureElement);
+        // cardThirdRow.appendChild(pressureValue);
+        //
+        // card.appendChild(cardRow);
+        // card.appendChild(cardSecondRow);
+        // card.appendChild(cardThirdRow);
+        //
+        //
+        // popup.appendChild(card);
+        // document.documentElement.appendChild(popup);
     } catch (err) {
         document.body.classList.remove('blur-image');
         const failPopup = getEmptyPopup();
@@ -251,7 +294,7 @@ export async function createRandomHobbyPopup() {
 }
 
 async function getWeatherInfo(city) {
-    const weatherUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=65000eee58d12ffd64af80cac936bc89&units=metric`;
+    const weatherUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=us&key=CL3TK8NLC437CFJ3Z4EKVJR8T&contentType=json&iconSet=icons2`;
     const response = await fetch(weatherUrl, {
         method: 'GET',
         contentType: 'application/json',
@@ -263,6 +306,10 @@ async function getWeatherInfo(city) {
 // Function that returns a Promise that resolves after a given time
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+    return (fahrenheit - 32) * 5 / 9;
 }
 
 // function chuckNorris() {
