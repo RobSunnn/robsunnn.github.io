@@ -1,4 +1,4 @@
-import { fetchFact, createWeatherForecast, createSearchPopup, createRandomHobbyPopup } from "/js/fetchData.js";
+import {fetchFact, createWeatherForecast, createSearchPopup, createRandomHobbyPopup} from "/js/fetchData.js";
 
 export function generateHomeContent() {
     const showBtn = document.getElementById('show-button');
@@ -11,7 +11,7 @@ export function generateHomeContent() {
         if (areCardsVisible) {
             // Hide all cards
             cardHolder.forEach(card => card.classList.add("invisible"));
-            cardHolder.forEach(card => card.classList.remove("typing-effect"));
+            cardHolder.forEach(card => card.classList.remove("black-to-white"));
             showBtn.textContent = 'Show More Content';
 
         } else {
@@ -23,7 +23,7 @@ export function generateHomeContent() {
             buttons.forEach(btn => {
                 attachEventListener(btn);
             });
-            cardHolder.forEach(card => card.classList.add("typing-effect"));
+            cardHolder.forEach(card => card.classList.add("black-to-white"));
             showBtn.textContent = 'Hide content';
             showBtn.classList.remove("btn-success");
             showBtn.classList.add("btn-danger");
@@ -43,9 +43,8 @@ function attachEventListener(btn) {
 
     if (btn.textContent === 'Cool fact') {
         const handleClick = async () => {
-            btn.setAttribute('disabled', '');  // Disable button to prevent multiple clicks
             await fetchFact();                  // Create Popup with fact
-            btn.removeAttribute('disabled');  // Re-enable button after operation completes
+            disableAllButtons();
         };
 
         // Attach the new click handler
@@ -54,9 +53,8 @@ function attachEventListener(btn) {
 
     } else if (btn.textContent === 'Weather Forecast') {
         const handleClick = async () => {
-            btn.setAttribute('disabled', '');  // Disable button to prevent multiple clicks
             await createSearchPopup();          // Create Search Popup
-            btn.removeAttribute('disabled');  // Re-enable button after popup is closed
+            disableAllButtons();
         };
 
         // Attach the new click handler
@@ -64,14 +62,13 @@ function attachEventListener(btn) {
         btn.clickHandler = handleClick;
     } else if (btn.textContent === 'Check it out here') {
         const handleClick = async () => {
-                    btn.setAttribute('disabled', '');  // Disable button to prevent multiple clicks
-                    await createRandomHobbyPopup();     // Create Hobby Popup
-                    btn.removeAttribute('disabled');  // Re-enable button after popup is closed
-                };
+            await createRandomHobbyPopup();     // Create Hobby Popup
+            disableAllButtons();
+        };
 
-                // Attach the new click handler
-                btn.addEventListener('click', handleClick);
-                btn.clickHandler = handleClick;
+        // Attach the new click handler
+        btn.addEventListener('click', handleClick);
+        btn.clickHandler = handleClick;
     }
 }
 
@@ -84,6 +81,10 @@ function removeEventListeners(buttons) {
             delete btn.clickHandler;
         }
     });
+}
+
+function disableAllButtons() {
+    Array.from(document.getElementsByClassName('btn-link')).forEach(btn => btn.setAttribute('disabled', ''))
 }
 
 

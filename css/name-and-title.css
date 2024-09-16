@@ -47,7 +47,6 @@
 }
 
 .black-to-white {
-    width: 0;
     animation: fadeIn 3s;
 }
 
@@ -239,7 +238,9 @@
 }
 
 @media screen and (max-width: 940px) and (max-height: 440px) {
-
+    main {
+        margin-top: 5em;
+    }
     .name-and-title-container {
         font-size: 0.7em;
         position: relative;

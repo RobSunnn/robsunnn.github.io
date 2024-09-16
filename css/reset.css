@@ -22,7 +22,7 @@ body {
 
 .hero {
     width: 100%;
-    min-height: 80vh;
+    min-height: 60vh;
     background: url("/images/poster.jpg") no-repeat center;
     background-size: cover;
     filter: blur(3px) brightness(0.7) contrast(1);

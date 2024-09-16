@@ -1,8 +1,10 @@
-import { getPopup } from "/js/popup.js";
-import { getEmptyPopup } from "/js/popup.js";
+import {getPopup} from "/js/popup.js";
+import {getEmptyPopup} from "/js/popup.js";
+
 export async function fetchQuote() {
     const ninjasURL = 'https://api.api-ninjas.com/v1/quotes?category=happiness';
     const divQuoteElement = document.getElementById('quotes');
+    divQuoteElement.scrollIntoView({behavior: 'smooth', block: 'center'});
 
     const messageLabel = document.createElement('h4');
     messageLabel.classList.add('typing-effect');
@@ -10,9 +12,9 @@ export async function fetchQuote() {
     divQuoteElement.append(messageLabel);
 
     messageLabel.innerText = 'Fetching random quote for you ...';
-    await delay(2500);
+    await delay(3000);
     messageLabel.innerText = 'Your quote is';
-    await delay(1000);
+    await delay(1300);
     divQuoteElement.innerText = '';
 
     messageLabel.remove();
@@ -61,7 +63,7 @@ export async function fetchQuote() {
         });
 }
 
-export async function fetchFact(e) {
+export async function fetchFact() {
     const ninjasURL = 'https://api.api-ninjas.com/v1/facts';
     fetch(ninjasURL, {
         method: 'GET',
@@ -76,7 +78,7 @@ export async function fetchFact(e) {
             // delay(3500);
             // emptyPopup.remove();
             const fact = result[0].fact;
-            const popup =  getPopup(fact);
+            const popup = getPopup(fact);
             // Append the popup outside the body, directly to the <html> element
             document.documentElement.appendChild(popup);
         });
@@ -84,8 +86,9 @@ export async function fetchFact(e) {
 
 export async function createWeatherForecast(city) {
     try {
-        const popup =  getEmptyPopup();
+        const popup = getEmptyPopup();
         popup.style.background = 'grey';
+        popup.classList.add('black-to-white');
 
         const weatherInfo = await getWeatherInfo(city);
 
@@ -120,7 +123,7 @@ export async function createWeatherForecast(city) {
         cardRow.appendChild(imgElement);
 
         const currentTemperatureElement = document.createElement('h4');
-        currentTemperatureElement.textContent =  "Current temperature is: ";
+        currentTemperatureElement.textContent = "Current temperature is: ";
 
         const currentTemperatureValue = document.createElement('p');
         currentTemperatureValue.textContent = `${currentTemperature}°C`;
@@ -129,10 +132,10 @@ export async function createWeatherForecast(city) {
         cardThirdRow.classList.add('card-row');
 
         const pressureElement = document.createElement('h4');
-        pressureElement.textContent =  "Humidity is: ";
+        pressureElement.textContent = "Humidity is: ";
 
         const pressureValue = document.createElement('p');
-        pressureValue.textContent =`${humidity}%`;
+        pressureValue.textContent = `${humidity}%`;
 
         cardSecondRow.appendChild(currentTemperatureElement);
         cardSecondRow.appendChild(currentTemperatureValue);
@@ -147,7 +150,7 @@ export async function createWeatherForecast(city) {
 
         popup.appendChild(card);
         document.documentElement.appendChild(popup);
-    } catch(err) {
+    } catch (err) {
         document.body.classList.remove('blur-image');
         const failPopup = getEmptyPopup();
 
@@ -156,8 +159,8 @@ export async function createWeatherForecast(city) {
         backBtn.textContent = 'Back to Search';
 
         backBtn.addEventListener('click', async () => {
-              await createSearchPopup();
-              failPopup.remove();
+            await createSearchPopup();
+            failPopup.remove();
         });
 
         failPopup.textContent = 'Please enter a valid city.';
@@ -171,7 +174,8 @@ export async function createWeatherForecast(city) {
 
 export async function createSearchPopup() {
 
-    const popup =  getEmptyPopup();
+    const popup = getEmptyPopup();
+    popup.classList.add('black-to-white');
 
     // Create the main heading
     const heading = document.createElement('h4');
@@ -183,7 +187,7 @@ export async function createSearchPopup() {
     cityInput.id = 'city';
     cityInput.placeholder = 'Write city here';
 
-     // Create the button
+    // Create the button
     const sendButton = document.createElement('button');
     sendButton.type = 'submit';
     sendButton.classList.add('btn', 'btn-primary', 'send-btn', 'mt-3');
@@ -201,10 +205,11 @@ export async function createSearchPopup() {
 }
 
 export async function createRandomHobbyPopup() {
-      const popup =  getEmptyPopup();
+    const popup = getEmptyPopup();
+    popup.classList.add('black-to-white')
 
-      const ninjasURL = 'https://api.api-ninjas.com/v1/hobbies';
- fetch(ninjasURL, {
+    const ninjasURL = 'https://api.api-ninjas.com/v1/hobbies';
+    fetch(ninjasURL, {
         method: 'GET',
         headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
         contentType: 'application/json',
@@ -215,7 +220,7 @@ export async function createRandomHobbyPopup() {
 
             const heading = document.createElement('h1');
             heading.classList.add('mb-3');
-            heading.textContent= 'Your Random Hobby Idea is';
+            heading.textContent = 'Your Random Hobby Idea is';
 
             const info = document.createElement('div');
             info.classList.add('d-flex', 'justify-content-around');
@@ -224,7 +229,7 @@ export async function createRandomHobbyPopup() {
             const hobbyUrl = result.link;
 
             const hobbyElement = document.createElement('h2');
-            hobbyElement.textContent= hobby;
+            hobbyElement.textContent = hobby;
 
 
             const hobbyLinkElement = document.createElement('a');
@@ -246,13 +251,13 @@ export async function createRandomHobbyPopup() {
 }
 
 async function getWeatherInfo(city) {
-      const weatherUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=65000eee58d12ffd64af80cac936bc89&units=metric`;
-      const response = await fetch(weatherUrl, {
-            method: 'GET',
-            contentType: 'application/json',
-        });
-      const result = await response.json();
-      return result;
+    const weatherUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=65000eee58d12ffd64af80cac936bc89&units=metric`;
+    const response = await fetch(weatherUrl, {
+        method: 'GET',
+        contentType: 'application/json',
+    });
+    const result = await response.json();
+    return result;
 }
 
 // Function that returns a Promise that resolves after a given time

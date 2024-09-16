@@ -7,7 +7,6 @@ export function createContactForm() {
     // Dynamically append a script to the document
     const mailScript = document.createElement('script');
     mailScript.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
-    mailScript.async = true;
     mailScript.type = 'text/javascript';
     document.body.appendChild(mailScript);
 
@@ -95,8 +94,8 @@ export function createContactForm() {
     contactFormContainer.appendChild(form);
     contactFormContainer.appendChild(quote);
 
-    sendButton.addEventListener('click', (e) => {
-        sendMail(e)
+    sendButton.addEventListener('click', async (e) => {
+        await sendMail(e)
     });
 
     return contactFormContainer;

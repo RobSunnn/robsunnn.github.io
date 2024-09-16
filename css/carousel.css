@@ -5,7 +5,7 @@
 }
 
 .carousel {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -15,6 +15,7 @@
 
 .carousel-card {
     max-width: 80%;
+    height: 60vh;
     margin: 5em auto;
     display: flex;
     justify-content: center;
@@ -22,13 +23,14 @@
 }
 
 .carousel-card img {
-    width: 100%;
+    width: 50%;
 }
 
 .carousel-card-body {
     padding: 15px;
     background-color: white;
     text-align: center;
+    align-content: center;
     width: 900px;
 }
 
@@ -140,6 +142,12 @@
     }
 }
 
+@media screen and (max-width: 950px) {
+    .carousel-card-text {
+        font-size: 0.8em;
+        padding: 0;
+    }
+}
 
 @media screen and (max-width: 860px) {
     .carousel {
@@ -168,5 +176,13 @@
         flex-wrap: wrap;
         height: auto;
     }
+    .carousel-card img {
+        width: 100%;
+    }
+}
 
+@media screen and (min-width: 2160px) {
+    .carousel {
+        width: 50%;
+    }
 }

@@ -31,7 +31,7 @@ buttons.forEach(button => button.addEventListener('click', async (e) => {
                                             <h5 class="cool-card-title">
                                                 <button id="cool-fact" class="btn-link btn btn-secondary">Cool fact</button>
                                             </h5>
-                                            <p class="cool-card-text">If you press this button a random fact from our world will appear</p>
+                                            <p class="cool-card-text">If you press this button a random fact from our world will appear.</p>
                                         </div>
                                     </li>
                                     <li class="card-item invisible">
@@ -53,7 +53,6 @@ buttons.forEach(button => button.addEventListener('click', async (e) => {
                                 </ul>
                             </section>
                 `;
-
 
                 setTimeout(() => {
                     generateHomeContent();

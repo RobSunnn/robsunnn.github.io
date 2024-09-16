@@ -1,4 +1,4 @@
-export function sendMail(e) {
+export async function sendMail(e) {
     e.preventDefault();
     
     const nameField = document.getElementById('name');
