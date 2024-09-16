@@ -104,7 +104,7 @@ export async function createWeatherForecast(city) {
             popup.style.background = 'linear-gradient(93deg, rgba(255,218,0,1) 0%, rgba(255,196,0,1) 49%, rgba(255,171,0,1) 78%)';
         } else if (currentTemperatureFahrenheit > 50) {
             popup.style.background = 'yellow';
-            popup.style.background = 'linear-gradient(93deg, rgba(0,5,255,1) 0%, rgba(0,215,255,1) 52%, rgba(8,0,255,1) 100%)';
+            popup.style.background = 'linear-gradient(93deg, rgba(78,255,0,1) 0%, rgba(181,255,0,1) 29%, rgba(202,255,0,1) 58%, rgba(254,255,0,1)';
         } else {
             popup.style.background = 'linear-gradient(to bottom, #020024, #20208b, #00d4ff)';
         }
