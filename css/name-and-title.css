@@ -126,6 +126,10 @@
 }
 
 @media screen and (max-width: 1380px) and (max-height: 780px) {
+    .hero {
+        height: 80vh !important;
+    }
+
     .profile-picture {
         margin-top: 5em;
     }

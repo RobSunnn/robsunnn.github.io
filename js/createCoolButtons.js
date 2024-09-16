@@ -15,6 +15,7 @@ export function generateHomeContent() {
             showBtn.textContent = 'Show More Content';
 
         } else {
+
             // Show all cards
             cardHolder.forEach(card => {
                 card.classList.remove("invisible");
