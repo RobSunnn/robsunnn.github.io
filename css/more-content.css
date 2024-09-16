@@ -23,7 +23,6 @@ section ul li {
 
 .cool-card {
     width: 100%;
-    height: 300px;
     background-color: royalblue;
     text-align: center;
     align-content: center;
@@ -48,14 +47,30 @@ section ul li {
 .card-row {
     width: 100%;
     display: flex;
+    margin-bottom: 0.5em;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1em;
     color: white;
+}
+
+.longterm-forecast {
+    display: flex;
+    justify-content: center;
+    gap: 0.8em
+}
+
+.longterm-forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-row h4,
 .card-row p {
     margin: 0;
+    font-size: 1.5em;
 }
 
 .btn-link {
