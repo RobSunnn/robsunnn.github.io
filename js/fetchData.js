@@ -47,7 +47,7 @@ export async function fetchQuote() {
             divQuoteElement.appendChild(quoteElement);
             divQuoteElement.appendChild(authorElement);
 
-            if (quote.length > 270) {
+            if (quote.length > 240) {
 
                 const quote = document.getElementById("quote");
                 const currentFontSize = window.getComputedStyle(quote).fontSize;
