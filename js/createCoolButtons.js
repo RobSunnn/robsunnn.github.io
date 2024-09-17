@@ -4,6 +4,7 @@ export function generateHomeContent() {
     const showBtn = document.getElementById('show-button');
     const buttons = Array.from(document.getElementsByClassName('btn-link'));
     const cardHolder = Array.from(document.getElementsByClassName('card-item'));
+    showBtn.scrollIntoView({behavior: 'smooth', block: 'center'});
 
     let areCardsVisible = false;  // Track whether buttons are currently visible
 
