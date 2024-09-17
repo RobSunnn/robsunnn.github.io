@@ -7,7 +7,7 @@ export function getPopup(data) {
     popup.id = 'popup';
     popup.classList.add('popup');
     popup.style.display = 'block';
-    const heading = document.createElement('h3');
+    const heading = document.createElement('h2');
     heading.textContent = "Your cool fact is:"
 
     // Create the close button

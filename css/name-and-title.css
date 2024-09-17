@@ -55,7 +55,7 @@
     max-width: 100%;
     position: absolute;
     margin-top: 5em;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -76,6 +76,7 @@
 .profile-picture {
     border-bottom-left-radius: 30%;
     border-top-right-radius: 30%;
+
 }
 
 .title {
@@ -262,7 +263,7 @@
         font-size: 0.7em;
         position: relative;
         transform: translate(-50%, -42%);
-        margin-top: -18em;
+        margin-top: -24em;
         margin-bottom: 8em;
     }
 
