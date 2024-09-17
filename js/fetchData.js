@@ -284,6 +284,7 @@ export async function createSearchPopup() {
 
     const popup = getEmptyPopup();
     popup.classList.add('black-to-white');
+    popup.style.height = '200px';
 
     // Create the main heading
     const heading = document.createElement('h4');
