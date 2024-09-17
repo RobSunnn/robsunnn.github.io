@@ -189,6 +189,20 @@
     }
 }
 
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 0.7em;
+    }
+
+    .technologies-wrapper .row h2 {
+        font-size: 0.5em;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+}
+
 @media screen and (max-width: 435px) and (max-height: 940px) {
     .hero {
         min-height: 60vh;

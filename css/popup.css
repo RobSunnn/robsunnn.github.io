@@ -1,6 +1,6 @@
 .popup {
     width: 60%;
-    height: 300px;
+    height: 400px;
     display: none; /* Hidden by default */
     position: fixed;
     top: 50%;
@@ -40,6 +40,18 @@
     z-index: 999;
 }
 
+@media screen and (max-width: 450px) and (max-height: 950px) {
+    .popup {
+        height: 50vh !important;
+    }
+}
+
+@media screen and (max-width: 950px) and (max-height: 450px) {
+    .popup {
+        height: 50vh !important;
+    }
+}
+
 @media (max-width: 992px) {
     .popup {
         width: 90%;
@@ -52,5 +64,7 @@
 
     .popup {
         font-size: 0.6em;
+        height: 30vh;
+
     }
 }

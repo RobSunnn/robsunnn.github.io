@@ -20,6 +20,7 @@ export function getPopup(data) {
     // Create the content paragraph
     const content = document.createElement('p');
     content.textContent = data;
+    content.id = 'fact-text';
 
     // Append close button and content to popup
     popup.appendChild(closeBtn);
