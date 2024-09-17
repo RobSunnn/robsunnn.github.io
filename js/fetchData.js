@@ -292,6 +292,8 @@ export async function createSearchPopup() {
     const cityInput = document.createElement('input');
     cityInput.type = 'text';
     cityInput.classList.add('form-control');
+    cityInput.style.width = '70%';
+    cityInput.style.margin = '0 auto';
     cityInput.id = 'city';
     cityInput.placeholder = 'Write city here';
 

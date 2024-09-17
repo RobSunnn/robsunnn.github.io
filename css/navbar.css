@@ -5,6 +5,7 @@
     display: flex !important;
     align-items: center;
     padding: 10px 20px;
+    opacity: 80%;
 }
 
 .navbar-brand {
@@ -57,4 +58,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media (max-width: 990px) {
+    .nav-item {
+        text-align: right;
+        margin-top: 0.5em;
+        background-color: unset !important;
+    }
 }
