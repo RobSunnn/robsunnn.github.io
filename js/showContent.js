@@ -18,9 +18,12 @@ buttons.forEach(button => button.addEventListener('click', async (e) => {
     switch (page) {
         case 'Home':
             newContent = `
-                    <h2>Home Page</h2>
-                    <p>This is the home page content. Enjoy browsing!</p>
+                            <div class="text-center mb-2">
+                                <h2>Home Page</h2>
+                                <p>This is the home page content. Enjoy browsing!</p>
+                            </div>
                             <section class="cards-wrapper">
+                   
                                 <div class="text-center mb-5">
                                     <button id="show-button" class="btn-link btn btn-primary">Show More Content</button>
                                 </div>

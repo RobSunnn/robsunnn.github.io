@@ -32,7 +32,10 @@
     opacity: 1;
     transform: translateX(0);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-    transform: translateY(10%);
 }
 
-
+@media (max-width: 770px) {
+    .index-bottom {
+        margin-top: -25em;
+    }
+}

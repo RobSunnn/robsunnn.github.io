@@ -5,7 +5,7 @@
 }
 
 .carousel {
-    width: 100%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -139,6 +139,12 @@
 
     .carousel-card-text {
         font-size: 0.5em;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .carousel {
+        width: 100%;
     }
 }
 

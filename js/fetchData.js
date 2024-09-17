@@ -94,6 +94,7 @@ export async function createWeatherForecast(city) {
         const weather = weatherInfo.currentConditions;
         const currentTemperatureFahrenheit = weatherInfo.currentConditions.temp;
         const currentTemperatureCelsius = `${Math.round(fahrenheitToCelsius(currentTemperatureFahrenheit))}°C`;
+
         const place = weatherInfo.resolvedAddress;
 
         if (currentTemperatureFahrenheit > 86) {
@@ -125,6 +126,11 @@ export async function createWeatherForecast(city) {
 
         const temperatureElement = document.createElement('h4');
         temperatureElement.textContent = `Current temperature is:`;
+        temperatureElement.style.fontSize = '1.3em';
+
+        const currentTemperatureCelsiusElement = document.createElement('p');
+        currentTemperatureCelsiusElement.textContent = currentTemperatureCelsius;
+        currentTemperatureCelsiusElement.style.fontSize = '1.5em';
 
         const heading = document.createElement('div');
         heading.classList.add('cool-card-title');
@@ -133,64 +139,64 @@ export async function createWeatherForecast(city) {
         firstRow.classList.add('card-row');
 
         const description = document.createElement('div');
-        description.classList.add('card-row');
+        description.classList.add('card-row', 'description');
         description.textContent = weatherInfo.description;
+        description.style.fontSize = '1.5em';
 
         const longTermForecast = document.createElement('div');
         longTermForecast.classList.add('longterm-forecast');
 
-       const nextDaysForecast = weatherInfo.days;
+        const nextDaysForecast = weatherInfo.days;
 
-      for (let i = 1; i <= 5; i++) { // Start from 0
-          const currentElement = nextDaysForecast[i];
-          const currentElementTemperatureFahrenheit = currentElement.temp;
-          const currentElementTemperatureCelsius = Math.round(fahrenheitToCelsius(currentElementTemperatureFahrenheit));
-          const currentElementIconCode = currentElement.icon;
-          const date = currentElement.datetime;
+        for (let i = 1; i <= 5; i++) { // Start from 0
+            const currentElement = nextDaysForecast[i];
+            const currentElementTemperatureFahrenheit = currentElement.temp;
+            const currentElementTemperatureCelsius = Math.round(fahrenheitToCelsius(currentElementTemperatureFahrenheit));
+            const currentElementIconCode = currentElement.icon;
+            const date = currentElement.datetime;
 
-          const dateParts = date.split('-');
-          // Extract the month and day
-          const month = dateParts[1];
-          const day = dateParts[2];
-          const dateString = day + "/" + month;
+            const dateParts = date.split('-');
+            // Extract the month and day
+            const month = dateParts[1];
+            const day = dateParts[2];
+            const dateString = day + "/" + month;
 
-          const wrapper = document.createElement('div');
-          wrapper.classList.add('longterm-forecast-item');
+            const wrapper = document.createElement('div');
+            wrapper.classList.add('longterm-forecast-item');
 
-          const currentIconUrl = `https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/PNG/2nd%20Set%20-%20Color/${currentElementIconCode}.png`;
+            const currentIconUrl = `https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/PNG/2nd%20Set%20-%20Color/${currentElementIconCode}.png`;
 
-          // Create an element for the temperature
-          const currentTemperatureElement = document.createElement('p');
-          currentTemperatureElement.textContent = `${currentElementTemperatureCelsius}°C`;
+            // Create an element for the temperature
+            const currentTemperatureElement = document.createElement('p');
+            currentTemperatureElement.textContent = `${currentElementTemperatureCelsius}°C`;
 
-          // Create an img element for the weather icon
-          const iconElement = document.createElement('img');
-          iconElement.src = currentIconUrl;
-          iconElement.alt = 'Weather Icon';
+            // Create an img element for the weather icon
+            const iconElement = document.createElement('img');
+            iconElement.src = currentIconUrl;
+            iconElement.alt = 'Weather Icon';
 
-          const dateElement = document.createElement('p');
-          dateElement.textContent = dateString;
+            const dateElement = document.createElement('p');
+            dateElement.textContent = dateString;
 
 
-          wrapper.appendChild(iconElement)
-          wrapper.appendChild(currentTemperatureElement)
-          wrapper.appendChild(dateElement);
-          // Append temperature and icon to the longTermForecast div
-          longTermForecast.appendChild(wrapper);
+            wrapper.appendChild(iconElement)
+            wrapper.appendChild(currentTemperatureElement)
+            wrapper.appendChild(dateElement);
+            // Append temperature and icon to the longTermForecast div
+            longTermForecast.appendChild(wrapper);
 
-      }
+        }
 
 
         heading.appendChild(cardTitle);
         heading.appendChild(imgElement);
         firstRow.appendChild(temperatureElement);
-        firstRow.append(currentTemperatureCelsius);
+        firstRow.append(currentTemperatureCelsiusElement);
 
         card.appendChild(heading);
         card.appendChild(firstRow);
         card.appendChild(description);
         card.appendChild(longTermForecast);
-
 
 
         popup.appendChild(card);

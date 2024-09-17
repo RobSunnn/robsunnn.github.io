@@ -42,6 +42,15 @@
 
 @media (max-width: 992px) {
     .popup {
-        width: 80%;
+        width: 90%;
+        height: 50vh;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .popup {
+        font-size: 0.6em;
     }
 }

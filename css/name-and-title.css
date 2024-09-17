@@ -149,9 +149,7 @@
 }
 
 @media screen and (max-width: 770px) {
-    .name-and-title-wrapper {
-        transform: translateY(-30%);
-    }
+
 
     .name-and-title-container .row {
         flex-direction: column-reverse;
@@ -160,6 +158,7 @@
     .name-and-title-container {
         font-size: 0.7em;
         position: relative;
+        transform: translate(-50%, -85%);
     }
 
     .profile-picture {
