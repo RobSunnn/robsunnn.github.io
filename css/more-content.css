@@ -95,7 +95,18 @@ section ul li {
     color: grey;
     background-color: purple;
 }
-
+@media screen and (max-width: 950px) and (max-height: 450px) {
+    .longterm-forecast,
+    .description,
+    .longterm-forecast-item {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 900px) {
+    .cool-card-text {
+        font-size: 0.7em;
+    }
+}
 @media screen and (max-width: 672px) {
 
     .cards-wrapper ul {
