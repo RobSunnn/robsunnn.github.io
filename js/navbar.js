@@ -18,7 +18,6 @@ document.addEventListener('click', function (event) {
 window.addEventListener('scroll', function () {
     let currentScrollPos = window.scrollY;
     if (prevScrollPos > currentScrollPos) {
-    console.log(document.getElementById("navbar").style)
         document.getElementById("navbar").style.top = "0";
     } else {
         collapseNavbar();
