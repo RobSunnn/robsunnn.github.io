@@ -7,10 +7,6 @@
         margin: 2em auto;
         display: flex;
     }
-
-    .technologies-and-name {
-        margin-top: 0;
-    }
     #name-title-and-picture {
         flex-direction: column-reverse;
     }

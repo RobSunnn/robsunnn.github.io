@@ -9,29 +9,31 @@
 
 .navbar-brand {
     align-items: center;
+    padding: 0; /* Ensure no extra padding around the brand/logo */
 }
 
 .navbar-collapse {
-    justify-content: end;
+    justify-content: flex-end; /* Aligns navigation links to the right */
 }
 
 .navbar-brand img {
-    max-height: 10px !important;
-    height: auto;
+    max-height: 32px !important; /* Set a more reasonable size for the logo */
     transition: transform 0.3s ease-in-out;
-    transform: scale(2.5);
 }
 
-.form-inline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid white;
+.navbar-toggler {
+    border: none; /* Remove the border around the button */
+    background-color: transparent; /* Ensures it blends with the background */
 }
 
 .nav-item:hover {
     background-color: white;
     border-radius: 10px;
+}
+
+.navbar .nav-link {
+    position: relative;
+    z-index: 4000;
 }
 
 .navbar .nav-link:hover {
@@ -40,7 +42,7 @@
 
 .navbar .navbar-brand,
 .navbar .nav-link {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #fff !important;
 }
@@ -49,14 +51,26 @@
     position: fixed;
     top: 0;
     width: 100%;
-    color: green !important;
-    text-align: center;
     z-index: 4000;
-    transition: top 0.4s !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    transition: top 0.4s;
 }
+
+
+.navbar-toggler-icon {
+    color: white; /* Ensure the toggle icon is visible */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        justify-content: center; /* Center nav links in mobile view */
+    }
+
+    .navbar-brand img {
+        max-height: 24px; /* Adjust logo size for smaller screens */
+    }
+}
+
 
 @media (max-width: 990px) {
     .nav-item {

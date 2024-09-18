@@ -69,7 +69,7 @@
 .profile-picture {
     border-bottom-left-radius: 30%;
     border-top-right-radius: 30%;
-    margin-top: 1em;
+    margin-top: 3em;
 }
 
 .title {
