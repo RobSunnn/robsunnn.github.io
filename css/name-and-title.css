@@ -76,7 +76,6 @@
 .profile-picture {
     border-bottom-left-radius: 30%;
     border-top-right-radius: 30%;
-
 }
 
 .title {
@@ -264,7 +263,7 @@
         font-size: 0.7em;
         position: relative;
         transform: translate(-50%, -46%);
-        margin-top: -24em;
+        margin-top: -21em;
         margin-bottom: 8em;
     }
 
