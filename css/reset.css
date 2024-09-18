@@ -34,9 +34,12 @@ body::before {
 }
 
 #navbar, body::before {
-    will-change: transform; /* Helps the browser anticipate changes */
+    will-change: transform;
 }
 
+body, #navbar {
+    transform: translate3d(0, 0, 0);
+}
 
 main {
     margin-top: 70px;
