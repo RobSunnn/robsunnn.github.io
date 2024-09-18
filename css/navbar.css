@@ -22,8 +22,8 @@
 }
 
 .navbar-toggler {
-    border: none; /* Remove the border around the button */
-    background-color: transparent; /* Ensures it blends with the background */
+    border: none;
+    background-color: transparent;
 }
 
 .nav-item:hover {

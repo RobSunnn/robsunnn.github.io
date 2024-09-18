@@ -2,6 +2,11 @@
     html {
         font-size: 0.7em;
     }
+
+    body::before {
+        background-attachment: scroll;
+    }
+
     .profile-picture {
         width: 60%;
         margin: 2em auto;

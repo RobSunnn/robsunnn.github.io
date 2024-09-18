@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling issues */
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -28,6 +32,11 @@ body::before {
     filter: blur(3px) brightness(0.7) contrast(1);; /* Blur effect */
     z-index: -1;
 }
+
+#navbar, body::before {
+    will-change: transform; /* Helps the browser anticipate changes */
+}
+
 
 main {
     margin-top: 70px;
