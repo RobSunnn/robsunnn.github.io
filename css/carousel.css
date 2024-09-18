@@ -23,7 +23,7 @@
 }
 
 .carousel-card img {
-    width: 50%;
+    width: 100%;
 }
 
 .carousel-card-body {
@@ -164,17 +164,6 @@
     }
 }
 
-@media screen and (max-width: 672px) {
-
-    .carousel-card-text {
-        font-size: 0.5em;
-        padding: 0;
-    }
-
-    .card-title a {
-        font-size: 1em;
-    }
-}
 
 @media screen and (max-width: 570px) {
     .carousel-card {
