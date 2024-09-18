@@ -1,7 +1,18 @@
 @media (max-width: 1400px) {
+     html {
+            font-size: 0.9em;
+        }
+
     main {
         margin-top: 0;
     }
+
+    .profile-picture {
+        width: 25vw;
+        margin: 0 auto;
+        display: flex;
+    }
+
 }
 
 @media (max-width: 770px) {
@@ -11,12 +22,6 @@
 
     body::before {
         background-attachment: scroll;
-    }
-
-    .profile-picture {
-        width: 60%;
-        margin: 2em auto;
-        display: flex;
     }
 
     .technologies-and-name {
@@ -32,6 +37,20 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+
+    html {
+        font-size: 0.5em;
+    }
+
+    .profile-picture {
+            width: 45vw;
+     }
+
+     .title {
+        font-size:1.7em
+     }
+}
 
 /*@media screen and (max-width: 1380px) and (max-height: 780px) {*/
 
