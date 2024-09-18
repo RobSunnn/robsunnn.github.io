@@ -16,6 +16,11 @@
     .technologies-and-name {
         margin-top: 0;
     }
+
+    .info-about-me {
+        width: 80%;
+    }
+
     #name-title-and-picture {
         flex-direction: column-reverse;
     }

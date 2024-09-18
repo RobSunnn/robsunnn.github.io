@@ -1,23 +1,27 @@
 .navbar {
-    background: linear-gradient(to right, rgba(43, 41, 41, 0.9), rgba(65, 70, 87, 0.9), rgba(105, 135, 224, 0.9));
     outline: 1px solid wheat;
-    display: flex !important;
     align-items: center;
     padding: 10px 20px;
     opacity: 80%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.4s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
     align-items: center;
-    padding: 0; /* Ensure no extra padding around the brand/logo */
+    padding: 0;
 }
 
 .navbar-collapse {
-    justify-content: flex-end; /* Aligns navigation links to the right */
+    justify-content: flex-end;
 }
 
 .navbar-brand img {
-    max-height: 32px !important; /* Set a more reasonable size for the logo */
+    max-height: 25px !important;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -46,15 +50,6 @@
     font-weight: 700;
     color: #fff !important;
 }
-
-#navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 4000;
-    transition: top 0.4s;
-}
-
 
 .navbar-toggler-icon {
     color: white; /* Ensure the toggle icon is visible */

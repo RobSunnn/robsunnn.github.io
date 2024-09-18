@@ -47,7 +47,7 @@
 }
 
 .black-to-white {
-    animation: fadeIn 3s;
+    animation: fadeIn 5s;
 }
 
 .name-and-title-container {
@@ -94,10 +94,11 @@
 .technologies {
     display: flex;
     height: auto;
-    width: 100%;
+    width: 80%;
     background: linear-gradient(to right, rgba(43, 41, 41, 0.9), rgba(65, 70, 87, 0.9), rgba(105, 135, 224, 0.9));
     border-radius: 30%;
     padding: 1em 0;
+    margin: 0 auto;
 }
 
 .technologies img {
