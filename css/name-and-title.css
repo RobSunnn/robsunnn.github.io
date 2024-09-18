@@ -139,7 +139,6 @@
     .name-and-title-container {
         font-size: 0.7em;
         position: relative;
-        transform: translate(-50%, -85%);
     }
 
     .profile-picture {
@@ -155,18 +154,6 @@
 
     .technologies-and-name {
         margin: 0;
-    }
-}
-
-@media screen and (max-width: 510px) {
-    .name-and-title-wrapper {
-        transform: translateY(-10%);
-    }
-}
-
-@media screen and (max-width: 440px) {
-    .name-and-title-wrapper {
-        transform: translateY(-7%);
     }
 }
 
