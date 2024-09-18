@@ -1,4 +1,5 @@
-import {fetchFact, createWeatherForecast, createSearchPopup, createRandomHobbyPopup} from "/js/fetchData.js";
+import {fetchFact} from "/js/fetchData.js";
+import { createSearchPopup, createRandomHobbyPopup } from "/js/popup.js";
 
 export function generateHomeContent() {
     const showBtn = document.getElementById('show-button');
@@ -36,7 +37,6 @@ export function generateHomeContent() {
     });
 }
 
-
 function attachEventListener(btn) {
     // Remove any previously attached event listener
     if (btn.clickHandler) {
@@ -72,17 +72,6 @@ function attachEventListener(btn) {
         btn.addEventListener('click', handleClick);
         btn.clickHandler = handleClick;
     }
-}
-
-// Function to remove all event listeners from buttons
-function removeEventListeners(buttons) {
-    buttons.forEach(btn => {
-        if (btn.clickHandler) {
-            // Remove the click event listener using the stored handler reference
-            btn.removeEventListener('click', btn.clickHandler);
-            delete btn.clickHandler;
-        }
-    });
 }
 
 function disableAllButtons() {

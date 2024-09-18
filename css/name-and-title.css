@@ -218,14 +218,14 @@
         font-size: 0.7em;
         position: relative;
         margin-top: 2em;
-        transform: translate(-50%, -96%);
+        transform: translate(-50%, -100%);
     }
 
     .name-and-title-container .row {
         align-items: center;
     }
 
-    .technologies {
+    technologies {
         display: flex;
         flex-wrap: wrap;
         gap: 0.6em;
@@ -252,6 +252,7 @@
 
     .info-about-me {
         margin-top: -23em !important;
+        width: 90% !important;
     }
 }
 

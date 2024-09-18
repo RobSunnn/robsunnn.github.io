@@ -1,4 +1,6 @@
 // Function to create the popup
+import {getWeatherInfo, fahrenheitToCelsius} from "/js/fetchData.js";
+
 export function getPopup(data) {
     document.body.classList.add('blur-image');
     // Create the popup div
@@ -76,4 +78,223 @@ export function getEmptyPopup() {
     });
 
     return popup;
+}
+
+export async function createWeatherForecast(city) {
+    try {
+        const popup = getEmptyPopup();
+        popup.classList.add('black-to-white');
+
+        const weatherInfo = await getWeatherInfo(city);
+        console.log(weatherInfo)
+
+        const weather = weatherInfo.currentConditions;
+        const currentTemperatureFahrenheit = weatherInfo.currentConditions.temp;
+        const currentTemperatureCelsius = `${Math.round(fahrenheitToCelsius(currentTemperatureFahrenheit))}°C`;
+
+        const place = weatherInfo.resolvedAddress;
+
+        if (currentTemperatureFahrenheit > 86) {
+            popup.style.background = 'red';
+            popup.style.background = 'linear-gradient(93deg, rgba(255,0,0,1) 5%, rgba(255,2,0,1) 41%, rgba(191,37,36,1) 73%)';
+        } else if (currentTemperatureFahrenheit > 68) {
+            popup.style.background = 'orange';
+            popup.style.background = 'linear-gradient(93deg, rgba(255,218,0,1) 0%, rgba(255,196,0,1) 49%, rgba(255,171,0,1) 78%)';
+        } else if (currentTemperatureFahrenheit > 50) {
+            popup.style.background = 'yellow';
+            popup.style.background = 'linear-gradient(93deg, rgba(78,255,0,1) 0%, rgba(181,255,0,1) 29%, rgba(202,255,0,1) 58%, rgba(254,255,0,1)';
+        } else {
+            popup.style.background = 'linear-gradient(to bottom, #020024, #20208b, #00d4ff)';
+        }
+
+
+        const weatherIconCode = weatherInfo.currentConditions.icon;
+
+        const iconUrl = `https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/PNG/2nd%20Set%20-%20Color/${weatherIconCode}.png`;
+
+        const card = document.createElement('div');
+        card.classList.add('weather-card', 'd-flex');
+
+        const cardTitle = document.createElement('h4');
+        cardTitle.textContent = `The weather in ${place} is:`;
+
+        const imgElement = document.createElement('img');
+        imgElement.src = iconUrl;
+
+        const temperatureElement = document.createElement('h4');
+        temperatureElement.textContent = `Current temperature is:`;
+        temperatureElement.style.fontSize = '1.3em';
+
+        const currentTemperatureCelsiusElement = document.createElement('p');
+        currentTemperatureCelsiusElement.textContent = currentTemperatureCelsius;
+        currentTemperatureCelsiusElement.style.fontSize = '1.5em';
+
+        const heading = document.createElement('div');
+        heading.classList.add('cool-card-title');
+
+        const firstRow = document.createElement('div');
+        firstRow.classList.add('card-row');
+
+        const description = document.createElement('div');
+        description.classList.add('card-row', 'description');
+        description.textContent = weatherInfo.description;
+        description.style.fontSize = '1.5em';
+
+        const longTermForecast = document.createElement('div');
+        longTermForecast.classList.add('longterm-forecast');
+
+        const nextDaysForecast = weatherInfo.days;
+
+        for (let i = 1; i <= 5; i++) { // Start from 0
+            const currentElement = nextDaysForecast[i];
+            const currentElementTemperatureFahrenheit = currentElement.temp;
+            const currentElementTemperatureCelsius = Math.round(fahrenheitToCelsius(currentElementTemperatureFahrenheit));
+            const currentElementIconCode = currentElement.icon;
+            const date = currentElement.datetime;
+
+            const dateParts = date.split('-');
+            // Extract the month and day
+            const month = dateParts[1];
+            const day = dateParts[2];
+            const dateString = day + "/" + month;
+
+            const wrapper = document.createElement('div');
+            wrapper.classList.add('longterm-forecast-item');
+
+            const currentIconUrl = `https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/PNG/2nd%20Set%20-%20Color/${currentElementIconCode}.png`;
+
+            // Create an element for the temperature
+            const currentTemperatureElement = document.createElement('p');
+            currentTemperatureElement.textContent = `${currentElementTemperatureCelsius}°C`;
+
+            // Create an img element for the weather icon
+            const iconElement = document.createElement('img');
+            iconElement.src = currentIconUrl;
+            iconElement.alt = 'Weather Icon';
+
+            const dateElement = document.createElement('p');
+            dateElement.textContent = dateString;
+
+
+            wrapper.appendChild(iconElement)
+            wrapper.appendChild(currentTemperatureElement)
+            wrapper.appendChild(dateElement);
+            // Append temperature and icon to the longTermForecast div
+            longTermForecast.appendChild(wrapper);
+
+        }
+
+        heading.appendChild(cardTitle);
+        heading.appendChild(imgElement);
+        firstRow.appendChild(temperatureElement);
+        firstRow.append(currentTemperatureCelsiusElement);
+
+        card.appendChild(heading);
+        card.appendChild(firstRow);
+        card.appendChild(description);
+        card.appendChild(longTermForecast);
+
+        popup.appendChild(card);
+        document.documentElement.appendChild(popup);
+
+    } catch (err) {
+        document.body.classList.remove('blur-image');
+        const failPopup = getEmptyPopup();
+        console.log(err)
+        const backBtn = document.createElement('button');
+        backBtn.classList.add('btn', 'btn-info', 'mt-2');
+        backBtn.textContent = 'Back to Search';
+
+        backBtn.addEventListener('click', async () => {
+            await createSearchPopup();
+            failPopup.remove();
+        });
+
+        failPopup.textContent = 'Please enter a valid city.';
+        failPopup.style.color = 'red';
+        failPopup.append(backBtn)
+
+        document.documentElement.appendChild(failPopup)
+    }
+
+}
+
+export async function createRandomHobbyPopup() {
+    const popup = getEmptyPopup();
+    popup.classList.add('black-to-white')
+
+    const ninjasURL = 'https://api.api-ninjas.com/v1/hobbies';
+    fetch(ninjasURL, {
+        method: 'GET',
+        headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
+        contentType: 'application/json',
+    })
+        .then(res => res.json())
+        .then(result => {
+
+            const heading = document.createElement('h1');
+            heading.classList.add('mb-3');
+            heading.textContent = 'Your Random Hobby Idea is';
+
+            const info = document.createElement('div');
+            info.classList.add('d-flex', 'justify-content-around');
+
+            const hobby = result.hobby;
+            const hobbyUrl = result.link;
+
+            const hobbyElement = document.createElement('h2');
+            hobbyElement.textContent = hobby;
+
+
+            const hobbyLinkElement = document.createElement('a');
+            hobbyLinkElement.href = hobbyUrl;
+            hobbyLinkElement.style.fontSize = "1.7em";
+            hobbyLinkElement.textContent = "Wikipedia";
+
+            // Open the link in a new tab
+            hobbyLinkElement.target = "_blank";
+
+            info.appendChild(hobbyElement)
+            info.appendChild(hobbyLinkElement)
+
+            popup.appendChild(heading)
+            popup.appendChild(info)
+            document.documentElement.appendChild(popup);
+        });
+
+}
+
+export async function createSearchPopup() {
+
+    const popup = getEmptyPopup();
+    popup.classList.add('black-to-white');
+    popup.style.height = '200px';
+
+    // Create the main heading
+    const heading = document.createElement('h4');
+    heading.innerText = 'Choose city.';
+
+    const cityInput = document.createElement('input');
+    cityInput.type = 'text';
+    cityInput.classList.add('form-control');
+    cityInput.style.width = '70%';
+    cityInput.style.margin = '0 auto';
+    cityInput.id = 'city';
+    cityInput.placeholder = 'Write city here';
+
+    // Create the button
+    const sendButton = document.createElement('button');
+    sendButton.type = 'submit';
+    sendButton.classList.add('btn', 'btn-primary', 'send-btn', 'mt-3');
+    sendButton.innerText = 'Check weather';
+    sendButton.addEventListener('click', () => {
+        createWeatherForecast(cityInput.value)
+        popup.remove()
+    })
+
+    popup.appendChild(heading);
+    popup.appendChild(cityInput);
+    popup.appendChild(sendButton);
+
+    document.documentElement.appendChild(popup);
 }
