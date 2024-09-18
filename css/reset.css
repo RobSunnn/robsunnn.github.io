@@ -31,12 +31,3 @@ p {
     background-size: cover;
     filter: blur(3px) brightness(0.7) contrast(1);
 }
-
-
-@media (max-width: 1200px) {
-
-    h5, h6 {
-        font-size: 0.6em !important;
-    }
-
-}

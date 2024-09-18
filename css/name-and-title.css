@@ -125,28 +125,9 @@
     padding: 0;
 }
 
-@media screen and (max-width: 1380px) and (max-height: 780px) {
-    .hero {
-        height: 80vh !important;
-    }
 
-    .profile-picture {
-        margin-top: 5em;
-    }
 
-    #quote {
-        font-size: 0.7em;
-    }
 
-}
-
-@media screen and (max-width: 670px) and (max-height: 380px) {
-
-    .name-and-title-container .row {
-        flex-direction: column-reverse;
-    }
-
-}
 
 @media screen and (max-width: 770px) {
 
@@ -168,7 +149,7 @@
         margin: 0 auto;
     }
 
-    .technologies-wrapper row {
+    .technologies-wrapper .row {
         flex-direction: column;
     }
 
@@ -201,100 +182,4 @@
     .title {
         font-size: 1.5em;
     }
-}
-
-@media screen and (max-width: 435px) and (max-height: 940px) {
-    .hero {
-        min-height: 60vh;
-    }
-
-    .profile-picture {
-        max-height: 350px;
-        margin-top: 13em;
-    }
-
-    .name-and-title-container {
-        font-size: 0.7em;
-        position: relative;
-        margin-top: 2em;
-        transform: translate(-50%, -100%);
-    }
-
-    .name-and-title-container .row {
-        align-items: center;
-    }
-
-    technologies {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6em;
-    }
-
-    .technologies img {
-        width: 13%;
-        max-width: 100%;
-        height: 80%;
-        margin: auto auto;
-    }
-
-    .technologies-wrapper .row {
-        flex-direction: column !important;
-    }
-
-    .technologies-wrapper .row h2 {
-        font-size: 0.8em;
-    }
-
-    .name-and-title .row {
-        flex-direction: column-reverse;
-    }
-
-    .info-about-me {
-        margin-top: -23em !important;
-        width: 90% !important;
-    }
-}
-
-@media screen and (max-width: 940px) and (max-height: 440px) {
-    main {
-        margin-top: 5em;
-    }
-    .name-and-title-container {
-        font-size: 0.7em;
-        position: relative;
-        transform: translate(-50%, -77%);
-        margin-bottom: 8em;
-    }
-
-    .col-md-4 {
-        text-align: center;
-    }
-
-    .technologies-wrapper .row {
-        flex-direction: column !important;
-    }
-
-    .title {
-        width: 100%;
-        margin-bottom: 1em;
-    }
-
-    .info-about-me {
-        margin-top: -10em !important;
-    }
-}
-@media screen and (max-width: 670px) and (max-height: 380px) {
-
-    .profile-picture {
-        margin-top: 23em;
-        width: 200px;
-        height: 200px;
-    }
-}
-
-@media screen and (max-width: 660px) and (max-height: 530px) {
-    .name-and-title-container {
-        transform: translate(-50%, -60%);
-    }
-
 }
