@@ -19,7 +19,6 @@
     align-self: center;
     align-content: center;
     border: 3px solid black;
-    /*margin: 4em auto 0 auto;*/
     animation: fadeIn 2s ease-in-out forwards;
 }
 

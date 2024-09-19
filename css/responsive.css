@@ -26,10 +26,23 @@
 
 @media screen and (max-width: 992px) and (max-height: 440px) {
     .carousel-inner {
-        height: 350px;
+        height: 360px;
     }
+
     .carousel-indicators {
         margin-bottom: 0;
+    }
+
+    .carousel-card img {
+        width: 45%;
+    }
+
+    .carousel-card-text {
+        font-size: 0.6em;
+    }
+
+    .carousel-indicators {
+        margin-bottom: -1em;
     }
 }
 
@@ -106,7 +119,6 @@
     .carousel-card {
         flex-wrap: wrap;
     }
-
 }
 
 @media screen and (min-width: 2160px) {
