@@ -12,7 +12,6 @@ export function createContactForm() {
 
     // Create the main heading
     const heading = document.createElement('h4');
-    heading.classList.add('mb-5');
     heading.innerText = 'You can email me from here, or you can use the links below.';
 
     // Create the form element

@@ -1,10 +1,16 @@
 @media (max-width: 1400px) {
     html {
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
 
     main {
         margin-top: 0;
+    }
+
+    .carousel-card {
+        min-height: 200px;
+        max-height: 320px;
+        overflow: hidden;
     }
 
     .profile-picture {
@@ -102,6 +108,12 @@
     }
 }
 
+@media screen and (max-width: 680px) {
+    .carousel-card-text {
+        font-size: 0.5em;
+    }
+}
+
 @media screen and (max-width: 600px) {
 
     html {
@@ -116,8 +128,25 @@
         font-size: 1.7em
     }
 
+    .carousel {
+        width: 100%;
+    }
+
     .carousel-card {
         flex-wrap: wrap;
+    }
+
+    .carousel-card img {
+        height: 240px;
+    }
+
+    .carousel-card-body {
+        overflow-y: auto;
+        max-height: 50px;
+    }
+
+    .carousel-card-text {
+        font-size: 0.8em;
     }
 }
 

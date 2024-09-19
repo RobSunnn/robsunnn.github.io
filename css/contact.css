@@ -15,11 +15,16 @@
 .contact-form {
     width: 100%;
     height: auto;
-    padding: 3em;
+    padding: 0.3rem;
     align-self: center;
     align-content: center;
     border: 3px solid black;
     animation: fadeIn 2s ease-in-out forwards;
+}
+
+.form-control {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .contact-form.in-view {
