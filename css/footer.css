@@ -8,8 +8,10 @@ footer {
     font-size: 1.3em;
     width: 100%;
     border-top: 2px solid white;
-    z-index: 1;
-    padding: 5px 0; /* Adjust padding as needed */
+    bottom: 0;
+    padding: 5px 0;
+    position: fixed;
+    z-index: 1000;
 }
 
 

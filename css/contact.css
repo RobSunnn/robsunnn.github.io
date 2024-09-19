@@ -114,8 +114,3 @@
     color: #daf5ff;
 }
 
-@media screen and (min-width: 2160px) {
-    .content {
-        width: 40%;
-    }
-}
