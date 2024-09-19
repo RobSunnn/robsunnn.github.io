@@ -62,7 +62,6 @@ export function createContactForm() {
     const messageLabel = document.createElement('h6');
     messageLabel.innerHTML = '<label for="message">Message:</label>';
 
-
     const messageTextarea = document.createElement('textarea');
     messageTextarea.classList.add('form-control');
     messageTextarea.rows = 2;

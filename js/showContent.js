@@ -8,10 +8,6 @@ buttons.forEach(button => button.addEventListener('click', async (e) => {
     e.preventDefault();
     const page = e.target.textContent;
     const content = document.getElementById('content');
-//    const nameAndTitleContainer = document.getElementsByClassName('name-and-title-wrapper')[0];
-//    const infoAboutMe = document.getElementsByClassName('info-about-me')[0];
-//    nameAndTitleContainer.style.transform = 'translateY(-30%)';
-//    infoAboutMe.style.transform = 'translateY(-30%)';
 
     let newContent = '';
 
@@ -348,6 +344,7 @@ buttons.forEach(button => button.addEventListener('click', async (e) => {
 
     setTimeout(() => {
         content.scrollIntoView({behavior: 'smooth', block: 'center'});
+
     }, 50);
 
     setTimeout(() => {
@@ -355,9 +352,11 @@ buttons.forEach(button => button.addEventListener('click', async (e) => {
         //to know which content to show
         if (newContent.length > 0) {
             content.innerHTML = newContent;
+            document.getElementsByClassName('carousel')[0].scrollIntoView({behavior: 'smooth', block: 'center'});
         }
+
         content.classList.add('fadeIn');
-        content.scrollIntoView({behavior: 'smooth', block: 'center'});
+
     }, 500);
 }))
 
