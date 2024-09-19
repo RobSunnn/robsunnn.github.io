@@ -9,9 +9,8 @@
 
 .carousel-card {
     max-width: 70%;
-    margin: 5em auto;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     box-shadow: 50px 40px 8px rgba(0, 0, 0, 0.2);
 }
@@ -50,14 +49,8 @@
     animation: fadeIn 2s ease-in-out forwards;
 }
 
-.carousel-indicators button {
-    width: 30px;
-    margin-right: 10px;
-    color: white;
-}
-
 .carousel-indicators {
-    margin-bottom: 4em;
+    margin-bottom: -2em;
 }
 
 @keyframes fadeIn {
