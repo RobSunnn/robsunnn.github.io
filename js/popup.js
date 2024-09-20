@@ -136,7 +136,7 @@ export async function createWeatherForecast(city) {
         const description = document.createElement('div');
         description.classList.add('card-row', 'description');
         description.textContent = weatherInfo.description;
-        description.style.fontSize = '2.7em';
+        description.style.fontSize = '3.2em';
 
         const longTermForecast = document.createElement('div');
         longTermForecast.classList.add('longterm-forecast');
