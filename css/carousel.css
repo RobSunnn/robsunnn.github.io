@@ -1,6 +1,7 @@
 .carousel {
     width: 80%;
     margin: 0 auto;
+
 }
 
 .carousel-item {
@@ -13,6 +14,9 @@
     display: flex;
     justify-content: center;
     box-shadow: 50px 40px 8px rgba(0, 0, 0, 0.2);
+    min-height: 400px;
+    max-height: 520px;
+    overflow: hidden;
 }
 
 .carousel-card img {
