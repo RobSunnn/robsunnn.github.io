@@ -48,7 +48,8 @@ section ul li {
     height: 450px;
     flex-direction: column;
     text-align: center;
-    align-content: center;
+    justify-content: center;
+
 }
 
 .card-row {

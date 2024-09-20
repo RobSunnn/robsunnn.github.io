@@ -21,11 +21,18 @@
 
     .carousel-card-text {
         font-size: 0.9em;
+        text-align: left;
+        margin-top: 1em;
+        margin-left: 0.3em;
     }
 
     #quote,
     #quote-author {
         font-size: 0.9em;
+    }
+
+    .description {
+        margin-top: 2.5em;
     }
 
 }
@@ -147,9 +154,22 @@
 
     .carousel-card-text {
         font-size: 0.8em;
+        text-align: left;
+        margin-top: 1em;
+        margin-left: 0.3em;
     }
 }
+@media screen and (max-width: 450px) {
 
+
+    .description {
+        margin-top: 0;
+    }
+
+    .popup {
+        height: 95vh;
+    }
+}
 @media screen and (min-width: 2160px) {
     .content {
         width: 40%;
