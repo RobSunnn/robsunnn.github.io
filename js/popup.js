@@ -57,7 +57,9 @@ export function getEmptyPopup() {
     popup.classList.add('remove-blur')
     popup.id = 'popup';
     popup.classList.add('popup');
-    popup.style.display = 'block';
+    popup.style.display = 'flex';
+    popup.style.flexDirection = 'column';
+    popup.style.justifyContent = 'center';
 
     // Create the close button
     const closeBtn = document.createElement('span');
@@ -125,7 +127,7 @@ export async function createWeatherForecast(city) {
 
         const currentTemperatureCelsiusElement = document.createElement('p');
         currentTemperatureCelsiusElement.textContent = currentTemperatureCelsius;
-        currentTemperatureCelsiusElement.style.fontSize = '1.5em';
+        currentTemperatureCelsiusElement.style.fontSize = '3.2em';
 
         const heading = document.createElement('div');
         heading.classList.add('cool-card-title');
@@ -136,7 +138,7 @@ export async function createWeatherForecast(city) {
         const description = document.createElement('div');
         description.classList.add('card-row', 'description');
         description.textContent = weatherInfo.description;
-        description.style.fontSize = '3.2em';
+        description.style.fontSize = '2.3em';
 
         const longTermForecast = document.createElement('div');
         longTermForecast.classList.add('longterm-forecast');
