@@ -86,7 +86,6 @@ export async function createWeatherForecast(city) {
         popup.classList.add('black-to-white');
 
         const weatherInfo = await getWeatherInfo(city);
-        console.log(weatherInfo)
 
         const weather = weatherInfo.currentConditions;
         const currentTemperatureFahrenheit = weatherInfo.currentConditions.temp;
@@ -123,7 +122,6 @@ export async function createWeatherForecast(city) {
 
         const temperatureElement = document.createElement('h4');
         temperatureElement.textContent = `Current temperature is:`;
-        temperatureElement.style.fontSize = '1.3em';
 
         const currentTemperatureCelsiusElement = document.createElement('p');
         currentTemperatureCelsiusElement.textContent = currentTemperatureCelsius;
@@ -138,7 +136,7 @@ export async function createWeatherForecast(city) {
         const description = document.createElement('div');
         description.classList.add('card-row', 'description');
         description.textContent = weatherInfo.description;
-        description.style.fontSize = '1.5em';
+        description.style.fontSize = '2.7em';
 
         const longTermForecast = document.createElement('div');
         longTermForecast.classList.add('longterm-forecast');

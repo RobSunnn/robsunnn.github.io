@@ -352,7 +352,9 @@ buttons.forEach(button => button.addEventListener('click', async (e) => {
         //to know which content to show
         if (newContent.length > 0) {
             content.innerHTML = newContent;
-            document.getElementsByClassName('carousel')[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+            if (page === 'Education') {
+                document.getElementsByClassName('carousel')[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+            }
         }
 
         content.classList.add('fadeIn');
