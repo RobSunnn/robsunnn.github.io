@@ -3,10 +3,6 @@
         font-size: 0.7em;
     }
 
-    main {
-        margin-top: 0;
-    }
-
     .carousel-card {
         min-height: 200px;
         max-height: 320px;
