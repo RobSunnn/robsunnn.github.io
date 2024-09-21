@@ -110,28 +110,3 @@ section ul li {
     font-size: 2em;
     margin-top: 1em;
 }
-
-@media screen and (max-width: 900px) {
-    .cool-card-text {
-        font-size: 0.7em;
-    }
-}
-@media screen and (max-width: 672px) {
-
-    .cards-wrapper ul {
-        flex-wrap: wrap;
-        width: 80%;
-        margin: 0 auto;
-    }
-
-}
-@media screen and (max-width: 450px) {
-
-    .longterm-forecast-item img {
-        width: 60%;
-    }
-
-    .longterm-forecast-item p {
-        font-size: 1.2em;
-    }
-}
