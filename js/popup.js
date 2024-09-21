@@ -178,9 +178,9 @@ export async function createWeatherForecast(city) {
             dateElement.textContent = dateString;
 
 
+            wrapper.appendChild(dateElement);
             wrapper.appendChild(iconElement)
             wrapper.appendChild(currentTemperatureElement)
-            wrapper.appendChild(dateElement);
             // Append temperature and icon to the longTermForecast div
             longTermForecast.appendChild(wrapper);
 

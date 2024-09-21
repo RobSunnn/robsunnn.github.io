@@ -182,7 +182,7 @@ buttons.forEach(button => button.addEventListener('click', async (e) => {
                 <img src="images/certificates/spring-data.jpg" class="d-block" alt="Spring Advanced">
                 <div class="carousel-card-body">
                     <h5 class="card-title">
-                        <a href="https://softuni.bg/certificates/details/180536/5816b185">Spring Data Course</a>
+                        <a href="https://softuni.bg/certificates/details/180536/5816b185">Spring Data</a>
                     </h5>
                     <p class="carousel-card-text">Spring Data course gave me knowledge how Application to Database
                         Connection

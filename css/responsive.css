@@ -13,7 +13,7 @@
     }
 
     .carousel-card-text {
-        font-size: 0.9em;
+        font-size: 0.6em;
     }
 
     #quote,
@@ -23,6 +23,10 @@
 
     .description {
         margin-top: 2.5em;
+    }
+
+    .description {
+        margin-top: 0;
     }
 
 }
