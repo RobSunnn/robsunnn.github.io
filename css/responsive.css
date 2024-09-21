@@ -78,6 +78,7 @@
     }
 
     .carousel-card-text {
+        margin-top: 0;
         font-size: 0.5em !important;
     }
 
