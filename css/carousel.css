@@ -27,7 +27,9 @@
     padding: 0.3em;
     background-color: white;
     text-align: center;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-title {
