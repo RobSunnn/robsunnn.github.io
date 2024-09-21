@@ -10,6 +10,7 @@ html, body {
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -45,4 +46,10 @@ main {
 
 p {
     margin-bottom: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }

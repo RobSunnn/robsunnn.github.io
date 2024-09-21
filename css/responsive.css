@@ -1,7 +1,4 @@
 @media (max-width: 1400px) {
-    html {
-        font-size: 0.7em;
-    }
 
     .carousel-card {
         min-height: 200px;
