@@ -3,6 +3,8 @@ let prevScrollPos = window.scrollY;
 function collapseNavbar() {
     let navbarToggle = document.querySelector('.navbar-toggler');
     let navbarCollapse = document.querySelector('.navbar-collapse');
+    let navbar = document.querySelector('.navbar'); // Select the first element with the class 'navbar'
+
     if (navbarCollapse.classList.contains('show')) {
         navbarToggle.click(); // Programmatically click the toggle to collapse the navbar
     }

@@ -1,5 +1,4 @@
 .navbar {
-    outline: 1px solid wheat;
     align-items: center;
     padding: 10px 20px;
     opacity: 80%;
@@ -9,7 +8,6 @@
     z-index: 1000;
     position: fixed;
     transition: top 0.4s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -52,10 +50,17 @@
     color: #fff !important;
 }
 
-.navbar-toggler-icon {
-    color: white; /* Ensure the toggle icon is visible */
+.navbar-toggler {
+    color: white !important; /* Ensure the toggle icon is visible */
 }
-
+@media (max-width: 992px) {
+    .nav-item:hover {
+        background-color: unset;
+    }
+    .navbar .nav-link:hover {
+        color: green !important;
+    }
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar-collapse {
@@ -72,6 +77,5 @@
     .nav-item {
         text-align: right;
         margin-top: 0.5em;
-        background-color: unset !important;
     }
 }
