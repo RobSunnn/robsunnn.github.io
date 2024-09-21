@@ -211,6 +211,7 @@ export async function createWeatherForecast(city) {
 
         failPopup.textContent = 'Please enter a valid city.';
         failPopup.style.color = 'red';
+        failPopup.style.fontSize = '2em';
         failPopup.append(backBtn)
 
         document.documentElement.appendChild(failPopup)

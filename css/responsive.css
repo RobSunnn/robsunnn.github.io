@@ -40,7 +40,8 @@
     }
     .popup {
         width: 90%;
-        height: 81vh;
+        height: 75vh;
+        font-size: 0.7em;
     }
 }
 
