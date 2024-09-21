@@ -42,18 +42,3 @@
     align-content: center;
     align-items: center;
 }
-
-@media (max-width: 992px) {
-    .popup {
-        width: 90%;
-        height: 95vh;
-    }
-}
-
-
-@media screen and (max-width: 450px) {
-    .popup {
-        font-size: 0.6em;
-        height: 30vh;
-    }
-}

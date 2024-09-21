@@ -34,10 +34,13 @@
 
 }
 
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
     .cool-card-text {
         font-size: 0.7em;
+    }
+    .popup {
+        width: 90%;
+        height: 81vh;
     }
 }
 
@@ -190,7 +193,8 @@
     }
 
     .popup {
-        height: 95vh;
+        font-size: 0.6em;
+        height: 30vh;
     }
 
     .longterm-forecast-item img {
