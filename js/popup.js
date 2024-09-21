@@ -7,7 +7,10 @@ export function getPopup(data) {
     popup.classList.add('remove-blur', 'typing-effect-2');
     popup.id = 'popup';
     popup.classList.add('popup');
-    popup.style.display = 'block';
+    popup.style.display = 'flex';
+    popup.style.flexDirection = 'column';
+    popup.style.justifyContent = 'center';
+
     const heading = document.createElement('h2');
     heading.textContent = "Your cool fact is:"
 
