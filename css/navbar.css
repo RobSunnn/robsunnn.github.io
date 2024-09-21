@@ -37,6 +37,7 @@
 .navbar .nav-link {
     position: relative;
     z-index: 4000;
+    padding: 0.3em;
 }
 
 .navbar .nav-link:hover {
@@ -53,12 +54,31 @@
 .navbar-toggler {
     color: white !important; /* Ensure the toggle icon is visible */
 }
+
 @media (max-width: 992px) {
-    .nav-item:hover {
-        background-color: unset;
+    .navbar-collapse {
+        position: absolute;
+        top: 10px;
+        right: 80px;
+        background-color: #3c4b76;
+        border-radius: 20%;
     }
+
+    .navbar-nav {
+        flex-direction: row; /* Make navbar items display in a row */
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 15px;
+    }
+
+    .navbar-collapse {
+        order: 1;
+    }
+
 }
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .navbar-collapse {
         justify-content: center;
@@ -69,10 +89,22 @@
     }
 }
 
+@media (max-width: 380px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 40px;
+        right: 0;
+    }
 
-@media (max-width: 990px) {
-    .nav-item {
-        text-align: right;
-        margin-top: 0.5em;
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 210px) {
+    .navbar-nav {
+        font-size: 0.5rem;
     }
 }
