@@ -1,11 +1,5 @@
 @media (max-width: 1400px) {
 
-    .carousel-card {
-        min-height: 200px;
-        max-height: 320px;
-        overflow: hidden;
-    }
-
     .profile-picture {
         width: 25vw;
         margin: 0 auto;
@@ -13,7 +7,7 @@
     }
 
     .carousel-card-text {
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 
     #quote,
@@ -29,6 +23,12 @@
         margin-top: 0;
     }
 
+}
+
+@media (max-width: 1150px) {
+    .carousel {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -73,14 +73,7 @@
         height: 30vh !important;
     }
 
-    .card-title {
-        margin: 1em auto -0.2em auto;
-    }
 
-    .carousel-card-text {
-        margin-top: 0;
-        font-size: 0.5em !important;
-    }
 
     .longterm-forecast-item p {
         font-size: 2.3em !important;
@@ -183,11 +176,6 @@
 
     .carousel-card img {
         height: 240px;
-    }
-
-    .carousel-card-body {
-        overflow-y: auto;
-        max-height: 50px;
     }
 
     .carousel-card-text {
