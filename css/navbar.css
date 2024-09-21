@@ -57,9 +57,6 @@
     .nav-item:hover {
         background-color: unset;
     }
-    .navbar .nav-link:hover {
-        color: green !important;
-    }
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {

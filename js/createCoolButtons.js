@@ -1,5 +1,5 @@
 import {fetchFact} from "/js/fetchData.js";
-import { createSearchPopup, createRandomHobbyPopup } from "/js/popup.js";
+import {createSearchPopup, createRandomHobbyPopup} from "/js/popup.js";
 
 export function generateHomeContent() {
     const showBtn = document.getElementById('show-button');
@@ -41,7 +41,9 @@ function attachEventListener(btn) {
     if (btn.clickHandler) {
         btn.removeEventListener('click', btn.clickHandler);
     }
-    btn.scrollIntoView({behavior: 'smooth', block: 'center'});
+    if (btn.textContent === 'Weather Forecast') {
+        btn.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
 
     if (btn.textContent === 'Cool fact') {
         const handleClick = async () => {
