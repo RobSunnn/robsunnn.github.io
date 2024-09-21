@@ -15,7 +15,6 @@ export function generateHomeContent() {
             cardHolder.forEach(card => card.classList.add("invisible"));
             cardHolder.forEach(card => card.classList.remove("black-to-white"));
             showBtn.textContent = 'Show More Content';
-
         } else {
 
             // Show all cards
@@ -42,6 +41,7 @@ function attachEventListener(btn) {
     if (btn.clickHandler) {
         btn.removeEventListener('click', btn.clickHandler);
     }
+    btn.scrollIntoView({behavior: 'smooth', block: 'center'});
 
     if (btn.textContent === 'Cool fact') {
         const handleClick = async () => {
