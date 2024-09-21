@@ -6,7 +6,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 9999;
+    position: fixed;
     transition: top 0.4s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -58,11 +59,11 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar-collapse {
-        justify-content: center; /* Center nav links in mobile view */
+        justify-content: center;
     }
 
     .navbar-brand img {
-        max-height: 24px; /* Adjust logo size for smaller screens */
+        max-height: 24px;
     }
 }
 

@@ -37,10 +37,6 @@ body::before {
     will-change: transform;
 }
 
-body, #navbar {
-    transform: translate3d(0, 0, 0);
-}
-
 main {
     margin-top: 70px;
     padding: 20px;
