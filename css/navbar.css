@@ -67,10 +67,6 @@
         align-items: center;
     }
 
-    .navbar-nav .nav-item {
-        margin-left: 15px;
-    }
-
     .navbar-collapse {
         order: 1;
     }
@@ -87,7 +83,7 @@
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 330px) {
     .navbar-collapse {
         position: absolute;
         top: 40px;
