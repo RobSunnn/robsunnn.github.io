@@ -19,11 +19,11 @@
 }
 
 .carousel-card img {
-    width: 50%;
+    width: 100%;
 }
 
 .carousel-card-body {
-    width: 50%;
+    width: 100%;
     padding: 0.3em;
     background-color: white;
     text-align: center;
@@ -37,20 +37,16 @@
 }
 
 .card-title a {
-    font-size: 1.2em;
     font-family: "Tektur", sans-serif;
 }
 
 .carousel-card-text {
     width: 100%;
-    font-size: 1.2em;
     color: black;
     text-align: left;
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-left: 0.3em;
     font-family: "Shantell Sans", cursive;
-
-
 }
 
 .carousel-item {

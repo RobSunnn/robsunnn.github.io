@@ -26,21 +26,21 @@
 }
 
 .carousel-close-btn {
+    width: 20%;
     position: absolute;
-    top: -50px;
-    right: -55px;
+    top: 10px;
+    left: -3px;
     cursor: pointer;
-    font-size: 3em;
+    font-size: 1.3em;
     font-weight: bold;
-    color: #aaa;
-    border: 2px solid white;
+    color: black;
     border-radius: 50%;
     padding: 0.3em;
 }
 
-.close-btn:hover {
+.carousel-close-btn:hover {
     color: black;
-    transform: scale(1.5);
+    transform: scale(2);
 }
 
 .overlay {

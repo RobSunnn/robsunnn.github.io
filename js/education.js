@@ -29,33 +29,13 @@ function generateCarouselPopup() {
 // Function to generate the carousel
 function generateCarousel() {
     const slides = getSlides();
-    const closeBtn = document.createElement('span');
-    closeBtn.id = 'closeBtn';
-    closeBtn.classList.add('carousel-close-btn');
-    closeBtn.style.display = 'block';
-    closeBtn.style.color = 'white';
-    closeBtn.innerHTML = '&times;';  // HTML for "×"
+
 
     const carousel = document.createElement('div');
     carousel.id = 'carouselExampleIndicators';
     carousel.classList.add('carousel');
     carousel.setAttribute('data-bs-ride', 'carousel');
-    carousel.appendChild(closeBtn);
 
-    // Hide the popup when the close button is clicked
-    closeBtn.addEventListener('click', function () {
-        popup.remove();
-        document.body.classList.remove('blur-image');
-        Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'))
-    });
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') { // Check if the pressed key is Escape and close popup
-            popup.remove();
-            Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'))
-            document.body.classList.remove('blur-image');
-        }
-    });
 
     // Create the indicators
     const indicators = document.createElement('div');
@@ -86,6 +66,7 @@ function generateCarousel() {
     slides.forEach((slide, index) => {
         const carouselItem = document.createElement('div');
         carouselItem.classList.add('carousel-item');
+
         if (index === 0) {
             carouselItem.classList.add('active');
         }
@@ -93,11 +74,43 @@ function generateCarousel() {
         const carouselCard = document.createElement('div');
         carouselCard.classList.add('carousel-card');
 
+        const imageAndButtonWrapper = document.createElement('div');
+        imageAndButtonWrapper.style.position = 'relative'; // Wrapper relative for button positioning
+        imageAndButtonWrapper.style.display = 'inline-block';
+        imageAndButtonWrapper.style.width = '100%';
+
+        const closeBtn = createCloseButton();
+
+         // Hide the popup when the close button is clicked
+        closeBtn.addEventListener('click', function () {
+            popup.remove();
+            document.body.classList.remove('blur-image');
+            Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'))
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') { // Check if the pressed key is Escape and close popup
+                popup.remove();
+                Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'))
+                document.body.classList.remove('blur-image');
+            }
+        });
+
         // Create image element
         const img = document.createElement('img');
         img.src = slide.imgSource;
         img.classList.add('d-block');
         img.alt = slide.name;
+
+        const imageWrapper = document.createElement('div');
+        imageWrapper.appendChild(img)
+
+        const btnWrapper = document.createElement('div');
+        btnWrapper.append(closeBtn);
+        btnWrapper.style.zIndex = '10';
+
+        imageAndButtonWrapper.appendChild(btnWrapper)
+        imageAndButtonWrapper.appendChild(imageWrapper)
 
         // Create carousel-card-body
         const cardBody = document.createElement('div');
@@ -122,7 +135,7 @@ function generateCarousel() {
         }
         cardBody.appendChild(cardText);
 
-        carouselCard.appendChild(img);
+        carouselCard.appendChild(imageAndButtonWrapper);
         carouselCard.appendChild(cardBody);
 
         carouselItem.appendChild(carouselCard);
@@ -158,6 +171,17 @@ function generateCarousel() {
     carousel.appendChild(nextButton);
 
     return carousel;
+}
+
+function createCloseButton() {
+    const closeBtn = document.createElement('span');
+    closeBtn.id = 'closeBtn';
+    closeBtn.classList.add('carousel-close-btn');
+    closeBtn.style.display = 'block';
+    closeBtn.style.color = 'white';
+    closeBtn.innerHTML = '&times;';  // HTML for "×"
+
+    return closeBtn;
 }
 
 function getSlides() {
