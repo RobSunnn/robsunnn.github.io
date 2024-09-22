@@ -21,12 +21,6 @@
 
 }
 
-@media (max-width: 1150px) {
-    .carousel {
-        width: 100%;
-    }
-}
-
 @media screen and (max-width: 992px) {
 
     .popup {
@@ -45,13 +39,21 @@
         width: 40%;
     }
 
+    .carousel-card-text {
+        font-size: 1em;
+    }
+
+    .card-title a {
+        font-size: 0.8em;
+    }
+
     .carousel-indicators {
         margin-bottom: 1em;
     }
 
     .close-btn {
-        top: 20px;
-        right: -15px;
+        top: 44px;
+        right: -60px;
     }
 
     .description {
@@ -77,8 +79,8 @@
     }
 
     .close-btn {
-        top: 0;
-        right: -30px;
+        top: -55px;
+        right: 45%;
     }
 }
 
@@ -89,11 +91,11 @@
     }
 
     .navbar-toggler {
-        font-size: 3em !important;
+        font-size: 2em !important;
     }
 
     .nav-link {
-        font-size: 2em !important;
+        font-size: 1.3em !important;
     }
 
     .technologies-and-name {

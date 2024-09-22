@@ -1,5 +1,6 @@
 .popup {
     width: 60%;
+    height: auto;
     display: none; /* Hidden by default */
     position: fixed;
     top: 50%;
@@ -22,6 +23,8 @@
     font-size: 3em;
     font-weight: bold;
     color: #aaa;
+    border: 2px solid white;
+    border-radius: 50%;
 }
 
 .close-btn:hover {
