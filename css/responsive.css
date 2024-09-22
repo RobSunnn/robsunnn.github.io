@@ -47,10 +47,6 @@
         height: 360px;
     }
 
-    .carousel-indicators {
-        margin-bottom: 0;
-    }
-
     .carousel-card img {
         width: 40%;
     }
@@ -60,7 +56,12 @@
     }
 
     .carousel-indicators {
-        margin-bottom: -1em;
+        margin-bottom: 1em;
+    }
+
+    .close-btn {
+        top: 20px;
+        right: -15px;
     }
 
     .description {
@@ -73,8 +74,6 @@
         height: 30vh !important;
     }
 
-
-
     .longterm-forecast-item p {
         font-size: 2.3em !important;
     }
@@ -82,12 +81,18 @@
     .carousel-card {
         max-width: 80%;
     }
+
+    .carousel-indicators {
+        margin-bottom: -4em;
+    }
+
+    .close-btn {
+        top: 0;
+        right: -30px;
+    }
 }
 
 @media (max-width: 770px) {
-    html {
-        font-size: 0.7em;
-    }
 
     body::before {
         background-attachment: scroll;
@@ -123,7 +128,7 @@
     }
 
     .carousel-card-text {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 
     .contact-form {
@@ -142,7 +147,7 @@
 
 @media screen and (max-width: 680px) {
     .carousel-card-text {
-        font-size: 0.5em;
+        font-size: 0.7em;
     }
 
     .cards-wrapper ul {
@@ -155,7 +160,7 @@
 @media screen and (max-width: 600px) {
 
     html {
-        font-size: 0.5em;
+        font-size: 0.7em;
     }
 
     .profile-picture {
@@ -206,17 +211,9 @@
 }
 
 @media screen and (min-width: 2160px) {
-    .content {
-        width: 40%;
-    }
 
     .carousel {
         width: 50%;
-    }
-
-    .carousel-card {
-        min-height: 850px;
-        max-height: 900px;
     }
 
 }

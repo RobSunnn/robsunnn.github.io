@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Tektur:wght@400..900&family=Tilt+Prism&display=swap');
+
+
 .carousel {
     width: 80%;
     margin: 0 auto;
@@ -12,7 +15,6 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    box-shadow: 50px 40px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
@@ -36,14 +38,19 @@
 
 .card-title a {
     font-size: 1.2em;
+    font-family: "Tektur", sans-serif;
 }
 
 .carousel-card-text {
     width: 100%;
+    font-size: 1.2em;
     color: black;
     text-align: left;
     margin-top: 1em;
     margin-left: 0.3em;
+    font-family: "Shantell Sans", cursive;
+
+
 }
 
 .carousel-item {
