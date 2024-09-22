@@ -1,6 +1,8 @@
 export function createCarousel() {
     generateCarouselPopup();
-    Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.add('disabled'))
+    Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.add('disabled'));
+    document.getElementById("navbar").style.top = "-400px";
+
 }
 
 function generateCarouselPopup() {
