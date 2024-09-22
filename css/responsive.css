@@ -22,6 +22,10 @@
         margin-top: 0;
     }
 
+    .carousel-card-text {
+        font-size: 1em;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -167,6 +171,14 @@
         margin: 0 auto;
     }
 
+    .cool-card {
+        font-size: 0.8em;
+    }
+
+    .btn-link {
+        font-size: 0.6em;
+    }
+
     #name-title-and-picture {
         flex-direction: column-reverse;
     }
@@ -185,12 +197,19 @@
 
     .carousel-card {
         flex-wrap: wrap;
-
     }
 
     .carousel-card-text {
        max-height: 120px;
        font-size: 1.1em;
+   }
+
+   .cool-card {
+       width: 50%;
+   }
+
+   .cards-wrapper ul {
+       flex-wrap: wrap;
    }
 }
 

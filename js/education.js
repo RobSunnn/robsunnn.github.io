@@ -2,7 +2,6 @@ export function createCarousel() {
     generateCarouselPopup();
     Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.add('disabled'));
     document.getElementById("navbar").style.top = "-400px";
-
 }
 
 function generateCarouselPopup() {
@@ -22,7 +21,6 @@ function generateCarouselPopup() {
     popup.style.boxShadow = 'none';
     popup.style.width = '80%';
     popup.style.aspectRatio = '2 / 1';
-    // Create the close button
 
     popup.appendChild(generateCarousel());
     document.documentElement.appendChild(popup);
@@ -87,12 +85,15 @@ function generateCarousel() {
         closeBtn.addEventListener('click', function () {
             popup.remove();
             document.body.classList.remove('blur-image');
+            document.getElementById("navbar").style.top = "0";
+
             Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'))
         });
 
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape') { // Check if the pressed key is Escape and close popup
                 popup.remove();
+                document.getElementById("navbar").style.top = "0";
                 Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'))
                 document.body.classList.remove('blur-image');
             }

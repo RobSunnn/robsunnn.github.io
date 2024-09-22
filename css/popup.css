@@ -13,6 +13,7 @@
     z-index: 1000; /* Ensure the popup is above other content */
     text-align: center;
     align-content: center;
+    justify-content: center;
 }
 
 .close-btn {
@@ -23,6 +24,10 @@
     font-size: 24px;
     font-weight: bold;
     color: #aaa;
+}
+
+.close-btn::hover {
+    transform: scale(2);
 }
 
 .carousel-close-btn {
