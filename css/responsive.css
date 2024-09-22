@@ -1,4 +1,7 @@
 @media (max-width: 1400px) {
+    .popup {
+        width: 100% !important;
+    }
 
     .profile-picture {
         width: 25vw;
@@ -22,19 +25,12 @@
 }
 
 @media screen and (max-width: 992px) {
-
     .popup {
-        width: 90%;
-        height: 75vh;
         font-size: 0.7em;
     }
 }
 
 @media screen and (max-width: 992px) and (max-height: 440px) {
-    .popup {
-        width: 100% !important;
-    }
-
     .carousel-inner {
         height: 360px;
     }
@@ -99,7 +95,7 @@
     }
 
     .nav-link {
-        font-size: 1.3em !important;
+        font-size: 1em !important;
     }
 
     .technologies-and-name {
@@ -132,7 +128,7 @@
         font-size: 0.8em;
     }
 
-        .contact-form {
+    .contact-form {
         padding: 0.5em;
     }
 
@@ -146,15 +142,8 @@
     }
 }
 
-@media screen and (max-width: 780px) {
-
-}
 
 @media screen and (max-width: 600px) {
-
-    html {
-        font-size: 0.7em;
-    }
 
     .profile-picture {
         width: 45vw;
@@ -201,6 +190,10 @@
 
     .carousel {
         width: 50%;
+    }
+
+    .popup {
+        width: 100% !important;
     }
 
 }
