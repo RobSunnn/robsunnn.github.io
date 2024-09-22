@@ -31,7 +31,7 @@ function generateCarousel() {
     const slides = getSlides();
     const closeBtn = document.createElement('span');
     closeBtn.id = 'closeBtn';
-    closeBtn.classList.add('close-btn');
+    closeBtn.classList.add('carousel-close-btn');
     closeBtn.style.display = 'block';
     closeBtn.style.color = 'white';
     closeBtn.innerHTML = '&times;';  // HTML for "×"
