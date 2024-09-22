@@ -1,6 +1,5 @@
 .popup {
     width: 60%;
-    height: auto;
     display: none; /* Hidden by default */
     position: fixed;
     top: 50%;

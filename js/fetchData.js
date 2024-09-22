@@ -71,11 +71,6 @@ export async function fetchFact() {
     })
         .then(res => res.json())
         .then(result => {
-            //todo: fix this
-            // const emptyPopup = getEmptyPopup();
-            // document.documentElement.appendChild(emptyPopup);
-            // delay(3500);
-            // emptyPopup.remove();
             const fact = result[0].fact;
             const popup = getPopup(fact);
             // Append the popup outside the body, directly to the <html> element

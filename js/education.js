@@ -1,5 +1,6 @@
 export function createCarousel() {
     generateCarouselPopup();
+    Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.add('disabled'))
 }
 
 function generateCarouselPopup() {
@@ -45,11 +46,13 @@ function generateCarousel() {
     closeBtn.addEventListener('click', function () {
         popup.remove();
         document.body.classList.remove('blur-image');
+        Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'))
     });
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') { // Check if the pressed key is Escape and close popup
             popup.remove();
+            Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'))
             document.body.classList.remove('blur-image');
         }
     });
