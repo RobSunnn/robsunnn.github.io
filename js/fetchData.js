@@ -81,11 +81,20 @@ export async function fetchFact() {
 }
 
 export async function getWeatherInfo(city) {
-    const weatherUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=us&key=CL3TK8NLC437CFJ3Z4EKVJR8T&contentType=json&iconSet=icons2`;
-    const response = await fetch(weatherUrl, {
+    const url = `robsunnn-api.azurewebsites.net/weather?city=${encodeURIComponent(city)}`;
+
+    const response = await fetch(url, {
         method: 'GET',
-        contentType: 'application/json',
+        headers: {
+            'Content-Type': 'application/json',
+        },
     });
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch weather data from backend');
+    }
+    const test = await response.json();
+    console.log(test)
     return await response.json();
 }
 
