@@ -20,8 +20,10 @@ export async function fetchQuote() {
 
     fetch(ninjasURL, {
         method: 'GET',
-
-        contentType: 'application/json',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        mode: 'cors'
     })
         .then(res => res.json())
         .then(result => {
