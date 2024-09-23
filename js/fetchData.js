@@ -1,7 +1,7 @@
 import { getPopup } from "/js/popup.js";
 
 export async function fetchQuote() {
-    const ninjasURL = 'https://api.api-ninjas.com/v1/quotes?category=happiness';
+    const ninjasURL = 'https://robsunnn-api.azurewebsites.net/quote';
     const divQuoteElement = document.getElementById('quotes');
     divQuoteElement.scrollIntoView({behavior: 'smooth', block: 'center'});
 
@@ -20,44 +20,44 @@ export async function fetchQuote() {
 
     fetch(ninjasURL, {
         method: 'GET',
-        headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
+
         contentType: 'application/json',
     })
         .then(res => res.json())
         .then(result => {
-            const authorOfQuote = result[0].author;
-            const quote = result[0].quote;
-
-            const authorElement = document.createElement('h3');
-            authorElement.setAttribute('id', 'quote-author');
-            // Create the anchor element for the hyperlink
-            const authorLink = document.createElement('a');
-            authorLink.href = `https://google.com/search?q=${authorOfQuote}`; // Replace with the actual URL
-            authorLink.textContent = authorOfQuote; // Set the author name as the link text
-
-            // Append the link to the author element
-            authorElement.appendChild(authorLink);
-
-            const quoteElement = document.createElement('p');
-            quoteElement.setAttribute('id', 'quote');
-            quoteElement.textContent = `"${quote}"`;
-
-
-            divQuoteElement.appendChild(quoteElement);
-            divQuoteElement.appendChild(authorElement);
-
-            if (quote.length > 240) {
-
-                const quote = document.getElementById("quote");
-                const currentFontSize = window.getComputedStyle(quote).fontSize;
-                const currentFontSizeValue = parseFloat(currentFontSize);
-                const reduction = 1.5;
-
-                const newFontSize = currentFontSizeValue / reduction;
-
-                quote.style.fontSize = `${newFontSize}px`;
-
-            }
+            // const authorOfQuote = result[0].author;
+            // const quote = result[0].quote;
+            console.log(result)
+            // const authorElement = document.createElement('h3');
+            // authorElement.setAttribute('id', 'quote-author');
+            // // Create the anchor element for the hyperlink
+            // const authorLink = document.createElement('a');
+            // authorLink.href = `https://google.com/search?q=${authorOfQuote}`; // Replace with the actual URL
+            // authorLink.textContent = authorOfQuote; // Set the author name as the link text
+            //
+            // // Append the link to the author element
+            // authorElement.appendChild(authorLink);
+            //
+            // const quoteElement = document.createElement('p');
+            // quoteElement.setAttribute('id', 'quote');
+            // quoteElement.textContent = `"${quote}"`;
+            //
+            //
+            // divQuoteElement.appendChild(quoteElement);
+            // divQuoteElement.appendChild(authorElement);
+            //
+            // if (quote.length > 240) {
+            //
+            //     const quote = document.getElementById("quote");
+            //     const currentFontSize = window.getComputedStyle(quote).fontSize;
+            //     const currentFontSizeValue = parseFloat(currentFontSize);
+            //     const reduction = 1.5;
+            //
+            //     const newFontSize = currentFontSizeValue / reduction;
+            //
+            //     quote.style.fontSize = `${newFontSize}px`;
+            //
+            // }
 
         });
 }
