@@ -245,7 +245,7 @@ export async function createRandomHobbyPopup() {
             const info = document.createElement('div');
             info.classList.add('d-flex', 'justify-content-around');
             const hobby =  Object.keys(result)[0];
-            const hobbyUrl = result[authorOfQuote];
+            const hobbyUrl = result[hobby];
 
             const hobbyElement = document.createElement('h2');
             hobbyElement.textContent = hobby;
