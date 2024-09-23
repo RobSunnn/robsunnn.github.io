@@ -73,7 +73,6 @@ export async function fetchFact() {
     })
         .then(res => res.json())
         .then(result => {
-            console.log(result)
             const fact = result[Object.keys(result)[0]];
             const popup = getPopup(fact);
             // Append the popup outside the body, directly to the <html> element

@@ -227,11 +227,13 @@ export async function createRandomHobbyPopup() {
     const popup = getEmptyPopup();
     popup.classList.add('black-to-white')
 
-    const ninjasURL = 'https://api.api-ninjas.com/v1/hobbies';
-    fetch(ninjasURL, {
+    const apiURL = 'https://robsunnn-api.azurewebsites.net/hobby';
+    fetch(apiURL, {
         method: 'GET',
-        headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
-        contentType: 'application/json',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        mode: 'cors'
     })
         .then(res => res.json())
         .then(result => {
@@ -242,13 +244,11 @@ export async function createRandomHobbyPopup() {
 
             const info = document.createElement('div');
             info.classList.add('d-flex', 'justify-content-around');
-
-            const hobby = result.hobby;
-            const hobbyUrl = result.link;
+            const hobby =  Object.keys(result)[0];
+            const hobbyUrl = result[authorOfQuote];
 
             const hobbyElement = document.createElement('h2');
             hobbyElement.textContent = hobby;
-
 
             const hobbyLinkElement = document.createElement('a');
             hobbyLinkElement.href = hobbyUrl;
