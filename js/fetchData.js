@@ -27,39 +27,39 @@ export async function fetchQuote() {
     })
         .then(res => res.json())
         .then(result => {
-            // const authorOfQuote = result[0].author;
-            // const quote = result[0].quote;
-            console.log(result)
-            // const authorElement = document.createElement('h3');
-            // authorElement.setAttribute('id', 'quote-author');
-            // // Create the anchor element for the hyperlink
-            // const authorLink = document.createElement('a');
-            // authorLink.href = `https://google.com/search?q=${authorOfQuote}`; // Replace with the actual URL
-            // authorLink.textContent = authorOfQuote; // Set the author name as the link text
-            //
-            // // Append the link to the author element
-            // authorElement.appendChild(authorLink);
-            //
-            // const quoteElement = document.createElement('p');
-            // quoteElement.setAttribute('id', 'quote');
-            // quoteElement.textContent = `"${quote}"`;
-            //
-            //
-            // divQuoteElement.appendChild(quoteElement);
-            // divQuoteElement.appendChild(authorElement);
-            //
-            // if (quote.length > 240) {
-            //
-            //     const quote = document.getElementById("quote");
-            //     const currentFontSize = window.getComputedStyle(quote).fontSize;
-            //     const currentFontSizeValue = parseFloat(currentFontSize);
-            //     const reduction = 1.5;
-            //
-            //     const newFontSize = currentFontSizeValue / reduction;
-            //
-            //     quote.style.fontSize = `${newFontSize}px`;
-            //
-            // }
+            const authorOfQuote =  Object.keys(result)[0];
+            const quote = result[authorOfQuote];
+
+            const authorElement = document.createElement('h3');
+            authorElement.setAttribute('id', 'quote-author');
+            // Create the anchor element for the hyperlink
+            const authorLink = document.createElement('a');
+            authorLink.href = `https://google.com/search?q=${authorOfQuote}`; // Replace with the actual URL
+            authorLink.textContent = authorOfQuote; // Set the author name as the link text
+
+            // Append the link to the author element
+            authorElement.appendChild(authorLink);
+
+            const quoteElement = document.createElement('p');
+            quoteElement.setAttribute('id', 'quote');
+            quoteElement.textContent = `"${quote}"`;
+
+
+            divQuoteElement.appendChild(quoteElement);
+            divQuoteElement.appendChild(authorElement);
+
+            if (quote.length > 240) {
+
+                const quote = document.getElementById("quote");
+                const currentFontSize = window.getComputedStyle(quote).fontSize;
+                const currentFontSizeValue = parseFloat(currentFontSize);
+                const reduction = 1.5;
+
+                const newFontSize = currentFontSizeValue / reduction;
+
+                quote.style.fontSize = `${newFontSize}px`;
+
+            }
 
         });
 }
