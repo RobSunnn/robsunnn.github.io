@@ -81,7 +81,7 @@ export async function fetchFact() {
 }
 
 export async function getWeatherInfo(city) {
-    const url = `robsunnn-api.azurewebsites.net/weather?city=${encodeURIComponent(city)}`;
+    const url = `robsunnn-api.azurewebsites.net/weather/${encodeURIComponent(city)}`;
 
     const response = await fetch(url, {
         method: 'GET',
