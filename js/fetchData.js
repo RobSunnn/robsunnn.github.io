@@ -84,10 +84,11 @@ export async function getWeatherInfo(city) {
     const url = `robsunnn-api.azurewebsites.net/weather/${encodeURIComponent(city)}`;
 
     const response = await fetch(url, {
-        method: 'GET',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ city })  // Send the city as part of the request body
     });
 
     if (!response.ok) {
