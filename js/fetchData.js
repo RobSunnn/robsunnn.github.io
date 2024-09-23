@@ -1,7 +1,7 @@
 import { getPopup } from "/js/popup.js";
 
 export async function fetchQuote() {
-    const ninjasURL = 'https://robsunnn-api.azurewebsites.net/quote';
+    const apiURL = 'https://robsunnn-api.azurewebsites.net/quote';
     const divQuoteElement = document.getElementById('quotes');
     divQuoteElement.scrollIntoView({behavior: 'smooth', block: 'center'});
 
@@ -18,7 +18,7 @@ export async function fetchQuote() {
 
     messageLabel.remove();
 
-    fetch(ninjasURL, {
+    fetch(apiURL, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ export async function fetchQuote() {
             authorElement.setAttribute('id', 'quote-author');
             // Create the anchor element for the hyperlink
             const authorLink = document.createElement('a');
-            authorLink.href = `https://google.com/search?q=${authorOfQuote}`; // Replace with the actual URL
+            authorLink.href = `https://google.com/search?q=${authorOfQuote}`; // Set the href attribute
             authorLink.textContent = authorOfQuote; // Set the author name as the link text
 
             // Append the link to the author element
@@ -65,18 +65,19 @@ export async function fetchQuote() {
 }
 
 export async function fetchFact() {
-    const ninjasURL = 'https://api.api-ninjas.com/v1/facts';
-    fetch(ninjasURL, {
+    const apiURL = 'https://robsunnn-api.azurewebsites.net/fact';
+    fetch(apiURL, {
         method: 'GET',
-        headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
-        contentType: 'application/json',
+        headers: {'Content-Type': 'application/json'},
+        mode: 'cors',
     })
         .then(res => res.json())
         .then(result => {
-            const fact = result[0].fact;
-            const popup = getPopup(fact);
-            // Append the popup outside the body, directly to the <html> element
-            document.documentElement.appendChild(popup);
+            console.log(result)
+            // const fact = result[0].fact;
+            // const popup = getPopup(fact);
+            // // Append the popup outside the body, directly to the <html> element
+            // document.documentElement.appendChild(popup);
         });
 }
 
