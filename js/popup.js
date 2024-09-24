@@ -39,8 +39,7 @@ export function getPopup(data) {
         document.body.classList.remove('blur-image');
         document.getElementById('cool-fact').removeAttribute('disabled');
         Array.from(document.getElementsByClassName('btn-link')).forEach(btn => btn.removeAttribute('disabled'))
-        Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.removeAttribute('disabled'));
-
+        Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'));
     });
 
     window.addEventListener('click', function (event) {
@@ -83,7 +82,7 @@ export function getEmptyPopup() {
         document.getElementById('weather-forecast').removeAttribute('disabled');
         document.body.classList.remove('blur-image');
         Array.from(document.getElementsByClassName('btn-link')).forEach(btn => btn.removeAttribute('disabled'));
-        Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.removeAttribute('disabled'));
+        Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'))
 
     });
 
@@ -188,7 +187,7 @@ export async function createWeatherForecast(city) {
             wrapper.appendChild(dateElement);
             wrapper.appendChild(iconElement)
             wrapper.appendChild(currentTemperatureElement)
-            // Append temperature and icon to the longTermForecast div
+
             longTermForecast.appendChild(wrapper);
 
         }
