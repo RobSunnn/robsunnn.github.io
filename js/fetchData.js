@@ -94,8 +94,7 @@ export async function getWeatherInfo(city) {
     if (!response.ok) {
         throw new Error('Failed to fetch weather data from backend');
     }
-    const test = await response.json();
-    console.log(test)
+
     return await response.json();
 }
 

@@ -203,7 +203,7 @@ export async function createWeatherForecast(city) {
     } catch (err) {
         document.body.classList.remove('blur-image');
         const failPopup = getEmptyPopup();
-
+        console.log(err)
         const backBtn = document.createElement('button');
         backBtn.classList.add('btn', 'btn-info', 'mt-2', 'send-btn');
         backBtn.textContent = 'Back to Search';
