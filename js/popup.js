@@ -92,7 +92,6 @@ export async function createWeatherForecast(city) {
 
         const weatherData = await getWeatherInfo(city);
         const weatherInfo = JSON.parse(weatherData);
-        console.log(weatherInfo)
 
         const weather = weatherInfo.currentConditions;
         const currentTemperatureFahrenheit = weatherInfo.currentConditions.temp;
