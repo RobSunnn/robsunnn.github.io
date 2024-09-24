@@ -71,6 +71,9 @@
     .description {
         margin-top: 0;
     }
+    .popup {
+        height: 70vh;
+    }
 }
 
 @media screen and (max-width: 440px) and (max-height: 992px) {
@@ -97,11 +100,6 @@
 
     .carousel-indicators {
         margin-bottom: -4em;
-    }
-
-    .close-btn {
-        top: -55px;
-        right: 45%;
     }
 }
 
