@@ -83,6 +83,10 @@ export async function fetchFact() {
 export async function getWeatherInfo(city) {
     const url = `https://robsunnn-api.azurewebsites.net/weather`;
 
+    if (city.length > 50) {
+        throw new Error('Please enter a valid city name');
+    }
+
     const response = await fetch(url, {
         method: 'POST',
         headers: {
