@@ -81,17 +81,18 @@ export async function fetchFact() {
 }
 
 export async function getWeatherInfo(city) {
-    const url = `https://robsunnn-api.azurewebsites.net/weather`;
     if (city.length > 50) {
         throw new Error('Please enter a valid city name');
     }
-    const formattedCity = city.replace(/\s+/g, '');
+    const encodedCity = encodeURIComponent(city.trim());
+    const url = `https://robsunnn-api.azurewebsites.net/weather?city=${encodedCity}`;
+
     const response = await fetch(url, {
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ city: formattedCity })  // Send the city as part of the request body
+        mode: 'cors'
     });
 
     if (!response.ok) {
