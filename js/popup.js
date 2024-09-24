@@ -10,7 +10,7 @@ export function getPopup(data) {
     popup.style.display = 'flex';
     popup.style.flexDirection = 'column';
     popup.style.justifyContent = 'center';
-    popup.style.height = '400px';
+    popup.style.width = '90%';
 
     const heading = document.createElement('h2');
     heading.textContent = "Your cool fact is:"
@@ -226,7 +226,8 @@ export async function createWeatherForecast(city) {
 
 export async function createRandomHobbyPopup() {
     const popup = getEmptyPopup();
-    popup.classList.add('black-to-white')
+    popup.classList.add('black-to-white');
+    popup.style.width = '90%';
 
     const apiURL = 'https://robsunnn-api.azurewebsites.net/hobby';
     fetch(apiURL, {
@@ -274,6 +275,7 @@ export async function createSearchPopup() {
     const popup = getEmptyPopup();
     popup.classList.add('black-to-white');
     popup.style.height = '200px';
+    popup.style.width = '90%';
 
     // Create the main heading
     const heading = document.createElement('h4');
