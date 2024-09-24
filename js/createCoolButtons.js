@@ -47,7 +47,8 @@ function attachEventListener(btn) {
 
     if (btn.textContent === 'Cool fact') {
         const handleClick = async () => {
-            await fetchFact();                  // Create Popup with fact
+            await fetchFact();
+            Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.add('disabled'));
             disableAllButtons();
         };
 
@@ -57,7 +58,8 @@ function attachEventListener(btn) {
 
     } else if (btn.textContent === 'Weather Forecast') {
         const handleClick = async () => {
-            await createSearchPopup();          // Create Search Popup
+            await createSearchPopup();
+            Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.add('disabled'));
             disableAllButtons();
         };
 
@@ -66,7 +68,8 @@ function attachEventListener(btn) {
         btn.clickHandler = handleClick;
     } else if (btn.textContent === 'Check it out here') {
         const handleClick = async () => {
-            await createRandomHobbyPopup();     // Create Hobby Popup
+            await createRandomHobbyPopup();
+            Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.add('disabled'));
             disableAllButtons();
         };
 

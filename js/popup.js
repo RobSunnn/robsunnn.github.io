@@ -39,14 +39,17 @@ export function getPopup(data) {
         document.body.classList.remove('blur-image');
         document.getElementById('cool-fact').removeAttribute('disabled');
         Array.from(document.getElementsByClassName('btn-link')).forEach(btn => btn.removeAttribute('disabled'))
+        Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.removeAttribute('disabled'));
+
     });
-    // Optional: Hide the popup if the user clicks outside of it
+
     window.addEventListener('click', function (event) {
         if (event.target === popup) {
             popup.remove();
             document.getElementById('cool-fact').removeAttribute('disabled');
             document.body.classList.remove('blur-image');
             Array.from(document.getElementsByClassName('btn-link')).forEach(btn => btn.removeAttribute('disabled'))
+            Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.removeAttribute('disabled'));
         }
     });
 
@@ -79,7 +82,8 @@ export function getEmptyPopup() {
         popup.remove();
         document.getElementById('weather-forecast').removeAttribute('disabled');
         document.body.classList.remove('blur-image');
-        Array.from(document.getElementsByClassName('btn-link')).forEach(btn => btn.removeAttribute('disabled'))
+        Array.from(document.getElementsByClassName('btn-link')).forEach(btn => btn.removeAttribute('disabled'));
+        Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.removeAttribute('disabled'));
 
     });
 
