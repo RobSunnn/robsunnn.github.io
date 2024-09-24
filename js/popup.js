@@ -294,7 +294,7 @@ export async function createSearchPopup() {
     sendButton.classList.add('btn', 'btn-primary', 'send-btn', 'mt-3');
     sendButton.innerText = 'Check weather';
     sendButton.addEventListener('click', () => {
-        createWeatherForecast(cityInput.value)
+        createWeatherForecast(cityInput.value.trim())
         popup.remove()
     })
 
