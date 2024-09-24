@@ -1,0 +1,160 @@
+import { getPopup } from "/js/popup.js";
+
+export async function fetchQuote() {
+    const apiURL = 'https://robsunnn-api.azurewebsites.net/quote';
+    const divQuoteElement = document.getElementById('quotes');
+    divQuoteElement.scrollIntoView({behavior: 'smooth', block: 'center'});
+
+    const messageLabel = document.createElement('h4');
+    messageLabel.classList.add('typing-effect');
+
+    divQuoteElement.append(messageLabel);
+
+    messageLabel.innerText = 'Fetching random quote for you ...';
+    await delay(3000);
+    messageLabel.innerText = 'Your quote is';
+    await delay(1300);
+    divQuoteElement.innerText = '';
+
+    messageLabel.remove();
+
+    fetch(apiURL, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        mode: 'cors'
+    })
+        .then(res => res.json())
+        .then(result => {
+            const authorOfQuote =  Object.keys(result)[0];
+            const quote = result[authorOfQuote];
+
+            const authorElement = document.createElement('h3');
+            authorElement.setAttribute('id', 'quote-author');
+            // Create the anchor element for the hyperlink
+            const authorLink = document.createElement('a');
+            authorLink.href = `https://google.com/search?q=${authorOfQuote}`; // Set the href attribute
+            authorLink.textContent = authorOfQuote; // Set the author name as the link text
+
+            // Append the link to the author element
+            authorElement.appendChild(authorLink);
+
+            const quoteElement = document.createElement('p');
+            quoteElement.setAttribute('id', 'quote');
+            quoteElement.textContent = `"${quote}"`;
+
+
+            divQuoteElement.appendChild(quoteElement);
+            divQuoteElement.appendChild(authorElement);
+
+            if (quote.length > 240) {
+
+                const quote = document.getElementById("quote");
+                const currentFontSize = window.getComputedStyle(quote).fontSize;
+                const currentFontSizeValue = parseFloat(currentFontSize);
+                const reduction = 1.5;
+
+                const newFontSize = currentFontSizeValue / reduction;
+
+                quote.style.fontSize = `${newFontSize}px`;
+
+            }
+
+        });
+}
+
+export async function fetchFact() {
+    const ninjasURL = 'https://api.api-ninjas.com/v1/facts';
+    fetch(ninjasURL, {
+        method: 'GET',
+        headers: {'X-Api-Key': 'vfKiINKq6zKFpXY67KqgoA==l5Do7u177pE9NyO6'},
+        contentType: 'application/json',
+    })
+        .then(res => res.json())
+        .then(result => {
+            //todo: fix this
+            // const emptyPopup = getEmptyPopup();
+            // document.documentElement.appendChild(emptyPopup);
+            // delay(3500);
+            // emptyPopup.remove();
+            const fact = result[0].fact;
+            const popup = getPopup(fact);
+            // Append the popup outside the body, directly to the <html> element
+            document.documentElement.appendChild(popup);
+        });
+}
+
+export async function getWeatherInfo(city) {
+    const url = `robsunnn-api.azurewebsites.net/weather`;
+
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ city })  // Send the city as part of the request body
+    });
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch weather data from backend');
+    }
+    const test = await response.json();
+    console.log(test)
+    return await response.json();
+}
+
+// Function that returns a Promise that resolves after a given time
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+export function fahrenheitToCelsius(fahrenheit) {
+    return (fahrenheit - 32) * 5 / 9;
+}
+
+// function chuckNorris() {
+//
+//     fetch('https://api.chucknorris.io/jokes/random')
+//         .then(res => res.json())
+//         .then(result => {
+//
+//             let htmlDivElement = document.createElement('div');
+//             htmlDivElement.textContent = result.value;
+//             htmlDivElement.setAttribute('id', 'joke');
+//             let uncleChuck = document.createElement('img');
+//             uncleChuck.src = './images/chicho Chuck.jpg'
+//
+//             hideButtons();
+//
+//             const hideStoryButton = document.createElement('a');
+//             hideStoryButton.setAttribute('id', 'story-btn');
+//             hideStoryButton.textContent = 'Hide';
+//             hideStoryButton.addEventListener('click', () => {
+//                 htmlDivElement.remove()
+//                 uncleChuck.remove()
+//                 hideStoryButton.remove()
+//             });
+//
+//             bodyElement.appendChild(uncleChuck)
+//             bodyElement.appendChild(htmlDivElement);
+//             bodyElement.appendChild(hideStoryButton);
+//         });
+// }
+//
+// function createHideButton() {
+//
+//     const hideStoryButton = document.createElement('a');
+//     hideStoryButton.setAttribute('id', 'story-btn');
+//     hideStoryButton.textContent = 'Hide';
+//     hideStoryButton.addEventListener('click', () => {
+//         location.reload()
+//     });
+//
+//     return hideStoryButton;
+// }
+//
+// function hideButtons() {
+//     storyButton.remove();
+//     timeButton.remove();
+// }

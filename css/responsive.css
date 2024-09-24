@@ -1,7 +1,4 @@
 @media (max-width: 1400px) {
-    .popup {
-        width: 100% !important;
-    }
 
     .profile-picture {
         width: 25vw;
@@ -23,7 +20,7 @@
     }
 
     .carousel-card-text {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
 }
@@ -115,7 +112,7 @@
     }
 
     .navbar-toggler {
-        font-size: 2em !important;
+        font-size: 1.5em !important;
     }
 
     .nav-link {
@@ -128,10 +125,6 @@
 
     .info-about-me {
         width: 80%;
-    }
-
-    .popup {
-        width: 100% !important;
     }
 
     .content {
@@ -148,7 +141,7 @@
 
     .carousel-card-text {
         width: 100%;
-        max-height: 30vh;
+        max-height: 150px;
         overflow-y: auto;
     }
 
@@ -230,14 +223,17 @@
     }
 }
 
-@media screen and (min-width: 2160px) {
+@media screen and (min-width: 1920px) {
+    .carousel {
+        width: 60%;
+    }
+    .carousel-card-text {
+      font-size: 1.1em;
+    }
+}
 
+@media screen and (min-width: 2160px) {
     .carousel {
         width: 50%;
     }
-
-    .popup {
-        width: 100% !important;
-    }
-
 }

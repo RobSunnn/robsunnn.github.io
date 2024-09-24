@@ -26,7 +26,7 @@
     color: #aaa;
 }
 
-.close-btn::hover {
+.close-btn:hover {
     transform: scale(2);
 }
 

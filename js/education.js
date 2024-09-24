@@ -19,7 +19,7 @@ function generateCarouselPopup() {
     popup.style.backgroundColor = 'transparent';
     popup.style.border = 'none';
     popup.style.boxShadow = 'none';
-    popup.style.width = '80%';
+    popup.style.width = '100%';
     popup.style.aspectRatio = '2 / 1';
 
     popup.appendChild(generateCarousel());
