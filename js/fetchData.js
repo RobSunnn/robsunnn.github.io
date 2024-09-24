@@ -95,7 +95,7 @@ export async function getWeatherInfo(city) {
         throw new Error('Failed to fetch weather data from backend');
     }
 
-    return await response.json();
+    return await response.text();
 }
 
 // Function that returns a Promise that resolves after a given time

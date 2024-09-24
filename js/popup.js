@@ -90,7 +90,8 @@ export async function createWeatherForecast(city) {
         const popup = getEmptyPopup();
         popup.classList.add('black-to-white');
 
-        const weatherInfo = await getWeatherInfo(city);
+        const weatherData = await getWeatherInfo(city);
+        const weatherInfo = JSON.parse(weatherData);
 
         const weather = weatherInfo.currentConditions;
         const currentTemperatureFahrenheit = weatherInfo.currentConditions.temp;
