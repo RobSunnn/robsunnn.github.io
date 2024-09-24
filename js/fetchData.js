@@ -85,12 +85,13 @@ export async function getWeatherInfo(city) {
     if (city.length > 50) {
         throw new Error('Please enter a valid city name');
     }
+    const formattedCity = city.replace(/\s+/g, '');
     const response = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ city })  // Send the city as part of the request body
+        body: JSON.stringify({ city: formattedCity })  // Send the city as part of the request body
     });
 
     if (!response.ok) {
