@@ -11,6 +11,7 @@ export function getPopup(data) {
     popup.style.flexDirection = 'column';
     popup.style.justifyContent = 'center';
     popup.style.width = '90%';
+    popup.style.height = '350px';
 
     const heading = document.createElement('h2');
     heading.textContent = "Your cool fact is:"
