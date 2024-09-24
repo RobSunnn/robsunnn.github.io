@@ -32,6 +32,7 @@ export async function sendMail(e) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(params),
+            mode: 'cors'
         });
 
         // Check if the request was successful
