@@ -24,20 +24,27 @@ export async function sendMail(e) {
         message: messageField.value,
     };
 
-    emailjs.init({
-        publicKey: "BwzIjmmEVLNY7N-2r",
-    });
+    try {
+        // Make the API request to send the email
+        const response = await fetch('https://robsunnn-api.azurewebsites.net/sendMail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(params),
+        });
 
-    const serviceID = 'service_3m9okqc';
-    const templateID = 'template_gexa6zi';
-
-    emailjs.send(serviceID, templateID, params)
-        .then(
-            (res) => {
-                clearForms(nameField, emailField, messageField);
-                alert('@@@@@     Your Message is Sent Successfully! Thank you :-)     @@@@@')
-            }
-        ).catch(err => console.log(err))
+        if (response.ok) {
+            alert('Email sent successfully!');
+            // Optionally, clear the form fields
+            clearForms(nameField, emailField, messageField);
+        } else {
+            alert('Error sending email. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred while sending the email. Please try again.');
+    }
 }
 
 function validateEmail(input) {
