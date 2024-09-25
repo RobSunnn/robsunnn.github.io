@@ -1,4 +1,4 @@
-import {sendMail} from '/js/sendMail.js';
+import { sendMail } from '/js/sendMail.js';
 
 export function createContactForm() {
     const contactFormContainer = document.createElement('div');

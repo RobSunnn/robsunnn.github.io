@@ -2,6 +2,12 @@ import { getPopup } from "/js/popup.js";
 
 export async function fetchQuote() {
     const apiURL = 'https://robsunnn-api.azurewebsites.net/quote';
+    const token = sessionStorage.getItem('apiToken');
+
+    if (!token) {
+        console.error("No token found in sessionStorage");
+        return;
+    }
     const divQuoteElement = document.getElementById('quotes');
     divQuoteElement.scrollIntoView({behavior: 'smooth', block: 'center'});
 
@@ -21,7 +27,8 @@ export async function fetchQuote() {
     fetch(apiURL, {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'x-api-token': token
         },
         mode: 'cors'
     })
