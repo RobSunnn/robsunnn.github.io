@@ -73,9 +73,17 @@ export async function fetchQuote() {
 
 export async function fetchFact() {
     const apiURL = 'https://robsunnn-api.azurewebsites.net/fact';
+    const token = sessionStorage.getItem('apiToken');
+
+    if (!token) {
+        console.error("No token found in sessionStorage");
+        return;
+    }
     fetch(apiURL, {
         method: 'GET',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json',
+            'x-api-token': token
+        },
         mode: 'cors',
     })
         .then(res => res.json())
