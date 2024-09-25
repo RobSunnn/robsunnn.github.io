@@ -20,8 +20,8 @@ export async function sendMail(e) {
 
     let params = {
         name: nameField.value,
-        email: emailField.value,
-        message: messageField.value,
+        userEmail: emailField.value,
+        messageContent: messageField.value,
     };
 
     try {
