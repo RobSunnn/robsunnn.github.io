@@ -97,6 +97,12 @@ export async function fetchFact() {
 
 export async function getWeatherInfo(city) {
     const url = `https://robsunnn-api.azurewebsites.net/weather`;
+    const token = sessionStorage.getItem('apiToken');
+
+    if (!token) {
+        console.error("No token found in sessionStorage");
+        return;
+    }
     if (city.length > 50) {
         throw new Error('Please enter a valid city name');
     }
@@ -105,6 +111,7 @@ export async function getWeatherInfo(city) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'x-api-token': token
         },
         body: JSON.stringify({ city: formattedCity })  // Send the city as part of the request body
     });

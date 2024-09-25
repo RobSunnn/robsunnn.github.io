@@ -5,6 +5,12 @@ export async function sendMail(e) {
     const emailField = document.getElementById('email');
     const messageField = document.getElementById('message');
 
+    const token = sessionStorage.getItem('apiToken');
+    if (!token) {
+        console.error("No token found in sessionStorage");
+        return;
+    }
+
     const validName = validateName(nameField.value);
     if (!validName) {
             return;
@@ -30,6 +36,7 @@ export async function sendMail(e) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'x-api-token': token
             },
             body: JSON.stringify(params),
         });
