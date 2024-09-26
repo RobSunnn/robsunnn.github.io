@@ -48,7 +48,7 @@ export function getPopup(data) {
             document.getElementById('cool-fact').removeAttribute('disabled');
             document.body.classList.remove('blur-image');
             Array.from(document.getElementsByClassName('btn-link')).forEach(btn => btn.removeAttribute('disabled'))
-            Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.removeAttribute('disabled'));
+            Array.from(document.getElementsByClassName('nav-link')).forEach(btn => btn.classList.remove('disabled'));
         }
     });
 
