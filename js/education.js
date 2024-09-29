@@ -132,7 +132,7 @@ function generateCarousel() {
         const cardText = document.createElement('p');
         cardText.classList.add('carousel-card-text');
         if (index === 0) {
-            cardText.innerHTML = `${slide.pText}<br><br> This is the repository holding my project defence for this course: <a href="${"https://github.com/robsunnn/hotelapp"}" target="_blank">Hotel MS</a>`
+            cardText.innerHTML = `${slide.pText}<br><br> This is the repository holding my project defence for this course: <a href="${"https://github.com/robsunnn/hotelapp"}" target="_blank">Hotel MS</a> <br> <br> The app is deployed here, you can check it out: <a href="${"https://hotel-ms.azurewebsites.net/"}" target="_blank">Hotel MS</a>`
         } else {
             cardText.textContent = slide.pText;
         }
