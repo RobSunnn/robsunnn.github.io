@@ -2,6 +2,7 @@
     .carousel {
         width: 80%;
     }
+
     .profile-picture {
         width: 25vw;
         margin: 0 auto;
@@ -22,18 +23,20 @@
     }
 
     .carousel-card-text {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
 
 }
-
-@media screen and (max-width: 992px) {
-    .popup {
-        font-size: 0.9em;
-    }
+@media screen and (max-width: 1300px) {
 
     .carousel {
         width: 100%;
+    }
+
+}
+@media screen and (max-width: 992px) {
+    .popup {
+        font-size: 0.9em;
     }
 
     .carousel-card-text {
