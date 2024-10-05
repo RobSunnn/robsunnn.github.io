@@ -3,6 +3,7 @@ import { getPopup } from "/js/popup.js";
 export async function fetchQuote() {
     const apiURL = 'https://robsunnn-api.azurewebsites.net/quote';
     const token = sessionStorage.getItem('apiToken');
+    const csrfToken = sessionStorage.getItem('csrfToken');
 
     if (!token) {
         console.error("No token found in sessionStorage");
@@ -28,6 +29,7 @@ export async function fetchQuote() {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrfToken,
             'x-api-token': token
         },
         mode: 'cors'
@@ -73,6 +75,7 @@ export async function fetchQuote() {
 
 export async function fetchFact() {
     const apiURL = 'https://robsunnn-api.azurewebsites.net/fact';
+    const csrfToken = sessionStorage.getItem('csrfToken');
     const token = sessionStorage.getItem('apiToken');
 
     if (!token) {
@@ -81,7 +84,9 @@ export async function fetchFact() {
     }
     fetch(apiURL, {
         method: 'GET',
-        headers: {'Content-Type': 'application/json',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrfToken,
             'x-api-token': token
         },
         mode: 'cors',
@@ -97,6 +102,7 @@ export async function fetchFact() {
 
 export async function getWeatherInfo(city) {
     const url = `https://robsunnn-api.azurewebsites.net/weather`;
+    const csrfToken = sessionStorage.getItem('csrfToken');
     const token = sessionStorage.getItem('apiToken');
 
     if (!token) {
@@ -111,6 +117,7 @@ export async function getWeatherInfo(city) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrfToken,
             'x-api-token': token
         },
         body: JSON.stringify({ city: formattedCity })  // Send the city as part of the request body

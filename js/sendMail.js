@@ -4,6 +4,7 @@ export async function sendMail(e) {
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
     const messageField = document.getElementById('message');
+    const csrfToken = sessionStorage.getItem('csrfToken');
 
     const token = sessionStorage.getItem('apiToken');
     if (!token) {
@@ -36,6 +37,7 @@ export async function sendMail(e) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrfToken,
                 'x-api-token': token
             },
             body: JSON.stringify(params),

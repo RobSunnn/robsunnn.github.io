@@ -234,6 +234,7 @@ export async function createRandomHobbyPopup() {
     popup.style.width = '90%';
 
     const token = sessionStorage.getItem('apiToken');
+    const csrfToken = sessionStorage.getItem('csrfToken');
 
     if (!token) {
         console.error("No token found in sessionStorage");
@@ -245,6 +246,7 @@ export async function createRandomHobbyPopup() {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrfToken,
             'x-api-token': token
         },
         mode: 'cors'
