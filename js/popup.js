@@ -233,21 +233,14 @@ export async function createRandomHobbyPopup() {
     popup.classList.add('black-to-white');
     popup.style.width = '90%';
 
-    const token = sessionStorage.getItem('apiToken');
     const csrfToken = sessionStorage.getItem('csrfToken');
-
-    if (!token) {
-        console.error("No token found in sessionStorage");
-        return;
-    }
 
     const apiURL = 'https://robsunnn-api.azurewebsites.net/hobby';
     fetch(apiURL, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': csrfToken,
-            'x-api-token': token
+            'X-CSRF-TOKEN': csrfToken
         },
         mode: 'cors'
     })

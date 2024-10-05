@@ -6,12 +6,6 @@ export async function sendMail(e) {
     const messageField = document.getElementById('message');
     const csrfToken = sessionStorage.getItem('csrfToken');
 
-    const token = sessionStorage.getItem('apiToken');
-    if (!token) {
-        console.error("No token found in sessionStorage");
-        return;
-    }
-
     const validName = validateName(nameField.value);
     if (!validName) {
             return;
@@ -37,8 +31,7 @@ export async function sendMail(e) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': csrfToken,
-                'x-api-token': token
+                'X-CSRF-TOKEN': csrfToken
             },
             body: JSON.stringify(params),
         });
