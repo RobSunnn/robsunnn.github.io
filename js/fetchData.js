@@ -2,7 +2,7 @@ import { getPopup } from "/js/popup.js";
 
 export async function fetchQuote() {
     const apiURL = 'https://robsunnn-api.azurewebsites.net/quote';
-    const csrfToken = sessionStorage.getItem('csrfToken');
+    const token = sessionStorage.getItem('apiToken');
 
     const divQuoteElement = document.getElementById('quotes');
     divQuoteElement.scrollIntoView({behavior: 'smooth', block: 'center'});
@@ -24,7 +24,7 @@ export async function fetchQuote() {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': csrfToken
+            'x-api-token': token
         },
         mode: 'cors'
     })
@@ -69,13 +69,13 @@ export async function fetchQuote() {
 
 export async function fetchFact() {
     const apiURL = 'https://robsunnn-api.azurewebsites.net/fact';
-    const csrfToken = sessionStorage.getItem('csrfToken');
+    const token = sessionStorage.getItem('apiToken');
 
     fetch(apiURL, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': csrfToken
+            'x-api-token': token
         },
         mode: 'cors',
     })
@@ -90,7 +90,7 @@ export async function fetchFact() {
 
 export async function getWeatherInfo(city) {
     const url = `https://robsunnn-api.azurewebsites.net/weather`;
-    const csrfToken = sessionStorage.getItem('csrfToken');
+        const token = sessionStorage.getItem('apiToken');
 
     if (city.length > 50) {
         throw new Error('Please enter a valid city name');
@@ -100,7 +100,7 @@ export async function getWeatherInfo(city) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': csrfToken
+            'x-api-token': token
         },
 
         body: JSON.stringify({ city: formattedCity })  // Send the city as part of the request body
