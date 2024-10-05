@@ -27,7 +27,10 @@ window.addEventListener("beforeunload", function () {
 // Function to get CSRF token and store it in sessionStorage
 function fetchCsrfToken() {
     fetch('https://robsunnn-api.azurewebsites.net/csrf-token', {
-        credentials: 'include'
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
     })
         .then(response => {
             if (!response.ok) {
