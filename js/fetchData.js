@@ -90,6 +90,7 @@ export async function fetchFact() {
             'x-api-token': token
         },
         mode: 'cors',
+        credentials: 'include',
     })
         .then(res => res.json())
         .then(result => {
@@ -120,6 +121,7 @@ export async function getWeatherInfo(city) {
             'X-CSRF-TOKEN': csrfToken,
             'x-api-token': token
         },
+
         body: JSON.stringify({ city: formattedCity })  // Send the city as part of the request body
     });
 
